@@ -7,7 +7,7 @@
       "dependencies": {
         "com.unity.inputsystem": "1.2.0"
       },
-      "hash": "76e11ee6c157faf70f82f1131dda7af84c729865"
+      "hash": "d27bb5b7cf5ff30177deb327f3f9156853ef2fb8"
     },
     "com.unity.collab-proxy": {
       "version": "1.15.13",
@@ -35,7 +35,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.14",
+      "version": "2.0.15",
       "depth": 0,
       "source": "registry",
       "dependencies": {
