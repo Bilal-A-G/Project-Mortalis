@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 1231766139}
   - component: {fileID: 1231766138}
   - component: {fileID: 1231766137}
+  - component: {fileID: 1231766142}
   - component: {fileID: 1231766141}
   m_Layer: 0
   m_Name: Player
@@ -626,8 +627,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movingEvent: {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
   stopMovingEvent: {fileID: 11400000, guid: 32f487d87ba8ad6438b560fbd151704d, type: 2}
-  moveSpeed: 10
+  moveSpeed:
+    useVariable: 1
+    assignedValue: 0
+    floatVariable: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
   finiteStateMachines: {fileID: 930298938}
+--- !u!143 &1231766142
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231766136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1792414320
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +699,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1792414323}
-          m_TargetAssemblyTypeName: Test, Assembly-CSharp
+          m_TargetAssemblyTypeName: PlayerMovementLogic, Assembly-CSharp
           m_MethodName: Move
           m_Mode: 0
           m_Arguments:
@@ -690,6 +712,7 @@ MonoBehaviour:
           m_CallState: 2
     events:
     - {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
+    - {fileID: 11400000, guid: 32f487d87ba8ad6438b560fbd151704d, type: 2}
 --- !u!114 &1792414323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +722,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1792414320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3316f40665b12479267d16d15c13d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d269553a49f25845a83544d6cdd075c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2044969967

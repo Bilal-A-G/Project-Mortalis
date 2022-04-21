@@ -7,7 +7,7 @@ public class PlayerMoveInput : MonoBehaviour
     public EventObject movingEvent;
     public EventObject stopMovingEvent;
 
-    public float moveSpeed;
+    public FloatRefrence moveSpeed;
 
     public Transform finiteStateMachines;
 
@@ -33,11 +33,11 @@ public class PlayerMoveInput : MonoBehaviour
         {
             if(ctx.ReadValue<Vector2>() == Vector2.zero)
             {
-                currentFiniteStateMachine.UpdateState(stopMovingEvent, new List<ResultArguments>() { new ResultArguments(0, 0, null, Vector2.zero, null) });
+                currentFiniteStateMachine.UpdateState(stopMovingEvent, new List<ResultArguments>() { new ResultArguments(0, 0, null, ctx.ReadValue<Vector2>(), gameObject) });
             }
             else
             {
-                currentFiniteStateMachine.UpdateState(movingEvent, new List<ResultArguments>() { new ResultArguments(moveSpeed, 0, null, ctx.ReadValue<Vector2>(), null) });
+                currentFiniteStateMachine.UpdateState(movingEvent, new List<ResultArguments>() { new ResultArguments(moveSpeed.GetValue(), 0, null, ctx.ReadValue<Vector2>(), gameObject) });
             }
         };
     }
