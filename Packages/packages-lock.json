@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.bilal.super-extensible-fsm-event-system": {
+      "version": "git@github.com:Bilal-A-G/Super-Extensible-FSM-Event-System.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.inputsystem": "1.2.0"
+      },
+      "hash": "76e11ee6c157faf70f82f1131dda7af84c729865"
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.13",
       "depth": 0,
