@@ -35,6 +35,24 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""f36cd510-d7f4-4b75-814f-1a95059e7294"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a05e36b-00ec-4027-ad2d-32f3d367662d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -92,6 +110,28 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""072de658-3399-43a9-b0f1-606496f5aa72"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1944a6f6-6055-4965-9d60-5dfdbfa781e6"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Escape"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -118,6 +158,8 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         // PcMap
         m_PcMap = asset.FindActionMap("PcMap", throwIfNotFound: true);
         m_PcMap_Movement = m_PcMap.FindAction("Movement", throwIfNotFound: true);
+        m_PcMap_Look = m_PcMap.FindAction("Look", throwIfNotFound: true);
+        m_PcMap_Escape = m_PcMap.FindAction("Escape", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -178,11 +220,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PcMap;
     private IPcMapActions m_PcMapActionsCallbackInterface;
     private readonly InputAction m_PcMap_Movement;
+    private readonly InputAction m_PcMap_Look;
+    private readonly InputAction m_PcMap_Escape;
     public struct PcMapActions
     {
         private @InputActions m_Wrapper;
         public PcMapActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_PcMap_Movement;
+        public InputAction @Look => m_Wrapper.m_PcMap_Look;
+        public InputAction @Escape => m_Wrapper.m_PcMap_Escape;
         public InputActionMap Get() { return m_Wrapper.m_PcMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -195,6 +241,12 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Movement.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnMovement;
+                @Look.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnLook;
+                @Escape.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnEscape;
+                @Escape.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnEscape;
+                @Escape.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnEscape;
             }
             m_Wrapper.m_PcMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -202,6 +254,12 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
+                @Look.started += instance.OnLook;
+                @Look.performed += instance.OnLook;
+                @Look.canceled += instance.OnLook;
+                @Escape.started += instance.OnEscape;
+                @Escape.performed += instance.OnEscape;
+                @Escape.canceled += instance.OnEscape;
             }
         }
     }
@@ -218,5 +276,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     public interface IPcMapActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
 }

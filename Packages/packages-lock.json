@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.bilal.designer-variables": {
+      "version": "git@github.com:Bilal-A-G/Designer-Variables.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.inputsystem": "1.2.0"
+      },
+      "hash": "5959fa9ede6c82e8d55b68b3f33737dc37fb9e22"
+    },
     "com.bilal.super-extensible-fsm-event-system": {
       "version": "git@github.com:Bilal-A-G/Super-Extensible-FSM-Event-System.git",
       "depth": 0,

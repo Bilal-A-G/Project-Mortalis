@@ -7,7 +7,7 @@ public class PlayerMoveInput : MonoBehaviour
     public EventObject movingEvent;
     public EventObject stopMovingEvent;
 
-    public FloatRefrence moveSpeed;
+    public GenericReference<float> moveSpeed;
 
     public Transform finiteStateMachines;
 
@@ -27,17 +27,33 @@ public class PlayerMoveInput : MonoBehaviour
     {
         inputActions = new InputActions();
 
+        List<ResultArguments> argumentsToPass = new List<ResultArguments>();
+        ResultArguments argument = new ResultArguments();
+        argumentsToPass.Add(argument);
+
         FiniteStateMachine currentFiniteStateMachine = finiteStateMachines.GetComponentInChildren<FiniteStateMachine>();
 
         inputActions.PcMap.Movement.performed += ctx =>
         {
             if(ctx.ReadValue<Vector2>() == Vector2.zero)
             {
-                currentFiniteStateMachine.UpdateState(stopMovingEvent, new List<ResultArguments>() { new ResultArguments(0, 0, null, ctx.ReadValue<Vector2>(), gameObject) });
+                argument.objectValue = gameObject;
+                argument.vectorValue = Vector2.zero;
+                argument.floatValue = 0f;
+
+                argumentsToPass[0] = argument;
+
+                currentFiniteStateMachine.UpdateState(stopMovingEvent, argumentsToPass);
             }
             else
             {
-                currentFiniteStateMachine.UpdateState(movingEvent, new List<ResultArguments>() { new ResultArguments(moveSpeed.GetValue(), 0, null, ctx.ReadValue<Vector2>(), gameObject) });
+                argument.floatValue = moveSpeed.GetValue();
+                argument.vectorValue = ctx.ReadValue<Vector2>();
+                argument.objectValue = gameObject;
+
+                argumentsToPass[0] = argument;
+
+                currentFiniteStateMachine.UpdateState(movingEvent, argumentsToPass);
             }
         };
     }
