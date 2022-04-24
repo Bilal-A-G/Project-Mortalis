@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 281807363}
   - component: {fileID: 281807362}
   - component: {fileID: 281807361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,6 +532,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 137.1, y: 0, z: 0}
+--- !u!1 &477036996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477036997}
+  - component: {fileID: 477036998}
+  m_Layer: 0
+  m_Name: GroundedLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477036997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477036996}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1099681915}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477036998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477036996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c7937124d94be4db5e5f3ee0c03cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 11400000, guid: 44133d1a36ebce54292cf32553797da8, type: 2}
 --- !u!1 &930298937
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +634,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 477036997}
   m_Father: {fileID: 1415758197}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -622,6 +667,7 @@ GameObject:
   - component: {fileID: 1231766142}
   - component: {fileID: 1231766141}
   - component: {fileID: 1231766143}
+  - component: {fileID: 1231766144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -707,6 +753,7 @@ Transform:
   - {fileID: 1792414321}
   - {fileID: 2044969970}
   - {fileID: 930298938}
+  - {fileID: 1862298171}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -727,6 +774,11 @@ MonoBehaviour:
   moveSpeed:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
+    overrideValue: 0
+  jumpedEvent: {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
+  jumpHeight:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 025288ed9dd94034da0d7f4eecc9bbc7, type: 2}
     overrideValue: 0
   finiteStateMachines: {fileID: 930298938}
 --- !u!143 &1231766142
@@ -770,6 +822,37 @@ MonoBehaviour:
     overrideValue: 0
   playerCamera: {fileID: 2044969967}
   finiteStateMachines: {fileID: 930298938}
+--- !u!114 &1231766144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231766136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce60a261c90dca441a994ffe4e398119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notGroundedEvent: {fileID: 11400000, guid: 258e8c8088bbefe46ad8ac4ca407813a, type: 2}
+  groundedEvent: {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
+  groundCheckRadius:
+    useOverride: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
+  groundLayer:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 9c7b0f07bd70b6c4b83bf88363f50184, type: 2}
+    overrideValue:
+      serializedVersion: 2
+      m_Bits: 8
+  gravity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: c8f1b219d948b1649aeb51ce0c24ce78, type: 2}
+    overrideValue: 0
+  player: {fileID: 1231766136}
+  groundCheck: {fileID: 1862298171}
+  finiteStateMachine: {fileID: 930298938}
 --- !u!1 &1415758196
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +910,7 @@ GameObject:
   - component: {fileID: 1792414322}
   - component: {fileID: 1792414323}
   - component: {fileID: 1792414324}
+  - component: {fileID: 1792414325}
   m_Layer: 0
   m_Name: Actions
   m_TagString: Untagged
@@ -930,6 +1014,57 @@ MonoBehaviour:
           m_CallState: 2
     events:
     - {fileID: 11400000, guid: 40eb08a34f5007a4da7d7d9ff69c6360, type: 2}
+  - serializedDelegates:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1792414325}
+          m_TargetAssemblyTypeName: Gravity, Assembly-CSharp
+          m_MethodName: ApplyGravity
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    events:
+    - {fileID: 11400000, guid: 258e8c8088bbefe46ad8ac4ca407813a, type: 2}
+  - serializedDelegates:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1792414325}
+          m_TargetAssemblyTypeName: Gravity, Assembly-CSharp
+          m_MethodName: StopApplyingGravity
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    events:
+    - {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
+  - serializedDelegates:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1792414325}
+          m_TargetAssemblyTypeName: GravityLogic, Assembly-CSharp
+          m_MethodName: Jump
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    events:
+    - {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
 --- !u!114 &1792414323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,6 +1089,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e924990cec21ae46b2ae66270b5cf92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1792414325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792414320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b6af40d9a557540b0c5fec2457f50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1862298170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862298171}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1862298171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862298170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.618, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1231766140}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044969967
 GameObject:
   m_ObjectHideFlags: 0

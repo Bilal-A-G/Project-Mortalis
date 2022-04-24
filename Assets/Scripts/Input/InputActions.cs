@@ -53,6 +53,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""a1b48782-1d0f-48cf-88b2-b682f90fee1c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +141,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a8f3b9ae-971c-4d6d-a12c-5cbc72e03025"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -160,6 +180,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PcMap_Movement = m_PcMap.FindAction("Movement", throwIfNotFound: true);
         m_PcMap_Look = m_PcMap.FindAction("Look", throwIfNotFound: true);
         m_PcMap_Escape = m_PcMap.FindAction("Escape", throwIfNotFound: true);
+        m_PcMap_Jump = m_PcMap.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -222,6 +243,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PcMap_Movement;
     private readonly InputAction m_PcMap_Look;
     private readonly InputAction m_PcMap_Escape;
+    private readonly InputAction m_PcMap_Jump;
     public struct PcMapActions
     {
         private @InputActions m_Wrapper;
@@ -229,6 +251,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_PcMap_Movement;
         public InputAction @Look => m_Wrapper.m_PcMap_Look;
         public InputAction @Escape => m_Wrapper.m_PcMap_Escape;
+        public InputAction @Jump => m_Wrapper.m_PcMap_Jump;
         public InputActionMap Get() { return m_Wrapper.m_PcMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -247,6 +270,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Escape.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnEscape;
                 @Escape.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnEscape;
                 @Escape.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnEscape;
+                @Jump.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnJump;
             }
             m_Wrapper.m_PcMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -260,6 +286,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Escape.started += instance.OnEscape;
                 @Escape.performed += instance.OnEscape;
                 @Escape.canceled += instance.OnEscape;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
             }
         }
     }
@@ -278,5 +307,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnEscape(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }

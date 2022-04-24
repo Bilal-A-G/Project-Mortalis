@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db3385bed6e36b14eb5fbb97273b0126, type: 3}
-  m_Name: PlayerDie
+  m_Script: {fileID: 11500000, guid: 10048102764b3d24784be326776831cd, type: 3}
+  m_Name: JumpHeight
   m_EditorClassIdentifier: 
-  argumentsList: []
+  value: 0.5
