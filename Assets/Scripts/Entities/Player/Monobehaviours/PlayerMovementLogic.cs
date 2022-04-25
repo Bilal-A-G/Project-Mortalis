@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovementLogic : MonoBehaviour, IMovable
 {
+    public GenericReference<float> velocity;
+
     CharacterController characterController;
     float moveSpeed;
     Vector2 moveDirection;
@@ -15,6 +17,11 @@ public class PlayerMovementLogic : MonoBehaviour, IMovable
         moveSpeed = arguments[0].floatValue;
         moveDirection = arguments[0].vectorValue;
         agent = arguments[0].objectValue;
+    }
+
+    public void Jump(ResultArguments[] arguments)
+    {
+        velocity.SetValue(arguments[0].floatValue * -arguments[1].floatValue);
     }
 
     void Update()

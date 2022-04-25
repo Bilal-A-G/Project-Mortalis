@@ -6,9 +6,6 @@ public class PlayerLookInput : MonoBehaviour
 {
     public EventObject playerLookEvent;
 
-    public EventObject playerStopLookEvent;
-    public EventObject playerStartLookEvent;
-
     public GenericReference<float> mouseSensitivity;
 
     public GameObject playerCamera;
@@ -16,8 +13,6 @@ public class PlayerLookInput : MonoBehaviour
 
     InputActions inputActions;
     FiniteStateMachine currentStateMachine;
-
-    bool isLooking = true;
 
     private void OnEnable()
     {
@@ -53,20 +48,6 @@ public class PlayerLookInput : MonoBehaviour
             argumentsToPass[1] = secondaryArguments;
 
             currentStateMachine.UpdateState(playerLookEvent, argumentsToPass);
-        };
-
-        inputActions.PcMap.Escape.performed += ctx =>
-        {
-            isLooking = !isLooking;
-
-            if (!isLooking)
-            {
-                currentStateMachine.UpdateState(playerStopLookEvent, argumentsToPass);
-            }
-            else
-            {
-                currentStateMachine.UpdateState(playerStartLookEvent, argumentsToPass);
-            }
         };
     }
 }

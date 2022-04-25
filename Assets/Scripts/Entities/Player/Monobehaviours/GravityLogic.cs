@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class GravityLogic : MonoBehaviour
 {
+    public GenericReference<float> velocity;
+
     GameObject agent;
     CharacterController controller;
     float gravity;
-
-    float velocity;
-
-    bool applyGravity;
 
     public void ApplyGravity(ResultArguments[] arguments)
     {
@@ -21,29 +19,22 @@ public class GravityLogic : MonoBehaviour
         {
             controller = agent.GetComponent<CharacterController>();
         }
-        applyGravity = true;
+
+        velocity.SetValue(velocity.GetValue() + gravity * 2 * Time.deltaTime);
     }
 
-    public void StopApplyingGravity(ResultArguments[] arguments) => applyGravity = false;
-
-    public void Jump(ResultArguments[] arguments)
+    public void StopApplyingGravity(ResultArguments[] arguments)
     {
-        velocity = arguments[0].floatValue * -gravity;
+        if (velocity.GetValue() > 0)
+        {
+            velocity.SetValue(0);
+        }
     }
 
     private void FixedUpdate()
     {
-        if (agent == null || controller == null) return;
+        if (controller == null) return;
 
-        if (applyGravity)
-        {
-            velocity += gravity * 2 * Time.deltaTime;
-        }
-        else if(!applyGravity && velocity > 0)
-        {
-            velocity = 0;
-        }
-
-        controller.Move(-agent.transform.up * velocity * Time.deltaTime);
+        controller.Move(Time.deltaTime * velocity.GetValue() * -agent.transform.up);
     }
 }

@@ -559,8 +559,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1099681915}
+  m_Children:
+  - {fileID: 1099681915}
+  m_Father: {fileID: 748859673}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &477036998
@@ -576,6 +577,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: {fileID: 11400000, guid: 44133d1a36ebce54292cf32553797da8, type: 2}
+--- !u!1 &748859672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748859673}
+  - component: {fileID: 748859674}
+  m_Layer: 0
+  m_Name: LookLayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &748859673
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748859672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 477036997}
+  m_Father: {fileID: 930298938}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &748859674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748859672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c7937124d94be4db5e5f3ee0c03cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 11400000, guid: d5512c68868772f48afeb8b66acd6ee3, type: 2}
 --- !u!1 &930298937
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +649,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1415758197}
+  - {fileID: 748859673}
   m_Father: {fileID: 1231766140}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -634,9 +680,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 477036997}
-  m_Father: {fileID: 1415758197}
+  m_Children: []
+  m_Father: {fileID: 477036997}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1099681916
@@ -780,6 +825,10 @@ MonoBehaviour:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 025288ed9dd94034da0d7f4eecc9bbc7, type: 2}
     overrideValue: 0
+  gravity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: c8f1b219d948b1649aeb51ce0c24ce78, type: 2}
+    overrideValue: 0
   finiteStateMachines: {fileID: 930298938}
 --- !u!143 &1231766142
 CharacterController:
@@ -812,10 +861,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLookEvent: {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
-  playerStopLookEvent: {fileID: 11400000, guid: 146b6b31f544a144fb2fb7fb58eb65a8,
-    type: 2}
-  playerStartLookEvent: {fileID: 11400000, guid: 40eb08a34f5007a4da7d7d9ff69c6360,
-    type: 2}
   mouseSensitivity:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 6e71ab9b62c429a4e883f12613225c4e, type: 2}
@@ -853,51 +898,6 @@ MonoBehaviour:
   player: {fileID: 1231766136}
   groundCheck: {fileID: 1862298171}
   finiteStateMachine: {fileID: 930298938}
---- !u!1 &1415758196
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1415758197}
-  - component: {fileID: 1415758198}
-  m_Layer: 0
-  m_Name: LookingLayer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1415758197
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415758196}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1099681915}
-  m_Father: {fileID: 930298938}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1415758198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415758196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6c7937124d94be4db5e5f3ee0c03cbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: {fileID: 11400000, guid: d5512c68868772f48afeb8b66acd6ee3, type: 2}
 --- !u!1 &1792414320
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,40 +983,6 @@ MonoBehaviour:
   - serializedDelegates:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1792414324}
-          m_TargetAssemblyTypeName: PlayerLookLogic, Assembly-CSharp
-          m_MethodName: StopLooking
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    events:
-    - {fileID: 11400000, guid: 146b6b31f544a144fb2fb7fb58eb65a8, type: 2}
-  - serializedDelegates:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1792414324}
-          m_TargetAssemblyTypeName: PlayerLookLogic, Assembly-CSharp
-          m_MethodName: StartLooking
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    events:
-    - {fileID: 11400000, guid: 40eb08a34f5007a4da7d7d9ff69c6360, type: 2}
-  - serializedDelegates:
-      m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 1792414325}
           m_TargetAssemblyTypeName: Gravity, Assembly-CSharp
           m_MethodName: ApplyGravity
@@ -1051,8 +1017,8 @@ MonoBehaviour:
   - serializedDelegates:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1792414325}
-          m_TargetAssemblyTypeName: GravityLogic, Assembly-CSharp
+        - m_Target: {fileID: 1792414323}
+          m_TargetAssemblyTypeName: PlayerMovementLogic, Assembly-CSharp
           m_MethodName: Jump
           m_Mode: 0
           m_Arguments:
@@ -1077,6 +1043,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d269553a49f25845a83544d6cdd075c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 653d6cd500bc7824280d86f222d00fb3, type: 2}
+    overrideValue: 0
 --- !u!114 &1792414324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,6 +1071,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b6af40d9a557540b0c5fec2457f50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 653d6cd500bc7824280d86f222d00fb3, type: 2}
+    overrideValue: 0
 --- !u!1 &1862298170
 GameObject:
   m_ObjectHideFlags: 0

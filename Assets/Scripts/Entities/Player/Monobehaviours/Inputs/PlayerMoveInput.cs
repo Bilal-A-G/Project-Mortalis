@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PlayerMoveInput : MonoBehaviour
 {
-    [Header("Ground Movement")]
     public EventObject movingEvent;
     public EventObject stopMovingEvent;
-
     public GenericReference<float> moveSpeed;
 
-    [Header("Jumping")]
     public EventObject jumpedEvent;
     public GenericReference<float> jumpHeight;
+    public GenericReference<float> gravity;
 
     public Transform finiteStateMachines;
 
@@ -34,7 +32,9 @@ public class PlayerMoveInput : MonoBehaviour
 
         List<ResultArguments> argumentsToPass = new List<ResultArguments>();
         ResultArguments argument = new ResultArguments();
+        ResultArguments argument2 = new ResultArguments();
         argumentsToPass.Add(argument);
+        argumentsToPass.Add(argument2);
 
         FiniteStateMachine currentFiniteStateMachine = finiteStateMachines.GetComponentInChildren<FiniteStateMachine>();
 
@@ -66,7 +66,10 @@ public class PlayerMoveInput : MonoBehaviour
             argument.floatValue = jumpHeight.GetValue();
             argument.objectValue = gameObject;
 
+            argument2.floatValue = gravity.GetValue();
+
             argumentsToPass[0] = argument;
+            argumentsToPass[1] = argument2;
 
             currentFiniteStateMachine.UpdateState(jumpedEvent, argumentsToPass);
         };
