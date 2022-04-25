@@ -5,16 +5,24 @@ using UnityEngine;
 public class PlayerMoveInput : MonoBehaviour
 {
     public EventObject movingEvent;
-    public EventObject stopMovingEvent;
+    public EventObject changeMoveDirectionEvent;
+    public EventObject stoppedEvent;
     public GenericReference<float> moveSpeed;
 
     public EventObject jumpedEvent;
     public GenericReference<float> jumpHeight;
     public GenericReference<float> gravity;
 
+    public EventObject runStartEvent;
+    public EventObject runStoppedEvent;
+
     public Transform finiteStateMachines;
 
     InputActions inputActions;
+
+    bool moving;
+    List<ResultArguments> argumentsToPass;
+    FiniteStateMachine currentFiniteStateMachine;
 
     private void OnEnable()
     {
@@ -30,26 +38,17 @@ public class PlayerMoveInput : MonoBehaviour
     {
         inputActions = new InputActions();
 
-        List<ResultArguments> argumentsToPass = new List<ResultArguments>();
+        argumentsToPass = new List<ResultArguments>();
         ResultArguments argument = new ResultArguments();
         ResultArguments argument2 = new ResultArguments();
         argumentsToPass.Add(argument);
         argumentsToPass.Add(argument2);
 
-        FiniteStateMachine currentFiniteStateMachine = finiteStateMachines.GetComponentInChildren<FiniteStateMachine>();
+        currentFiniteStateMachine = finiteStateMachines.GetComponentInChildren<FiniteStateMachine>();
 
         inputActions.PcMap.Movement.performed += ctx =>
         {
-            if(ctx.ReadValue<Vector2>() == Vector2.zero)
-            {
-                argument.objectValue = gameObject;
-                argument.floatValue = 0f;
-
-                argumentsToPass[0] = argument;
-
-                currentFiniteStateMachine.UpdateState(stopMovingEvent, argumentsToPass);
-            }
-            else
+            if(ctx.ReadValue<Vector2>() != Vector2.zero)
             {
                 argument.floatValue = moveSpeed.GetValue();
                 argument.vectorValue = ctx.ReadValue<Vector2>();
@@ -57,7 +56,15 @@ public class PlayerMoveInput : MonoBehaviour
 
                 argumentsToPass[0] = argument;
 
-                currentFiniteStateMachine.UpdateState(movingEvent, argumentsToPass);
+                moving = true;
+
+                currentFiniteStateMachine.UpdateState(changeMoveDirectionEvent, argumentsToPass);
+            }
+            else
+            {
+                moving = false;
+
+                currentFiniteStateMachine.UpdateState(stoppedEvent, argumentsToPass);
             }
         };
 
@@ -73,5 +80,24 @@ public class PlayerMoveInput : MonoBehaviour
 
             currentFiniteStateMachine.UpdateState(jumpedEvent, argumentsToPass);
         };
+
+        inputActions.PcMap.Run.started += ctx =>
+        {
+            currentFiniteStateMachine.UpdateState(runStartEvent, argumentsToPass);
+        };
+
+        inputActions.PcMap.Run.canceled += ctx =>
+        {
+            currentFiniteStateMachine.UpdateState(runStoppedEvent, argumentsToPass);
+        };
+    }
+
+
+    private void Update()
+    {
+        if (moving)
+        {
+            currentFiniteStateMachine.UpdateState(movingEvent, argumentsToPass);
+        }
     }
 }

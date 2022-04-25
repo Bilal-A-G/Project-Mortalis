@@ -11,23 +11,21 @@ public class PlayerMovementLogic : MonoBehaviour, IMovable
     Vector2 moveDirection;
     GameObject agent;
 
-    public void Move(ResultArguments[] arguments)
+    public void ChangeMoveDirection(ResultArguments[] arguments)
     {
+        moveDirection = arguments[0].vectorValue;
         characterController = arguments[0].objectValue.GetComponent<CharacterController>();
         moveSpeed = arguments[0].floatValue;
-        moveDirection = arguments[0].vectorValue;
         agent = arguments[0].objectValue;
+    }
+
+    public void Move(ResultArguments[] arguments)
+    {
+        characterController.Move(((agent.gameObject.transform.forward * moveDirection.y) + agent.gameObject.transform.right * moveDirection.x) * moveSpeed * Time.deltaTime);
     }
 
     public void Jump(ResultArguments[] arguments)
     {
         velocity.SetValue(arguments[0].floatValue * -arguments[1].floatValue);
-    }
-
-    void Update()
-    {
-        if(characterController == null) return;
-
-        characterController.Move(((agent.gameObject.transform.forward * moveDirection.y) + agent.gameObject.transform.right * moveDirection.x) * moveSpeed * Time.deltaTime);
     }
 }

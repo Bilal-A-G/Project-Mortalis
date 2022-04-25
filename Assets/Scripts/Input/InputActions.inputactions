@@ -9,7 +9,7 @@
                     "name": "Movement",
                     "type": "PassThrough",
                     "id": "aa0f1931-6bbf-44ac-a33b-47844345893d",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -24,18 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Escape",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "8a05e36b-00ec-4027-ad2d-32f3d367662d",
+                    "id": "a1b48782-1d0f-48cf-88b2-b682f90fee1c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "Run",
                     "type": "Button",
-                    "id": "a1b48782-1d0f-48cf-88b2-b682f90fee1c",
+                    "id": "bb993eb5-9742-4018-bd7d-e03eb3f516ca",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -111,23 +111,23 @@
                 },
                 {
                     "name": "",
-                    "id": "1944a6f6-6055-4965-9d60-5dfdbfa781e6",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardAndMouse",
-                    "action": "Escape",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a8f3b9ae-971c-4d6d-a12c-5cbc72e03025",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardAndMouse",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a6982177-37f2-4d99-87da-f9c67c789e38",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -815,7 +815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingEvent: {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
-  stopMovingEvent: {fileID: 11400000, guid: 32f487d87ba8ad6438b560fbd151704d, type: 2}
+  changeMoveDirectionEvent: {fileID: 11400000, guid: 32f487d87ba8ad6438b560fbd151704d,
+    type: 2}
+  stoppedEvent: {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
   moveSpeed:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
@@ -829,6 +831,8 @@ MonoBehaviour:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: c8f1b219d948b1649aeb51ce0c24ce78, type: 2}
     overrideValue: 0
+  runStartEvent: {fileID: 11400000, guid: dbba5afb218cdfc43b4d4b57bd070748, type: 2}
+  runStoppedEvent: {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
   finiteStateMachines: {fileID: 930298938}
 --- !u!143 &1231766142
 CharacterController:
@@ -962,7 +966,6 @@ MonoBehaviour:
           m_CallState: 2
     events:
     - {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
-    - {fileID: 11400000, guid: 32f487d87ba8ad6438b560fbd151704d, type: 2}
   - serializedDelegates:
       m_PersistentCalls:
         m_Calls:
@@ -1031,6 +1034,23 @@ MonoBehaviour:
           m_CallState: 2
     events:
     - {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
+  - serializedDelegates:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1792414323}
+          m_TargetAssemblyTypeName: PlayerMovementLogic, Assembly-CSharp
+          m_MethodName: ChangeMoveDirection
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    events:
+    - {fileID: 11400000, guid: 32f487d87ba8ad6438b560fbd151704d, type: 2}
 --- !u!114 &1792414323
 MonoBehaviour:
   m_ObjectHideFlags: 0
