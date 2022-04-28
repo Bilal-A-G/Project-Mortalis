@@ -532,6 +532,121 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 137.1, y: 0, z: 0}
+--- !u!1 &514476222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 514476223}
+  - component: {fileID: 514476224}
+  m_Layer: 0
+  m_Name: Looking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &514476223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514476222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1581511550}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &514476224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514476222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94c4f06bf5cfe44ebcf0dd2a995bacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLookEvent: {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
+  mouseDelta:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
+    overrideValue: {x: 0, y: 0}
+  finiteStateMachine: {fileID: 930298939}
+--- !u!1 &760473038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760473039}
+  - component: {fileID: 760473040}
+  - component: {fileID: 760473041}
+  m_Layer: 0
+  m_Name: Movement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760473039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760473038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1581511550}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760473040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760473038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef25201e3e99c34f8e69136c4dc984d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingEvent: {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
+  stoppedMovingEvent: {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
+  moveDirection:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
+    overrideValue: {x: 0, y: 0}
+  finiteStateMachines: {fileID: 930298939}
+--- !u!114 &760473041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760473038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89336743704c3141bfe572b35bbd7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runStartEvent: {fileID: 11400000, guid: dbba5afb218cdfc43b4d4b57bd070748, type: 2}
+  runStoppedEvent: {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
+  finiteStateMachines: {fileID: 930298939}
 --- !u!1 &868381522
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,9 +938,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1581511550}
-  - component: {fileID: 1581511551}
-  - component: {fileID: 1581511552}
-  - component: {fileID: 1581511553}
   m_Layer: 0
   m_Name: Inputs
   m_TagString: Untagged
@@ -843,79 +955,14 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 760473039}
+  - {fileID: 2041543670}
+  - {fileID: 514476223}
+  - {fileID: 2134507785}
   m_Father: {fileID: 1231766140}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1581511551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581511549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ef25201e3e99c34f8e69136c4dc984d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkingEvent: {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
-  stoppedWalkingEvent: {fileID: 11400000, guid: 6e6078b6509794f4f9bd9a23c038449d,
-    type: 2}
-  stoppedMovingEvent: {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
-  jumpedEvent: {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
-  runStartEvent: {fileID: 11400000, guid: dbba5afb218cdfc43b4d4b57bd070748, type: 2}
-  runStoppedEvent: {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
-  moveDirection:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
-    overrideValue: {x: 0, y: 0}
-  finiteStateMachines: {fileID: 930298938}
---- !u!114 &1581511552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581511549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f94c4f06bf5cfe44ebcf0dd2a995bacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLookEvent: {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
-  mouseDelta:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
-    overrideValue: {x: 0, y: 0}
-  finiteStateMachines: {fileID: 930298938}
---- !u!114 &1581511553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581511549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce60a261c90dca441a994ffe4e398119, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notGroundedEvent: {fileID: 11400000, guid: 258e8c8088bbefe46ad8ac4ca407813a, type: 2}
-  groundedEvent: {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
-  groundCheckRadius:
-    useOverride: 1
-    variableValue: {fileID: 0}
-    overrideValue: 1
-  groundLayer:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: 9c7b0f07bd70b6c4b83bf88363f50184, type: 2}
-    overrideValue:
-      serializedVersion: 2
-      m_Bits: 8
-  player: {fileID: 1231766136}
-  groundCheck: {fileID: 1862298171}
-  finiteStateMachine: {fileID: 930298938}
 --- !u!1 &1792414320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1074,7 @@ GameObject:
   - component: {fileID: 1835142808}
   - component: {fileID: 1835142810}
   - component: {fileID: 1835142809}
+  - component: {fileID: 1835142811}
   m_Layer: 0
   m_Name: MovementLogic
   m_TagString: Untagged
@@ -1060,18 +1108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d269553a49f25845a83544d6cdd075c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: 653d6cd500bc7824280d86f222d00fb3, type: 2}
-    overrideValue: 0
-  jumpHeight:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: 025288ed9dd94034da0d7f4eecc9bbc7, type: 2}
-    overrideValue: 0
-  gravity:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: c8f1b219d948b1649aeb51ce0c24ce78, type: 2}
-    overrideValue: 0
   moveSpeed:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
@@ -1122,8 +1158,8 @@ MonoBehaviour:
   - serializedDelegates:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1835142809}
-          m_TargetAssemblyTypeName: PlayerMovementLogic, Assembly-CSharp
+        - m_Target: {fileID: 1835142811}
+          m_TargetAssemblyTypeName: JumpLogic, Assembly-CSharp
           m_MethodName: Jump
           m_Mode: 1
           m_Arguments:
@@ -1140,7 +1176,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1835142809}
-          m_TargetAssemblyTypeName: PlayerMovementLogic, Assembly-CSharp
+          m_TargetAssemblyTypeName: MovementLogic, Assembly-CSharp
           m_MethodName: ChangeMoveSpeedToRun
           m_Mode: 1
           m_Arguments:
@@ -1157,7 +1193,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1835142809}
-          m_TargetAssemblyTypeName: PlayerMovementLogic, Assembly-CSharp
+          m_TargetAssemblyTypeName: MovementLogic, Assembly-CSharp
           m_MethodName: ChangeMoveSpeedToWalk
           m_Mode: 1
           m_Arguments:
@@ -1171,6 +1207,30 @@ MonoBehaviour:
     events:
     - {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
     - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
+--- !u!114 &1835142811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835142807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e11e53799ded5e44b90b14ebae61888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 653d6cd500bc7824280d86f222d00fb3, type: 2}
+    overrideValue: 0
+  jumpHeight:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 025288ed9dd94034da0d7f4eecc9bbc7, type: 2}
+    overrideValue: 0
+  gravity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: c8f1b219d948b1649aeb51ce0c24ce78, type: 2}
+    overrideValue: 0
 --- !u!1 &1862298170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,6 +1261,51 @@ Transform:
   m_Father: {fileID: 1231766140}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2041543669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041543670}
+  - component: {fileID: 2041543671}
+  m_Layer: 0
+  m_Name: Jumping
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2041543670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041543669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1581511550}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041543671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041543669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5335fcccd2869b4586ede30cc3c70cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpedEvent: {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
+  finiteStateMachines: {fileID: 930298939}
 --- !u!1 &2044969967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,3 +1522,61 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!1 &2134507784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134507785}
+  - component: {fileID: 2134507786}
+  m_Layer: 0
+  m_Name: Grounded
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2134507785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134507784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1581511550}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134507786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134507784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce60a261c90dca441a994ffe4e398119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notGroundedEvent: {fileID: 11400000, guid: 258e8c8088bbefe46ad8ac4ca407813a, type: 2}
+  groundedEvent: {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
+  groundCheckRadius:
+    useOverride: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
+  groundLayer:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 9c7b0f07bd70b6c4b83bf88363f50184, type: 2}
+    overrideValue:
+      serializedVersion: 2
+      m_Bits: 8
+  player: {fileID: 1231766136}
+  groundCheck: {fileID: 1862298171}
+  finiteStateMachine: {fileID: 930298939}

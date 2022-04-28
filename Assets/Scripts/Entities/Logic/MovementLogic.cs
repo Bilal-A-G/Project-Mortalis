@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementLogic : MonoBehaviour, IMovable
+public class MovementLogic : MonoBehaviour
 {
-    [Header("Jumping")]
-    public GenericReference<float> velocity;
-    public GenericReference<float> jumpHeight;
-    public GenericReference<float> gravity;
-
-    [Header("GroundMovement")]
     public GenericReference<float> moveSpeed;
     public GenericReference<float> walkSpeed;
     public GenericReference<float> runSpeed;
@@ -25,12 +19,7 @@ public class PlayerMovementLogic : MonoBehaviour, IMovable
 
     public void Move()
     {
-        characterController.Move(((agent.gameObject.transform.forward * moveDirection.GetValue().y) + agent.gameObject.transform.right * moveDirection.GetValue().x) * moveSpeed.GetValue() * Time.deltaTime);
-    }
-
-    public void Jump()
-    {
-        velocity.SetValue(jumpHeight.GetValue() * -gravity.GetValue());
+        characterController.Move(moveSpeed.GetValue() * Time.deltaTime * ((agent.gameObject.transform.forward * moveDirection.GetValue().y) + agent.gameObject.transform.right * moveDirection.GetValue().x));
     }
 
     public void ChangeMoveSpeedToRun() => moveSpeed.SetValue(runSpeed.GetValue());

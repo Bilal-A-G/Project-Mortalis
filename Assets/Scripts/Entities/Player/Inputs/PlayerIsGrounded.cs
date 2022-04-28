@@ -13,24 +13,17 @@ public class PlayerIsGrounded : MonoBehaviour
     public GameObject player;
 
     public Transform groundCheck;
-    public Transform finiteStateMachine;
-
-    FiniteStateMachine currentFiniteStateMachine;
-
-    private void Awake()
-    {
-        currentFiniteStateMachine = finiteStateMachine.GetComponentInChildren<FiniteStateMachine>();
-    }
+    public FiniteStateMachine finiteStateMachine;
 
     void FixedUpdate()
     {
         if (Physics.CheckSphere(groundCheck.position, groundCheckRadius.GetValue(), groundLayer.GetValue()))
         {
-            currentFiniteStateMachine.UpdateState(groundedEvent);
+            finiteStateMachine.UpdateState(groundedEvent);
         }
         else
         {
-            currentFiniteStateMachine.UpdateState(notGroundedEvent);
+            finiteStateMachine.UpdateState(notGroundedEvent);
         }
     }
 }
