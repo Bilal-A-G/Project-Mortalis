@@ -16,7 +16,7 @@
       "dependencies": {
         "com.unity.inputsystem": "1.2.0"
       },
-      "hash": "aaf3eaed0c25393f48ff42686b621be928726f31"
+      "hash": "c14da0caad268e4b9f9cedc50cad6301c315dd37"
     },
     "com.unity.collab-proxy": {
       "version": "1.15.13",

@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
-  m_Name: LookState
+  m_Script: {fileID: 11500000, guid: db3385bed6e36b14eb5fbb97273b0126, type: 3}
+  m_Name: PlayerStopWalking
   m_EditorClassIdentifier: 
-  stateActions:
-  - {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
-  stateTransitions: []

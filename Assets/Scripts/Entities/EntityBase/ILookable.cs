@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ILookable
 {
-    public void Look(ResultArguments[] arguments);
+    public void Look();
 }

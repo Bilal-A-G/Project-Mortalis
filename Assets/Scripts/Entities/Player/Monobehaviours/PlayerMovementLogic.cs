@@ -4,28 +4,36 @@ using UnityEngine;
 
 public class PlayerMovementLogic : MonoBehaviour, IMovable
 {
+    [Header("Jumping")]
     public GenericReference<float> velocity;
+    public GenericReference<float> jumpHeight;
+    public GenericReference<float> gravity;
+
+    [Header("GroundMovement")]
+    public GenericReference<float> moveSpeed;
+    public GenericReference<float> walkSpeed;
+    public GenericReference<float> runSpeed;
+    public GenericReference<Vector2> moveDirection;
+    public GameObject agent;
 
     CharacterController characterController;
-    float moveSpeed;
-    Vector2 moveDirection;
-    GameObject agent;
 
-    public void ChangeMoveDirection(ResultArguments[] arguments)
+    private void Awake()
     {
-        moveDirection = arguments[0].vectorValue;
-        characterController = arguments[0].objectValue.GetComponent<CharacterController>();
-        moveSpeed = arguments[0].floatValue;
-        agent = arguments[0].objectValue;
+        characterController = agent.GetComponent<CharacterController>();
     }
 
-    public void Move(ResultArguments[] arguments)
+    public void Move()
     {
-        characterController.Move(((agent.gameObject.transform.forward * moveDirection.y) + agent.gameObject.transform.right * moveDirection.x) * moveSpeed * Time.deltaTime);
+        characterController.Move(((agent.gameObject.transform.forward * moveDirection.GetValue().y) + agent.gameObject.transform.right * moveDirection.GetValue().x) * moveSpeed.GetValue() * Time.deltaTime);
     }
 
-    public void Jump(ResultArguments[] arguments)
+    public void Jump()
     {
-        velocity.SetValue(arguments[0].floatValue * -arguments[1].floatValue);
+        velocity.SetValue(jumpHeight.GetValue() * -gravity.GetValue());
     }
+
+    public void ChangeMoveSpeedToRun() => moveSpeed.SetValue(runSpeed.GetValue());
+
+    public void ChangeMoveSpeedToWalk() => moveSpeed.SetValue(walkSpeed.GetValue());
 }

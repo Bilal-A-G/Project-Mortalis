@@ -1,5 +1,5 @@
 
 public interface IMovable
 {
-    public void Move(ResultArguments[] arguments);
+    public void Move();
 }

@@ -10,7 +10,6 @@ public class PlayerIsGrounded : MonoBehaviour
     public GenericReference<float> groundCheckRadius;
     public GenericReference<LayerMask> groundLayer;
 
-    public GenericReference<float> gravity;
     public GameObject player;
 
     public Transform groundCheck;
@@ -18,32 +17,20 @@ public class PlayerIsGrounded : MonoBehaviour
 
     FiniteStateMachine currentFiniteStateMachine;
 
-    List<ResultArguments> argumentsToPass;
-    ResultArguments argument;
-
-    private void Start()
+    private void Awake()
     {
         currentFiniteStateMachine = finiteStateMachine.GetComponentInChildren<FiniteStateMachine>();
-
-        argumentsToPass = new List<ResultArguments>();
-        argument = new ResultArguments();
-        argumentsToPass.Add(argument);
     }
 
     void FixedUpdate()
     {
         if (Physics.CheckSphere(groundCheck.position, groundCheckRadius.GetValue(), groundLayer.GetValue()))
         {
-            currentFiniteStateMachine.UpdateState(groundedEvent, argumentsToPass);
+            currentFiniteStateMachine.UpdateState(groundedEvent);
         }
         else
         {
-            argument.floatValue = gravity.GetValue();
-            argument.objectValue = player;
-
-            argumentsToPass[0] = argument;
-
-            currentFiniteStateMachine.UpdateState(notGroundedEvent, argumentsToPass);
+            currentFiniteStateMachine.UpdateState(notGroundedEvent);
         }
     }
 }

@@ -5,25 +5,27 @@ using UnityEngine;
 public class GravityLogic : MonoBehaviour
 {
     public GenericReference<float> velocity;
+    public GenericReference<float> gravity;
+    public GameObject agent;
 
-    GameObject agent;
     CharacterController controller;
-    float gravity;
 
-    public void ApplyGravity(ResultArguments[] arguments)
+    private void Awake()
     {
-        agent = arguments[0].objectValue;
-        gravity = arguments[0].floatValue;
+        controller = agent.GetComponent<CharacterController>();
+    }
 
+    public void ApplyGravity()
+    {
         if(controller == null)
         {
             controller = agent.GetComponent<CharacterController>();
         }
 
-        velocity.SetValue(velocity.GetValue() + gravity * 2 * Time.deltaTime);
+        velocity.SetValue(velocity.GetValue() + gravity.GetValue() * 2 * Time.deltaTime);
     }
 
-    public void StopApplyingGravity(ResultArguments[] arguments)
+    public void StopApplyingGravity()
     {
         if (velocity.GetValue() > 0)
         {
