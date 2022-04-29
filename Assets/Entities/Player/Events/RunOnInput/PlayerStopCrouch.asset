@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db3385bed6e36b14eb5fbb97273b0126, type: 3}
-  m_Name: PlayerStartCrouching
+  m_Name: PlayerStopCrouch
   m_EditorClassIdentifier: 

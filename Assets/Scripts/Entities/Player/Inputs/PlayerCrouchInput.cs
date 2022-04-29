@@ -6,6 +6,7 @@ public class PlayerCrouchInput : BasePlayerInput
 {
     public EventObject crouchStartedEvent;
     public EventObject crouchStoppedEvent;
+    public EventObject notCrouchingEvent;
 
     public FiniteStateMachine currentFiniteStateMachine;
 
@@ -24,6 +25,7 @@ public class PlayerCrouchInput : BasePlayerInput
         inputActions.PcMap.Crouch.canceled += ctx =>
         {
             crouching = false;
+            currentFiniteStateMachine.UpdateState(crouchStoppedEvent);
         };
     }
 
@@ -31,7 +33,7 @@ public class PlayerCrouchInput : BasePlayerInput
     {
         if (!crouching)
         {
-            currentFiniteStateMachine.UpdateState(crouchStoppedEvent);
+            currentFiniteStateMachine.UpdateState(notCrouchingEvent);
         }
     }
 }

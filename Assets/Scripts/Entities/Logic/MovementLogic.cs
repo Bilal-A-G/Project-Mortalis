@@ -7,6 +7,7 @@ public class MovementLogic : MonoBehaviour
     public GenericReference<float> moveSpeed;
     public GenericReference<float> walkSpeed;
     public GenericReference<float> runSpeed;
+    public GenericReference<float> crouchSpeed;
     public GenericReference<Vector2> moveDirection;
     public GameObject agent;
 
@@ -25,4 +26,6 @@ public class MovementLogic : MonoBehaviour
     public void ChangeMoveSpeedToRun() => moveSpeed.SetValue(runSpeed.GetValue());
 
     public void ChangeMoveSpeedToWalk() => moveSpeed.SetValue(walkSpeed.GetValue());
+
+    public void ChangeMoveSpeedToCrouch() => moveSpeed.SetValue(crouchSpeed.GetValue());
 }

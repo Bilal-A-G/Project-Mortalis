@@ -663,6 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crouchStartedEvent: {fileID: 11400000, guid: 020856c243e34c5419dd56c888728fe7, type: 2}
   crouchStoppedEvent: {fileID: 11400000, guid: 329089e67ff526b42b39b4f8c89fc994, type: 2}
+  notCrouchingEvent: {fileID: 11400000, guid: 98c081dfa06a4184f82adaee95dc1201, type: 2}
   currentFiniteStateMachine: {fileID: 930298939}
 --- !u!114 &760473043
 MonoBehaviour:
@@ -908,7 +909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958429891}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5.23, z: 3.31}
+  m_LocalPosition: {x: 0, y: 5.23, z: 11.36}
   m_LocalScale: {x: 6.664, y: 7.1502, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1093,7 +1094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482990688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.91, z: 0}
+  m_LocalPosition: {x: 0, y: 0.597, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1231766140}
@@ -1290,6 +1291,10 @@ MonoBehaviour:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 3ba2ebd47b6496c48bf498d11b6292dd, type: 2}
     overrideValue: 0
+  crouchSpeed:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 1921b3979a678b64ca9a538ebb781666, type: 2}
+    overrideValue: 0
   moveDirection:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
@@ -1377,6 +1382,24 @@ MonoBehaviour:
     events:
     - {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
     - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
+    - {fileID: 11400000, guid: 329089e67ff526b42b39b4f8c89fc994, type: 2}
+  - serializedDelegates:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1835142809}
+          m_TargetAssemblyTypeName: MovementLogic, Assembly-CSharp
+          m_MethodName: ChangeMoveSpeedToCrouch
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    events:
+    - {fileID: 11400000, guid: 020856c243e34c5419dd56c888728fe7, type: 2}
 --- !u!114 &1835142811
 MonoBehaviour:
   m_ObjectHideFlags: 0
