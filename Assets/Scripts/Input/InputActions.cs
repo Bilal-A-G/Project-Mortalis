@@ -62,6 +62,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Crouch"",
+                    ""type"": ""Button"",
+                    ""id"": ""fbfd07a9-ce81-4532-811f-8becb6eff6d9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -152,6 +161,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Run"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ff69bfae-e065-4c1f-939c-e7010f978d0a"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -181,6 +201,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PcMap_Look = m_PcMap.FindAction("Look", throwIfNotFound: true);
         m_PcMap_Jump = m_PcMap.FindAction("Jump", throwIfNotFound: true);
         m_PcMap_Run = m_PcMap.FindAction("Run", throwIfNotFound: true);
+        m_PcMap_Crouch = m_PcMap.FindAction("Crouch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -244,6 +265,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PcMap_Look;
     private readonly InputAction m_PcMap_Jump;
     private readonly InputAction m_PcMap_Run;
+    private readonly InputAction m_PcMap_Crouch;
     public struct PcMapActions
     {
         private @InputActions m_Wrapper;
@@ -252,6 +274,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_PcMap_Look;
         public InputAction @Jump => m_Wrapper.m_PcMap_Jump;
         public InputAction @Run => m_Wrapper.m_PcMap_Run;
+        public InputAction @Crouch => m_Wrapper.m_PcMap_Crouch;
         public InputActionMap Get() { return m_Wrapper.m_PcMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -273,6 +296,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Run.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnRun;
                 @Run.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnRun;
                 @Run.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnRun;
+                @Crouch.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnCrouch;
+                @Crouch.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnCrouch;
+                @Crouch.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnCrouch;
             }
             m_Wrapper.m_PcMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -289,6 +315,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Run.started += instance.OnRun;
                 @Run.performed += instance.OnRun;
                 @Run.canceled += instance.OnRun;
+                @Crouch.started += instance.OnCrouch;
+                @Crouch.performed += instance.OnCrouch;
+                @Crouch.canceled += instance.OnCrouch;
             }
         }
     }
@@ -308,5 +337,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
+        void OnCrouch(InputAction.CallbackContext context);
     }
 }

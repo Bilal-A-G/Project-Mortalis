@@ -15,6 +15,8 @@ MonoBehaviour:
   stateActions:
   - {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
   stateTransitions:
+  - action: {fileID: 11400000, guid: 020856c243e34c5419dd56c888728fe7, type: 2}
+    stateObject: {fileID: 11400000, guid: c296b5aed3a218340b22be0e3ae3ef23, type: 2}
   - action: {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
     stateObject: {fileID: 11400000, guid: 0f05c4f6011c8d8499ac93d2c5dc5f20, type: 2}
   stateChild: {fileID: 11400000, guid: bbb75ce20d939984d9670a2411853cdf, type: 2}
