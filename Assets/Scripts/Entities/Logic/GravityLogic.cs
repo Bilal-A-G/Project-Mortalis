@@ -17,12 +17,9 @@ public class GravityLogic : MonoBehaviour
 
     public void ApplyGravity()
     {
-        if(controller == null)
-        {
-            controller = agent.GetComponent<CharacterController>();
-        }
-
         velocity.SetValue(velocity.GetValue() + gravity.GetValue() * 2 * Time.deltaTime);
+
+        controller.Move(Time.deltaTime * velocity.GetValue() * -agent.transform.up);
     }
 
     public void StopApplyingGravity()
@@ -31,11 +28,6 @@ public class GravityLogic : MonoBehaviour
         {
             velocity.SetValue(0);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        if (controller == null) return;
 
         controller.Move(Time.deltaTime * velocity.GetValue() * -agent.transform.up);
     }
