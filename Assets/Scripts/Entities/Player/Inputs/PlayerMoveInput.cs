@@ -25,7 +25,7 @@ public class PlayerMoveInput : BasePlayerInput
             }
             else
             {
-                finiteStateMachines.UpdateState(stoppedMovingEvent);
+                finiteStateMachines.UpdateState(stoppedMovingEvent, callingObject);
                 moving = false;
             }
         };
@@ -35,6 +35,6 @@ public class PlayerMoveInput : BasePlayerInput
     {
         if (!moving) return;
 
-        finiteStateMachines.UpdateState(movingEvent);
+        finiteStateMachines.UpdateState(movingEvent, callingObject);
     }
 }

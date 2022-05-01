@@ -15,12 +15,12 @@ public class PlayerRunInput : BasePlayerInput
 
         inputActions.PcMap.Run.started += ctx =>
         {
-            finiteStateMachines.UpdateState(runStartEvent);
+            finiteStateMachines.UpdateState(runStartEvent, callingObject);
         };
 
         inputActions.PcMap.Run.canceled += ctx =>
         {
-            finiteStateMachines.UpdateState(runStoppedEvent);
+            finiteStateMachines.UpdateState(runStoppedEvent, callingObject);
         };
     }
 }

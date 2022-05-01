@@ -19,13 +19,13 @@ public class PlayerCrouchInput : BasePlayerInput
         inputActions.PcMap.Crouch.started += ctx => 
         {
             crouching = true;
-            currentFiniteStateMachine.UpdateState(crouchStartedEvent);
+            currentFiniteStateMachine.UpdateState(crouchStartedEvent, callingObject);
         };
 
         inputActions.PcMap.Crouch.canceled += ctx =>
         {
             crouching = false;
-            currentFiniteStateMachine.UpdateState(crouchStoppedEvent);
+            currentFiniteStateMachine.UpdateState(crouchStoppedEvent, callingObject);
         };
     }
 
@@ -33,7 +33,7 @@ public class PlayerCrouchInput : BasePlayerInput
     {
         if (!crouching)
         {
-            currentFiniteStateMachine.UpdateState(notCrouchingEvent);
+            currentFiniteStateMachine.UpdateState(notCrouchingEvent, callingObject);
         }
     }
 }

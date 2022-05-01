@@ -581,6 +581,7 @@ MonoBehaviour:
     variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
     overrideValue: {x: 0, y: 0}
   finiteStateMachine: {fileID: 930298939}
+  callingObject: {fileID: 1231766136}
 --- !u!1 &760473038
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +635,7 @@ MonoBehaviour:
     variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
     overrideValue: {x: 0, y: 0}
   finiteStateMachines: {fileID: 930298939}
+  callingObject: {fileID: 1231766136}
 --- !u!114 &760473041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -649,6 +651,7 @@ MonoBehaviour:
   runStartEvent: {fileID: 11400000, guid: dbba5afb218cdfc43b4d4b57bd070748, type: 2}
   runStoppedEvent: {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
   finiteStateMachines: {fileID: 930298939}
+  callingObject: {fileID: 1231766136}
 --- !u!114 &760473042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +668,7 @@ MonoBehaviour:
   crouchStoppedEvent: {fileID: 11400000, guid: 329089e67ff526b42b39b4f8c89fc994, type: 2}
   notCrouchingEvent: {fileID: 11400000, guid: 98c081dfa06a4184f82adaee95dc1201, type: 2}
   currentFiniteStateMachine: {fileID: 930298939}
+  callingObject: {fileID: 1231766136}
 --- !u!114 &760473043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,6 +695,7 @@ MonoBehaviour:
       m_Bits: 0
   checkEmpty: {fileID: 1482990689}
   finiteStateMachine: {fileID: 930298939}
+  callingObject: {fileID: 1231766136}
 --- !u!1 &868381522
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +780,7 @@ MonoBehaviour:
           m_CallState: 2
     events:
     - {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
+  parentObject: {fileID: 1231766136}
 --- !u!1 &930298937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1213,6 +1219,7 @@ MonoBehaviour:
           m_CallState: 2
     events:
     - {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
+  parentObject: {fileID: 1231766136}
 --- !u!114 &1792414325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1400,6 +1407,7 @@ MonoBehaviour:
           m_CallState: 2
     events:
     - {fileID: 11400000, guid: 020856c243e34c5419dd56c888728fe7, type: 2}
+  parentObject: {fileID: 1231766136}
 --- !u!114 &1835142811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,7 +1432,6 @@ MonoBehaviour:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: c8f1b219d948b1649aeb51ce0c24ce78, type: 2}
     overrideValue: 0
-  agent: {fileID: 1231766136}
 --- !u!1 &1862298170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpedEvent: {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
   finiteStateMachines: {fileID: 930298939}
+  callingObject: {fileID: 1231766136}
 --- !u!1 &2044969967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,3 +1781,4 @@ MonoBehaviour:
       m_Bits: 0
   checkEmpty: {fileID: 1862298171}
   finiteStateMachine: {fileID: 930298939}
+  callingObject: {fileID: 1231766136}

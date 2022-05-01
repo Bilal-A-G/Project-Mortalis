@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class BasePlayerInput : MonoBehaviour
 {
     protected InputActions inputActions;
+    public GameObject callingObject;
 
     private void OnEnable()
     {

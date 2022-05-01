@@ -13,15 +13,17 @@ public class CheckSphereInput : MonoBehaviour
     public Transform checkEmpty;
     public FiniteStateMachine finiteStateMachine;
 
+    public GameObject callingObject;
+
     void FixedUpdate()
     {
         if (Physics.CheckSphere(checkEmpty.position, checkRadius.GetValue(), checkLayer.GetValue()))
         {
-            finiteStateMachine.UpdateState(contactingEvent);
+            finiteStateMachine.UpdateState(contactingEvent, callingObject);
         }
         else
         {
-            finiteStateMachine.UpdateState(notContactingEvent);
+            finiteStateMachine.UpdateState(notContactingEvent, callingObject);
         }
     }
 }
