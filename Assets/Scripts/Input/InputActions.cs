@@ -71,6 +71,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FireGun"",
+                    ""type"": ""Button"",
+                    ""id"": ""7861c130-d89e-45e3-b870-8274e23ec9bf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +181,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c21e331-adbe-4202-a7ed-fead7674f31c"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""FireGun"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -202,6 +222,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_PcMap_Jump = m_PcMap.FindAction("Jump", throwIfNotFound: true);
         m_PcMap_Run = m_PcMap.FindAction("Run", throwIfNotFound: true);
         m_PcMap_Crouch = m_PcMap.FindAction("Crouch", throwIfNotFound: true);
+        m_PcMap_FireGun = m_PcMap.FindAction("FireGun", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -266,6 +287,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_PcMap_Jump;
     private readonly InputAction m_PcMap_Run;
     private readonly InputAction m_PcMap_Crouch;
+    private readonly InputAction m_PcMap_FireGun;
     public struct PcMapActions
     {
         private @InputActions m_Wrapper;
@@ -275,6 +297,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_PcMap_Jump;
         public InputAction @Run => m_Wrapper.m_PcMap_Run;
         public InputAction @Crouch => m_Wrapper.m_PcMap_Crouch;
+        public InputAction @FireGun => m_Wrapper.m_PcMap_FireGun;
         public InputActionMap Get() { return m_Wrapper.m_PcMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -299,6 +322,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Crouch.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnCrouch;
                 @Crouch.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnCrouch;
                 @Crouch.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnCrouch;
+                @FireGun.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnFireGun;
+                @FireGun.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnFireGun;
+                @FireGun.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnFireGun;
             }
             m_Wrapper.m_PcMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -318,6 +344,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Crouch.started += instance.OnCrouch;
                 @Crouch.performed += instance.OnCrouch;
                 @Crouch.canceled += instance.OnCrouch;
+                @FireGun.started += instance.OnFireGun;
+                @FireGun.performed += instance.OnFireGun;
+                @FireGun.canceled += instance.OnFireGun;
             }
         }
     }
@@ -338,5 +367,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
+        void OnFireGun(InputAction.CallbackContext context);
     }
 }

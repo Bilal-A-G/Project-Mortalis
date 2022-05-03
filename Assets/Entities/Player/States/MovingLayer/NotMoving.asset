@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
   m_Name: NotMoving
   m_EditorClassIdentifier: 
-  stateActions:
-  - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
+  stateActions: []
   stateTransitions:
   - action: {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
     stateObject: {fileID: 11400000, guid: 80e82c5e0e4bc2f4781ee98eb0203c99, type: 2}
