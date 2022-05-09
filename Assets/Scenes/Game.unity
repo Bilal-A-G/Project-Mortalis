@@ -666,7 +666,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
   crouchStartedEvent: {fileID: 11400000, guid: 020856c243e34c5419dd56c888728fe7, type: 2}
-  crouchStoppedEvent: {fileID: 11400000, guid: 329089e67ff526b42b39b4f8c89fc994, type: 2}
   notCrouchingEvent: {fileID: 11400000, guid: 98c081dfa06a4184f82adaee95dc1201, type: 2}
   currentFiniteStateMachine: {fileID: 930298939}
 --- !u!114 &760473043
@@ -1137,7 +1136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482990688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.597, z: 0}
+  m_LocalPosition: {x: 0, y: 2.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1231766140}
@@ -1326,7 +1325,7 @@ MonoBehaviour:
   moveSpeed:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
-    overrideValue: 0
+    overrideValue: 2
   walkSpeed:
     useOverride: 0
     variableValue: {fileID: 11400000, guid: 67f94494497eb164e9f16376a98f4b91, type: 2}
@@ -1426,7 +1425,7 @@ MonoBehaviour:
     events:
     - {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
     - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
-    - {fileID: 11400000, guid: 329089e67ff526b42b39b4f8c89fc994, type: 2}
+    - {fileID: 11400000, guid: 98c081dfa06a4184f82adaee95dc1201, type: 2}
   - serializedDelegates:
       m_PersistentCalls:
         m_Calls:
@@ -1625,7 +1624,7 @@ Transform:
   m_GameObject: {fileID: 2044969967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5489998, z: -0.165}
-  m_LocalScale: {x: 1, y: 0.6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1126095308}
   m_Father: {fileID: 1231766140}
