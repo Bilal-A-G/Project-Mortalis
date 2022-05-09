@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunFireLogic : MonoBehaviour
+public class GunShootLogic : MonoBehaviour
 {
     public GenericReference<float> damage;
     public GenericReference<float> maxRange;

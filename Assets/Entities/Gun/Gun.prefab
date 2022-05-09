@@ -89,7 +89,7 @@ MonoBehaviour:
     overrideValue:
       serializedVersion: 2
       m_Bits: 0
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 6520972235912593892}
 --- !u!1 &6520972234263451862
 GameObject:
   m_ObjectHideFlags: 0
