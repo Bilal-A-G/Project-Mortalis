@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: Grounded
   m_EditorClassIdentifier: 
   stateActions:
-  - {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
-  - {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
+  - translate: 0
+    isFolded: 1
+    translateTo: {fileID: 0}
+    action: {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
+  - translate: 0
+    isFolded: 1
+    translateTo: {fileID: 0}
+    action: {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
   stateTransitions:
   - action: {fileID: 11400000, guid: 258e8c8088bbefe46ad8ac4ca407813a, type: 2}
     stateObject: {fileID: 11400000, guid: b6b235ca06bdb48419943fb44dfdb373, type: 2}

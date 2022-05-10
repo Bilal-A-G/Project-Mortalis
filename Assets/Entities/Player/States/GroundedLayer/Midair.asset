@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Midair
   m_EditorClassIdentifier: 
   stateActions:
-  - {fileID: 11400000, guid: 258e8c8088bbefe46ad8ac4ca407813a, type: 2}
+  - translate: 0
+    isFolded: 1
+    translateTo: {fileID: 0}
+    action: {fileID: 11400000, guid: 258e8c8088bbefe46ad8ac4ca407813a, type: 2}
   stateTransitions:
   - action: {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
     stateObject: {fileID: 11400000, guid: 44133d1a36ebce54292cf32553797da8, type: 2}

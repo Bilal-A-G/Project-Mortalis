@@ -9,14 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379d305a604a3234fb746cbe32829818, type: 3}
+  m_Script: {fileID: 11500000, guid: 93491874fdd46d04bb581a153511b6a2, type: 3}
   m_Name: ChangeSpeedToWalk
   m_EditorClassIdentifier: 
-  floatToChange:
+  floatToSetTo:
     useOverride: 0
-    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
-    overrideValue: 0
-  floatToChangeTo:
-    useOverride: 0
+    isFolded: 1
     variableValue: {fileID: 11400000, guid: 67f94494497eb164e9f16376a98f4b91, type: 2}
+    overrideValue: 0
+  floatToSet:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
     overrideValue: 0
