@@ -673,6 +673,7 @@ MonoBehaviour:
   playerLookEvent: {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
   mouseDelta:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
     overrideValue: {x: 0, y: 0}
   finiteStateMachine: {fileID: 930298939}
@@ -727,6 +728,7 @@ MonoBehaviour:
   stoppedMovingEvent: {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
   moveDirection:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
     overrideValue: {x: 0, y: 0}
   finiteStateMachines: {fileID: 930298939}
@@ -778,10 +780,12 @@ MonoBehaviour:
   contactingEvent: {fileID: 11400000, guid: f30c467888cc5a64097e789429cd8fa5, type: 2}
   checkRadius:
     useOverride: 1
+    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: 0.5
   checkLayer:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 9c7b0f07bd70b6c4b83bf88363f50184, type: 2}
     overrideValue:
       serializedVersion: 2
@@ -1958,10 +1962,12 @@ MonoBehaviour:
   contactingEvent: {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
   checkRadius:
     useOverride: 1
+    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: 1
   checkLayer:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 9c7b0f07bd70b6c4b83bf88363f50184, type: 2}
     overrideValue:
       serializedVersion: 2

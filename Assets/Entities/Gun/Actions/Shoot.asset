@@ -14,19 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 14d14f4cc54c14b4aaaca2ac8a6e8e34, type: 2}
     overrideValue: 0
   maxRange:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: f93d04e13e67286409d2b097f4824879, type: 2}
     overrideValue: 0
   layerToHit:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: acb69b04950582d4c99dcb1d1410f756, type: 2}
     overrideValue:
       serializedVersion: 2
       m_Bits: 0
   firePointName:
     useOverride: 1
+    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: FirePoint

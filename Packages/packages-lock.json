@@ -7,7 +7,7 @@
       "dependencies": {
         "com.unity.inputsystem": "1.2.0"
       },
-      "hash": "1303484d19b8d1030ebc6d1bde708e2ec98c74a0"
+      "hash": "bc887a2c7ecf76fc9d40cd3a8c1741afb2422771"
     },
     "com.bilal.super-extensible-fsm-event-system": {
       "version": "git@github.com:Bilal-A-G/Super-Extensible-FSM-Event-System.git",
@@ -16,7 +16,7 @@
       "dependencies": {
         "com.unity.inputsystem": "1.2.0"
       },
-      "hash": "54b46759673f2399532a13432ce3416fcd1593aa"
+      "hash": "5e870b4e8e4031b03af2ecc38e6e097f2bbb1fac"
     },
     "com.unity.collab-proxy": {
       "version": "1.15.13",
