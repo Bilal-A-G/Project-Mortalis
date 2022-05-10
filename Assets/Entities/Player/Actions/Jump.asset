@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6785c35ebb2dc6340badadeeffb5e15b, type: 3}
+  m_Name: Jump
+  m_EditorClassIdentifier: 
+  velocity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 653d6cd500bc7824280d86f222d00fb3, type: 2}
+    overrideValue: 0
+  jumpHeight:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 025288ed9dd94034da0d7f4eecc9bbc7, type: 2}
+    overrideValue: 0
+  gravity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: c8f1b219d948b1649aeb51ce0c24ce78, type: 2}
+    overrideValue: 0

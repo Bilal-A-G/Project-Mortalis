@@ -1,57 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2158977363660498293
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2158977363660498292}
-  - component: {fileID: 2158977363660498291}
-  m_Layer: 0
-  m_Name: FiringAnimations
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2158977363660498292
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2158977363660498293}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6520972235534015125}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2158977363660498291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2158977363660498293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8737fae6ae94d246938cade87acd86f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventAnimationPairs:
-  - events:
-    - {fileID: 11400000, guid: 770f7b3367a194844810abd09a14ed03, type: 2}
-    animations:
-    - Begin slide animation
-    - Eject shell casing
-    - Do recoil
-    - End slide animation
-  parentObject: {fileID: 6520972235554660569}
 --- !u!1 &6520972234167369357
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6520972234167369356}
   - component: {fileID: 6520972234167369355}
-  - component: {fileID: 6520972234167369354}
   m_Layer: 0
-  m_Name: FiringLogic
+  m_Name: Firing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,50 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedDelegateEventPairs:
   - serializedDelegates:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6520972234167369354}
-          m_TargetAssemblyTypeName: GunFireLogic, Assembly-CSharp
-          m_MethodName: Fire
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+    - {fileID: 11400000, guid: ee2daaa8b828d8d42b27028bfdb6198b, type: 2}
     events:
     - {fileID: 11400000, guid: 770f7b3367a194844810abd09a14ed03, type: 2}
   parentObject: {fileID: 6520972235554660569}
---- !u!114 &6520972234167369354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6520972234167369357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca22532a56c00414ea8a4933851db0d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: 14d14f4cc54c14b4aaaca2ac8a6e8e34, type: 2}
-    overrideValue: 24
-  maxRange:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: f93d04e13e67286409d2b097f4824879, type: 2}
-    overrideValue: 5
-  layerToHit:
-    useOverride: 0
-    variableValue: {fileID: 11400000, guid: acb69b04950582d4c99dcb1d1410f756, type: 2}
-    overrideValue:
-      serializedVersion: 2
-      m_Bits: 0
-  firePoint: {fileID: 6520972235912593892}
 --- !u!1 &6520972234263451862
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6520972235534015125}
   m_Layer: 0
-  m_Name: Logic
+  m_Name: Actions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +152,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6520972234167369356}
-  - {fileID: 2158977363660498292}
   m_Father: {fileID: 6520972235554660568}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c45e4fa0f978804ab6101b3333781df, type: 3}
+  m_Name: Look
+  m_EditorClassIdentifier: 
+  currentMouseDelta:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
+    overrideValue: {x: 0, y: 0}
+  mouseSensitivity:
+    useOverride: 0
+    variableValue: {fileID: 11400000, guid: 6e71ab9b62c429a4e883f12613225c4e, type: 2}
+    overrideValue: 0
+  cameraName:
+    useOverride: 1
+    variableValue: {fileID: 0}
+    overrideValue: Main Camera
