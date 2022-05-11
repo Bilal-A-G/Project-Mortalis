@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4de4055d6ad25540a28555e7a13757d, type: 3}
+  m_Name: MoveSlide
+  m_EditorClassIdentifier: 
+  onBoltReachEnd: {fileID: 0}
+  onBoltStartMove: {fileID: 11400000, guid: 78643adb5b990ab4283bfd7a8f6cb7f0, type: 2}
+  localBoltEndPosition:
+    useOverride: 1
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: {x: -0.00882, y: 0.01322, z: 0.00039}
+  boltPath1:
+    useOverride: 1
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: Model
+  boltPath2:
+    useOverride: 1
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: Armature
+  boltPath3:
+    useOverride: 1
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: Handle
+  boltPath4:
+    useOverride: 1
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: Slide
+  speed:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0.1
+  tolorence:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0.0005
+  easingFunction:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.08673096
+        inSlope: 0.40286255
+        outSlope: 0.40286255
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.4895935
+        inSlope: 0.40286255
+        outSlope: 0.40286255
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
