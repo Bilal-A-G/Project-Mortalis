@@ -44,36 +44,13 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: 0.1
+  kickbackSpeed:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: 0
   tolorence:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: 0.0005
-  easingFunction:
-    useOverride: 1
-    isFolded: 1
-    variableValue: {fileID: 0}
-    overrideValue:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.08673096
-        inSlope: 0.40286255
-        outSlope: 0.40286255
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0.4895935
-        inSlope: 0.40286255
-        outSlope: 0.40286255
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
