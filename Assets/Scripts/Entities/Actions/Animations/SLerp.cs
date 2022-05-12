@@ -41,7 +41,7 @@ public class SLerp : ActionBase
     {
         if (!debounce) return;
 
-        lerpObject.transform.localPosition = Vector3.Slerp(lerpObject.transform.localPosition, localEndPosition.GetValue(), lerpSpeed.GetValue());
+        lerpObject.transform.localPosition = Vector3.Slerp(lerpObject.transform.localPosition, localEndPosition.GetValue(), lerpSpeed.GetValue() * Time.deltaTime);
         lerpObject.transform.Rotate(lerpObject.transform.up, rotationSpeed.GetValue());
 
         if ((localEndPosition.GetValue() - lerpObject.transform.localPosition).magnitude <= tolorence.GetValue())

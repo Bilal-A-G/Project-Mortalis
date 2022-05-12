@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1863.5898, g: 1876.1865, b: 3037.6406, a: 1}
+  m_IndirectSpecularColor: {r: 1863.5098, g: 1876.0654, b: 3037.6328, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 5a2e2ea2bbb65c94991102dd295d47ce,
+  m_LightingDataAsset: {fileID: 112000000, guid: 27dde3f2eeeee17409a6557923313cb2,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 33c6ec1207aa94d4ebb2906bdd3cd5f8,
     type: 2}
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_SlopeBias: 0.5
   m_ShadowUpdateMode: 0
   m_AlwaysDrawDynamicShadows: 0
-  m_UpdateShadowOnLightMovement: 1
+  m_UpdateShadowOnLightMovement: 0
   m_CachedShadowTranslationThreshold: 0.01
   m_CachedShadowAngularThreshold: 0.5
   m_BarnDoorAngle: 90
@@ -509,7 +509,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
