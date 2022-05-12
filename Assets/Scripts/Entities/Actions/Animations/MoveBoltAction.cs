@@ -40,7 +40,7 @@ public class MoveBoltAction : ActionBase
         if (onBoltStartMove != null) onBoltStartMove.Invoke(callingObject);
     }
 
-    public override void Update()
+    public override void FixedUpdate()
     {
         if (!debounce) return;
 
@@ -67,7 +67,7 @@ public class MoveBoltAction : ActionBase
 
     bool LerpBoltToPosition(Vector3 endPosition, float speed)
     {
-        bolt.transform.localPosition = Vector3.Lerp(bolt.transform.localPosition, endPosition, speed);
+        bolt.transform.localPosition = Vector3.MoveTowards(bolt.transform.localPosition, endPosition, speed);
 
         if ((endPosition - bolt.transform.localPosition).magnitude <= tolorence.GetValue())
         {

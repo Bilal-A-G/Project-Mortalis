@@ -22,12 +22,12 @@ MonoBehaviour:
   onEndLerp: {fileID: 0}
   lerpSpeed:
     useOverride: 1
-    isFolded: 1
+    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: 0.1
   rotationSpeed:
     useOverride: 1
-    isFolded: 1
+    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: 10
   tolorence:
@@ -37,6 +37,6 @@ MonoBehaviour:
     overrideValue: 0
   localEndPosition:
     useOverride: 1
-    isFolded: 1
+    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: {x: 0.053, y: 0.0002, z: 0.0244}

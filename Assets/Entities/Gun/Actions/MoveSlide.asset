@@ -20,7 +20,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 0
     variableValue: {fileID: 0}
-    overrideValue: {x: -0.00882, y: 0.01322, z: 0.00039}
+    overrideValue: {x: -0.00862, y: 0.01329, z: 0.00039}
   boltPath:
     useOverride: 0
     isFolded: 0
@@ -29,14 +29,14 @@ MonoBehaviour:
       path: []
   speed:
     useOverride: 1
-    isFolded: 0
+    isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.3
+    overrideValue: 0.002
   kickbackSpeed:
     useOverride: 1
-    isFolded: 0
+    isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.1
+    overrideValue: 0.0005
   tolorence:
     useOverride: 0
     isFolded: 0
