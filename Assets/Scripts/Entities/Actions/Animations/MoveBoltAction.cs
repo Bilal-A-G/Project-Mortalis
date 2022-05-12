@@ -11,10 +11,7 @@ public class MoveBoltAction : ActionBase
 
     public GenericReference<Vector3> localBoltEndPosition;
 
-    public GenericReference<string> boltPath1;
-    public GenericReference<string> boltPath2;
-    public GenericReference<string> boltPath3;
-    public GenericReference<string> boltPath4;
+    public GenericReference<Path> boltPath;
 
     public GenericReference<float> speed;
     public GenericReference<float> kickbackSpeed;
@@ -32,7 +29,7 @@ public class MoveBoltAction : ActionBase
 
         if(bolt == null)
         {
-            bolt = callingObject.transform.Find(boltPath1.GetValue()).Find(boltPath2.GetValue()).Find(boltPath3.GetValue()).Find(boltPath4.GetValue()).gameObject;
+            bolt = boltPath.GetValue().GetObjectAtPath(callingObject);
             boltStartPosition = bolt.transform.localPosition;
         }
 
@@ -84,5 +81,6 @@ public class MoveBoltAction : ActionBase
     {
         debounce = false;
         isDoingKickback = false;
+        bolt = null;
     }
 }

@@ -7,7 +7,7 @@
       "dependencies": {
         "com.unity.inputsystem": "1.2.0"
       },
-      "hash": "bc887a2c7ecf76fc9d40cd3a8c1741afb2422771"
+      "hash": "08bc5dbd817ba05d4a5bb920ac98b659a1a12206"
     },
     "com.bilal.super-extensible-fsm-event-system": {
       "version": "git@github.com:Bilal-A-G/Super-Extensible-FSM-Event-System.git",

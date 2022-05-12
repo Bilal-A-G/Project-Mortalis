@@ -12,45 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4de4055d6ad25540a28555e7a13757d, type: 3}
   m_Name: MoveSlide
   m_EditorClassIdentifier: 
-  onBoltReachEnd: {fileID: 0}
   onBoltStartMove: {fileID: 11400000, guid: 78643adb5b990ab4283bfd7a8f6cb7f0, type: 2}
+  onBoltStartKickback: {fileID: 11400000, guid: b334309ecf7f317489c1e3aadd9270ef,
+    type: 2}
+  onBoltReachEnd: {fileID: 0}
   localBoltEndPosition:
     useOverride: 1
     isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: {x: -0.00882, y: 0.01322, z: 0.00039}
-  boltPath1:
-    useOverride: 1
-    isFolded: 0
-    variableValue: {fileID: 0}
-    overrideValue: Model
-  boltPath2:
-    useOverride: 1
-    isFolded: 0
-    variableValue: {fileID: 0}
-    overrideValue: Armature
-  boltPath3:
-    useOverride: 1
-    isFolded: 0
-    variableValue: {fileID: 0}
-    overrideValue: Handle
-  boltPath4:
-    useOverride: 1
-    isFolded: 0
-    variableValue: {fileID: 0}
-    overrideValue: Slide
-  speed:
-    useOverride: 1
-    isFolded: 1
-    variableValue: {fileID: 0}
-    overrideValue: 0.1
-  kickbackSpeed:
+  boltPath:
     useOverride: 0
     isFolded: 0
-    variableValue: {fileID: 0}
-    overrideValue: 0
-  tolorence:
+    variableValue: {fileID: 11400000, guid: f7483115c9386004f964072e1a8dd247, type: 2}
+    overrideValue:
+      path: []
+  speed:
     useOverride: 1
-    isFolded: 1
+    isFolded: 0
     variableValue: {fileID: 0}
+    overrideValue: 0.3
+  kickbackSpeed:
+    useOverride: 1
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: 0.1
+  tolorence:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 11400000, guid: 87d4d12bd8b44474a968a9b727be39d9, type: 2}
     overrideValue: 0.0005

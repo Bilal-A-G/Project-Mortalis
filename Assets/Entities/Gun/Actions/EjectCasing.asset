@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf31fe616226bc4ab08da23111e7b3c, type: 3}
+  m_Name: EjectCasing
+  m_EditorClassIdentifier: 
+  lerpObjectPath:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 11400000, guid: b3996ccafee5bca40a7adfd0e1c76c5a, type: 2}
+    overrideValue:
+      path: []
+  onStartLerp: {fileID: 0}
+  onEndLerp: {fileID: 0}
+  lerpSpeed:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0.1
+  rotationSpeed:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 10
+  tolorence:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 11400000, guid: 87d4d12bd8b44474a968a9b727be39d9, type: 2}
+    overrideValue: 0
+  localEndPosition:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: {x: 0.053, y: 0.0002, z: 0.0244}
