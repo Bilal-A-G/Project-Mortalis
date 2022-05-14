@@ -31,10 +31,10 @@ MonoBehaviour:
     variableValue: {fileID: 0}
     overrideValue: 10
   tolorence:
-    useOverride: 0
-    isFolded: 0
+    useOverride: 1
+    isFolded: 1
     variableValue: {fileID: 11400000, guid: 87d4d12bd8b44474a968a9b727be39d9, type: 2}
-    overrideValue: 0
+    overrideValue: 0.01
   localEndPosition:
     useOverride: 1
     isFolded: 0

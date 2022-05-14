@@ -9,21 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4de4055d6ad25540a28555e7a13757d, type: 3}
-  m_Name: MoveSlide
+  m_Script: {fileID: 11500000, guid: 49291b10b496baa43b09b2e63ff38ca6, type: 3}
+  m_Name: Recoil
   m_EditorClassIdentifier: 
-  onLerpStart: {fileID: 11400000, guid: 78643adb5b990ab4283bfd7a8f6cb7f0, type: 2}
-  onLerpKickback: {fileID: 11400000, guid: b334309ecf7f317489c1e3aadd9270ef, type: 2}
+  onLerpStart: {fileID: 0}
+  onLerpKickback: {fileID: 0}
   onLerpEnd: {fileID: 0}
   endVector:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 399797892c6b30243a0fd3126556b165, type: 2}
-    overrideValue: {x: -0.00841, y: 0.01333, z: 0.0004}
+    variableValue: {fileID: 11400000, guid: fa58c91b54f85c548b587ea436dc40fe, type: 2}
+    overrideValue: {x: 359.05658, y: 269.66614, z: 293.35233}
   lerpTargetPath:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: f7483115c9386004f964072e1a8dd247, type: 2}
+    variableValue: {fileID: 11400000, guid: f8a24c0ff8207c5499e3099c8a188edd, type: 2}
     overrideValue:
       path: []
   speed:
@@ -37,10 +37,10 @@ MonoBehaviour:
     variableValue: {fileID: 0}
     overrideValue: 7
   tolorence:
-    useOverride: 0
-    isFolded: 0
+    useOverride: 1
+    isFolded: 1
     variableValue: {fileID: 11400000, guid: 87d4d12bd8b44474a968a9b727be39d9, type: 2}
-    overrideValue: 0.0005
+    overrideValue: 2
   debounce:
     useOverride: 0
     isFolded: 1

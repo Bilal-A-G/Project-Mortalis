@@ -383,6 +383,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b334309ecf7f317489c1e3aadd9270ef, type: 2}
     actions:
     - {fileID: 11400000, guid: 711d1fdb2b5ffbd45ac8065dbbe9ce15, type: 2}
+  - events:
+    - {fileID: 11400000, guid: e80a2c94b9047084691b07fdcf5edf9d, type: 2}
+    actions:
+    - {fileID: 11400000, guid: a0db411c3ec462e44acf006f449164f5, type: 2}
   parentObject: {fileID: 60662583036564279}
 --- !u!1 &1220829591707840915
 GameObject:

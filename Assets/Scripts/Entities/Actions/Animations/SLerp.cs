@@ -13,11 +13,11 @@ public class SLerp : ActionBase
     public GenericReference<float> tolorence;
     public GenericReference<Vector3> localEndPosition;
 
-    bool debounce;
     GameObject lerpObject;
     GameObject callingObject;
     Vector3 lerpObjectStartPosition;
     Quaternion lerpObjectStartRotation;
+    bool debounce;
 
     public override void Execute(GameObject callingObject)
     {
@@ -31,7 +31,6 @@ public class SLerp : ActionBase
         }
 
         if (debounce) return;
-
         debounce = true;
 
         if(onStartLerp != null) onStartLerp.Invoke(callingObject);
@@ -40,22 +39,22 @@ public class SLerp : ActionBase
     public override void Update()
     {
         if (!debounce) return;
-
+ 
         lerpObject.transform.localPosition = Vector3.Slerp(lerpObject.transform.localPosition, localEndPosition.GetValue(), lerpSpeed.GetValue() * Time.deltaTime);
         lerpObject.transform.Rotate(lerpObject.transform.up, rotationSpeed.GetValue());
 
         if ((localEndPosition.GetValue() - lerpObject.transform.localPosition).magnitude <= tolorence.GetValue())
         {
-            debounce = false;
             if(onEndLerp != null) onEndLerp.Invoke(callingObject);
             lerpObject.transform.localPosition = lerpObjectStartPosition;
             lerpObject.transform.localRotation = lerpObjectStartRotation;
+            debounce = false;
         }
     }
 
     private void OnDisable()
     {
-        debounce = false;
         lerpObject = null;
+        debounce = false;
     }
 }
