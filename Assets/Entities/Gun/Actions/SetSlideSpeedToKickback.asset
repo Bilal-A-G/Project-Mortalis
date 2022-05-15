@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93491874fdd46d04bb581a153511b6a2, type: 3}
-  m_Name: SetAnimationSpeedToKickback
+  m_Name: SetSlideSpeedToKickback
   m_EditorClassIdentifier: 
-  floatToSetTo:
-    useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: d7684de5fc0fe8e4b93452d81274fa94, type: 2}
-    overrideValue: 0
-  floatToSet:
+  valueToSet:
     useOverride: 0
     isFolded: 1
     variableValue: {fileID: 11400000, guid: a7be92fb9bf09454a8b72114fab37024, type: 2}
+    overrideValue: 0
+  valueToSetTo:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 0}
     overrideValue: 0

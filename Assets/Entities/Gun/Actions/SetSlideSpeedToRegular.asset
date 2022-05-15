@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93491874fdd46d04bb581a153511b6a2, type: 3}
-  m_Name: SetAnimationSpeedToRegular
+  m_Name: SetSlideSpeedToRegular
   m_EditorClassIdentifier: 
-  floatToSetTo:
+  valueToSet:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 16e9270e978af4d40a069609b8059037, type: 2}
+    variableValue: {fileID: 0}
     overrideValue: 0
-  floatToSet:
+  valueToSetTo:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: a7be92fb9bf09454a8b72114fab37024, type: 2}
+    variableValue: {fileID: 0}
     overrideValue: 0
