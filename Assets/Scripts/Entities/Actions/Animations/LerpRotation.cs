@@ -7,15 +7,6 @@ public class LerpRotation : LerpPosition
 {
     protected override void LerpProperty(Vector3 startRotation, Vector3 endRotation)
     {
-        if(endRotation.x < 0) endRotation.x += 360;
-        else if(endRotation.x > 360) endRotation.x -= 360;
-
-        if (endRotation.y < 0) endRotation.y += 360;
-        else if (endRotation.y > 360) endRotation.y -= 360;
-
-        if (endRotation.z < 0) endRotation.z += 360;
-        else if (endRotation.z > 360) endRotation.z -= 360;
-
         float lerpedX = Mathf.LerpUnclamped(startRotation.x, endRotation.x, thisFrameEvaluation);
         float lerpedY = Mathf.LerpUnclamped(startRotation.y, endRotation.y, thisFrameEvaluation);
         float lerpedZ = Mathf.LerpUnclamped(startRotation.z, endRotation.z, thisFrameEvaluation);
@@ -25,6 +16,21 @@ public class LerpRotation : LerpPosition
 
     protected override void SetUpStartVector()
     {
-        startVector = lerpTarget.transform.localRotation.eulerAngles;
+        Vector3 startPosition = lerpTarget.transform.localEulerAngles;
+
+        if(startPosition.x > 180)
+        {
+            startPosition.x -= 360;
+        }
+        if(startPosition.y > 180)
+        {
+            startPosition.y -= 360;
+        }
+        if(startPosition.z > 180)
+        {
+            startPosition.z -= 360;
+        }
+
+        startVector = startPosition;
     }
 }

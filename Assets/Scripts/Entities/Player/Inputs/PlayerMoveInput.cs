@@ -18,9 +18,10 @@ public class PlayerMoveInput : BasePlayerInput
 
         inputActions.PcMap.Movement.performed += ctx =>
         {
-            if(ctx.ReadValue<Vector2>() != Vector2.zero)
+            moveDirection.SetValue(ctx.ReadValue<Vector2>());
+
+            if (ctx.ReadValue<Vector2>() != Vector2.zero)
             {
-                moveDirection.SetValue(ctx.ReadValue<Vector2>());
                 moving = true;
             }
             else

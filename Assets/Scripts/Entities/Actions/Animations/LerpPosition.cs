@@ -35,7 +35,6 @@ public class LerpPosition : ActionBase
         if(lerpTarget == null)
         {
             lerpTarget = lerpTargetPath.GetValue().GetObjectAtPath(callingObject);
-            SetUpStartVector();
         }
 
         if (debounce) return;
@@ -44,6 +43,8 @@ public class LerpPosition : ActionBase
         timeSinceExecuted = 0;
         lastFrameEvaluation = 0;
         thisFrameEvaluation = 0;
+
+        SetUpStartVector();
 
         if (onLerpStart != null) onLerpStart.Invoke(callingObject);
     }
@@ -59,19 +60,19 @@ public class LerpPosition : ActionBase
 
         timeSinceExecuted += Time.deltaTime * speed.GetValue();
 
-        if (LerpToEnd(startVector, endVector.GetValue()))
+        if (LerpToEnd())
         {
             if (onLerpEnd != null) onLerpEnd.Invoke(callingObject);
             debounce = false;
         }
     }
 
-    protected bool LerpToEnd(Vector3 startPosition, Vector3 endPosition)
+    protected bool LerpToEnd()
     {
         lastFrameEvaluation = thisFrameEvaluation;
         thisFrameEvaluation = easingFunction.GetValue().Evaluate(timeSinceExecuted);
 
-        LerpProperty(startPosition, endPosition);
+        LerpProperty(startVector, endVector.GetValue());
 
         bool underMaximum = timeSinceExecuted < animationDuration.GetValue() + tolorence.GetValue();
         bool overMinimum = timeSinceExecuted > animationDuration.GetValue() - tolorence.GetValue();
@@ -94,7 +95,7 @@ public class LerpPosition : ActionBase
         lerpTarget.transform.localPosition = Vector3.LerpUnclamped(startPosition, endPosition, thisFrameEvaluation);
     }
 
-    protected void OnDisable()
+    protected virtual void OnDisable()
     {
         debounce = false;
         lerpTarget = null;

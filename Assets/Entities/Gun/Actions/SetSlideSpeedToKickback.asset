@@ -20,5 +20,5 @@ MonoBehaviour:
   valueToSetTo:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 0}
+    variableValue: {fileID: 11400000, guid: d7684de5fc0fe8e4b93452d81274fa94, type: 2}
     overrideValue: 0

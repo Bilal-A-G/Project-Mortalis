@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCrouchInput : BasePlayerInput
 {
-    public EventObject crouchStartedEvent;
+    public EventObject crouchingEvent;
     public EventObject notCrouchingEvent;
 
     public FiniteStateMachine currentFiniteStateMachine;
@@ -18,7 +18,7 @@ public class PlayerCrouchInput : BasePlayerInput
         inputActions.PcMap.Crouch.started += ctx => 
         {
             crouching = true;
-            currentFiniteStateMachine.UpdateState(crouchStartedEvent, callingObject);
+            currentFiniteStateMachine.UpdateState(crouchingEvent, callingObject);
         };
 
         inputActions.PcMap.Crouch.canceled += ctx =>

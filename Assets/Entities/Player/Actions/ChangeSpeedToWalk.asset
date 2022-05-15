@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93491874fdd46d04bb581a153511b6a2, type: 3}
   m_Name: ChangeSpeedToWalk
   m_EditorClassIdentifier: 
-  floatToSetTo:
-    useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: 67f94494497eb164e9f16376a98f4b91, type: 2}
-    overrideValue: 0
-  floatToSet:
+  valueToSet:
     useOverride: 0
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
+    overrideValue: 0
+  valueToSetTo:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 67f94494497eb164e9f16376a98f4b91, type: 2}
     overrideValue: 0

@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentMouseDelta:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
     overrideValue: {x: 0, y: 0}
   mouseSensitivity:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 6e71ab9b62c429a4e883f12613225c4e, type: 2}
     overrideValue: 0
   cameraName:
     useOverride: 1
+    isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: Main Camera
+    overrideValue: MainCamera
