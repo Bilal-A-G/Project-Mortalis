@@ -12,31 +12,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf31fe616226bc4ab08da23111e7b3c, type: 3}
   m_Name: EjectCasing
   m_EditorClassIdentifier: 
-  lerpObjectPath:
+  onLerpStart: {fileID: 0}
+  onKickback: {fileID: 0}
+  onLerpEnd: {fileID: 11400000, guid: 73e8200a59640da4fa07470b0ebb623a, type: 2}
+  endVector:
     useOverride: 0
-    isFolded: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 416ea1d25fa9a8a46bba881a6c0de866, type: 2}
+    overrideValue: {x: 0, y: 0, z: 0}
+  lerpTargetPath:
+    useOverride: 0
+    isFolded: 1
     variableValue: {fileID: 11400000, guid: b3996ccafee5bca40a7adfd0e1c76c5a, type: 2}
     overrideValue:
       path: []
-  onStartLerp: {fileID: 0}
-  onEndLerp: {fileID: 0}
-  lerpSpeed:
+  speed:
     useOverride: 1
     isFolded: 1
-    variableValue: {fileID: 0}
-    overrideValue: 10
-  rotationSpeed:
-    useOverride: 1
-    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: 10
   tolorence:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 87d4d12bd8b44474a968a9b727be39d9, type: 2}
-    overrideValue: 0.01
-  localEndPosition:
+    overrideValue: 0.1
+  animationDuration:
     useOverride: 1
-    isFolded: 0
+    isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: {x: 0.053, y: 0.0002, z: 0.0244}
+    overrideValue: 1
+  easingFunction:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4

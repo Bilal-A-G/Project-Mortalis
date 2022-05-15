@@ -42,6 +42,8 @@ public class LerpPosition : ActionBase
         debounce = true;
         didKickback = false;
         timeSinceExecuted = 0;
+        lastFrameEvaluation = 0;
+        thisFrameEvaluation = 0;
 
         if (onLerpStart != null) onLerpStart.Invoke(callingObject);
     }
@@ -97,5 +99,7 @@ public class LerpPosition : ActionBase
         debounce = false;
         lerpTarget = null;
         didKickback = false;
+        lastFrameEvaluation = 0f;
+        thisFrameEvaluation = 0f;
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1863.5059, g: 1876.0127, b: 3037.6328, a: 1}
+  m_IndirectSpecularColor: {r: 1863.6074, g: 1876.1943, b: 3037.6953, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2115,5 +2115,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 1220829591667709830, guid: acf30fc32e6df7843805647117e1c0b0,
+        type: 3}
+      propertyPath: eventActions.Array.data[3].actions.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a0db411c3ec462e44acf006f449164f5,
+        type: 2}
+    - target: {fileID: 1220829591667709830, guid: acf30fc32e6df7843805647117e1c0b0,
+        type: 3}
+      propertyPath: eventActions.Array.data[3].actions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c73a1a465e126a4ab16d1b31854d86d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acf30fc32e6df7843805647117e1c0b0, type: 3}

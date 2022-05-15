@@ -379,12 +379,17 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: 6ef7300b207020145ac3993bb784e335, type: 2}
     - {fileID: 11400000, guid: 711d1fdb2b5ffbd45ac8065dbbe9ce15, type: 2}
+    - {fileID: 11400000, guid: fcdcaaa22722b674eba75f377a015fa5, type: 2}
   - events:
     - {fileID: 11400000, guid: 3f432a16dec1a9a46a9fc1030b12c72c, type: 2}
     actions:
     - {fileID: 11400000, guid: 409e9f792cf38e0468931fe96d18486d, type: 2}
     - {fileID: 11400000, guid: a0db411c3ec462e44acf006f449164f5, type: 2}
     - {fileID: 11400000, guid: 7c73a1a465e126a4ab16d1b31854d86d, type: 2}
+  - events:
+    - {fileID: 11400000, guid: 73e8200a59640da4fa07470b0ebb623a, type: 2}
+    actions:
+    - {fileID: 11400000, guid: 3bb552503cc631e41b16e9e96d59b497, type: 2}
   parentObject: {fileID: 60662583036564279}
 --- !u!1 &1220829591707840915
 GameObject:
