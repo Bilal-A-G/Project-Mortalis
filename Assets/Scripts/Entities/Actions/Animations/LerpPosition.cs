@@ -85,7 +85,7 @@ public class LerpPosition : ActionBase
             if(onKickback != null) onKickback.Invoke(callingObject);
         }
 
-        if (underMaximum && overMinimum || overMaximum) return true;
+        if (underMaximum && overMinimum && speed.GetValue() != 0 || overMaximum && speed.GetValue() != 0) return true;
 
         return false;
     }
