@@ -5,36 +5,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Lerp Rotation", menuName = "FSM/Actions/Lerp Rotation")]
 public class LerpRotation : LerpPosition
 {
-    protected override bool LerpToEnd(Vector3 endRotation, float speed)
+    protected override void LerpProperty(Vector3 startRotation, Vector3 endRotation)
     {
-        Vector3 lerpTargetRotation = lerpTarget.transform.localEulerAngles;
-        float lerpedX = Mathf.LerpAngle(lerpTargetRotation.x, endRotation.x, speed * Time.deltaTime);
-        float lerpedY = Mathf.LerpAngle(lerpTargetRotation.y, endRotation.y, speed * Time.deltaTime);
-        float lerpedZ = Mathf.LerpAngle(lerpTargetRotation.z, endRotation.z, speed * Time.deltaTime);
+        if(endRotation.x < 0) endRotation.x += 360;
+        else if(endRotation.x > 360) endRotation.x -= 360;
+
+        if (endRotation.y < 0) endRotation.y += 360;
+        else if (endRotation.y > 360) endRotation.y -= 360;
+
+        if (endRotation.z < 0) endRotation.z += 360;
+        else if (endRotation.z > 360) endRotation.z -= 360;
+
+        float lerpedX = Mathf.LerpUnclamped(startRotation.x, endRotation.x, thisFrameEvaluation);
+        float lerpedY = Mathf.LerpUnclamped(startRotation.y, endRotation.y, thisFrameEvaluation);
+        float lerpedZ = Mathf.LerpUnclamped(startRotation.z, endRotation.z, thisFrameEvaluation);
 
         lerpTarget.transform.localEulerAngles = new Vector3(lerpedX, lerpedY, lerpedZ);
-
-        Vector3 endRotationToEvaluate = endRotation;
-
-        if(endRotation.x < 0)
-        {
-            endRotationToEvaluate.x += 360;
-        }
-        if (endRotation.y < 0)
-        {
-            endRotationToEvaluate.y += 360;
-        }
-        if(endRotation.z < 0)
-        {
-            endRotationToEvaluate.z += 360;
-        }
-
-        if ((endRotationToEvaluate - lerpTarget.transform.localEulerAngles).magnitude <= tolorence.GetValue())
-        {
-            return true;
-        }
-
-        return false;
     }
 
     protected override void SetUpStartVector()
