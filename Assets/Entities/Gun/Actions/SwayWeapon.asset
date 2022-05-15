@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035ac0d4505e0e44799ed3ac722ce3fe, type: 3}
+  m_Name: SwayWeapon
+  m_EditorClassIdentifier: 
+  mouseDelta:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
+    overrideValue: {x: 0, y: 0}
+  moveDelta:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
+    overrideValue: {x: 0, y: 0}
+  lookSwayAmount:
+  - useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0.05
+  moveSwayAmount:
+  - useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
+    overrideValue: 0
+  - useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
+    overrideValue: 0.1
+  speed:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0.3
+  pathToTarget:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 27e3126bf34576949a98432ba0309cd8, type: 2}
+    overrideValue:
+      path: []

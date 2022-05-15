@@ -965,6 +965,7 @@ Transform:
   - {fileID: 1835142808}
   - {fileID: 1792414321}
   - {fileID: 868381523}
+  - {fileID: 1979508452}
   m_Father: {fileID: 1231766140}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1694,12 +1695,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
     actions:
     - {fileID: 11400000, guid: 6fb8e49f3373e62419bddc4dcc6f9a49, type: 2}
-  - events:
-    - {fileID: 11400000, guid: e21e30b9857420a46bf445faa7de1cff, type: 2}
-    - {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
-    actions:
-    - {fileID: 11400000, guid: 613368c14f10eb84f8efbc00cd8a4457, type: 2}
-    - {fileID: 11400000, guid: e91d2f5c11e78ef4e817ff3205b92ed5, type: 2}
   parentObject: {fileID: 1231766136}
 --- !u!1 &1862298170
 GameObject:
@@ -1731,6 +1726,57 @@ Transform:
   m_Father: {fileID: 1231766140}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1979508451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1979508452}
+  - component: {fileID: 1979508453}
+  m_Layer: 0
+  m_Name: WeaponSway
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1979508452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979508451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 982854633}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1979508453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979508451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fec39b78b67a40a3a5a5400114178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventActions:
+  - events:
+    - {fileID: 11400000, guid: 3f432a16dec1a9a46a9fc1030b12c72c, type: 2}
+    - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
+    - {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
+    actions:
+    - {fileID: 11400000, guid: e91d2f5c11e78ef4e817ff3205b92ed5, type: 2}
+  parentObject: {fileID: 1231766136}
 --- !u!1 &2041543669
 GameObject:
   m_ObjectHideFlags: 0
