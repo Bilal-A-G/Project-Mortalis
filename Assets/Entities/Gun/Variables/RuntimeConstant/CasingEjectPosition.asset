@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a251a3ad4e1e444597ed31299334f38, type: 3}
   m_Name: CasingEjectPosition
   m_EditorClassIdentifier: 
-  value: {x: 0.0293, y: 0, z: 0.025}
+  value: {x: 0.0388, y: 0.0003, z: 0.0256}
