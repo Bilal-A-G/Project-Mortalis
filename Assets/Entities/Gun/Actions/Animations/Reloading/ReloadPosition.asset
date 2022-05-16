@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4de4055d6ad25540a28555e7a13757d, type: 3}
   m_Name: ReloadPosition
   m_EditorClassIdentifier: 
-  onLerpStart: {fileID: 0}
+  onLerpStart: {fileID: 11400000, guid: f880c00025b635948a14d2b77d20f5f6, type: 2}
   onKickback: {fileID: 11400000, guid: f6ea11c67c90de34c95a41979103a967, type: 2}
   onLerpEnd: {fileID: 11400000, guid: bb8153799db44884ca2ef144f059b024, type: 2}
   endVector:
@@ -26,11 +26,11 @@ MonoBehaviour:
     variableValue: {fileID: 11400000, guid: f8a24c0ff8207c5499e3099c8a188edd, type: 2}
     overrideValue:
       path: []
-  speed:
+  currentSpeed:
     useOverride: 0
     isFolded: 1
     variableValue: {fileID: 11400000, guid: e6dd1f264bb64e54fa0f2c4411adcea6, type: 2}
-    overrideValue: 3
+    overrideValue: 0
   tolorence:
     useOverride: 1
     isFolded: 1
@@ -51,18 +51,45 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 34
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
+        time: 0.63908476
+        value: 1.1989759
+        inSlope: -0.075648725
+        outSlope: -0.075648725
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.27982953
+      - serializedVersion: 3
         time: 1
         value: 1
-        inSlope: 1
-        outSlope: 1
-        tangentMode: 34
+        inSlope: 0.30843568
+        outSlope: 0.30843568
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.65352136
+      - serializedVersion: 3
+        time: 1.7106705
+        value: -0.054296806
+        inSlope: -1.1390375
+        outSlope: -1.1390375
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 0.0039126277
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0
         outWeight: 0

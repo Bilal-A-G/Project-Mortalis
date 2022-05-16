@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10048102764b3d24784be326776831cd, type: 3}
   m_Name: ReloadRegularRotationSpeed
   m_EditorClassIdentifier: 
-  value: 8
+  value: 2

@@ -7,6 +7,8 @@ public class LerpRotation : LerpPosition
 {
     protected override void LerpProperty(Vector3 startRotation, Vector3 endRotation)
     {
+        float thisFrameEvaluation = easingFunction.GetValue().Evaluate(timeSinceExecuted);
+
         float lerpedX = Mathf.LerpUnclamped(startRotation.x, endRotation.x, thisFrameEvaluation);
         float lerpedY = Mathf.LerpUnclamped(startRotation.y, endRotation.y, thisFrameEvaluation);
         float lerpedZ = Mathf.LerpUnclamped(startRotation.z, endRotation.z, thisFrameEvaluation);
@@ -32,5 +34,10 @@ public class LerpRotation : LerpPosition
         }
 
         startVector = startPosition;
+    }
+
+    protected override void ResetLerpedProperty()
+    {
+        lerpTarget.transform.localEulerAngles = startVector;
     }
 }

@@ -7,6 +7,6 @@ public class SLerp : LerpPosition
 {
     protected override void LerpProperty(Vector3 startPosition, Vector3 endPosition)
     {
-        lerpTarget.transform.localPosition = Vector3.SlerpUnclamped(startPosition, endPosition, thisFrameEvaluation);
+        lerpTarget.transform.localPosition = Vector3.SlerpUnclamped(startPosition, endPosition, easingFunction.GetValue().Evaluate(timeSinceExecuted));
     }
 }
