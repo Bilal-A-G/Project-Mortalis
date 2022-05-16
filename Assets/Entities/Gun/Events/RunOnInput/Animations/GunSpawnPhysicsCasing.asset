@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a251a3ad4e1e444597ed31299334f38, type: 3}
-  m_Name: CasingEjectPosition
+  m_Script: {fileID: 11500000, guid: db3385bed6e36b14eb5fbb97273b0126, type: 3}
+  m_Name: GunSpawnPhysicsCasing
   m_EditorClassIdentifier: 
-  value: {x: 0.0282, y: 0.0033, z: 0.0261}
