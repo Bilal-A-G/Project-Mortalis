@@ -17,7 +17,13 @@ MonoBehaviour:
     isFolded: 1
     translateTo: {fileID: 0}
     action: {fileID: 11400000, guid: 770f7b3367a194844810abd09a14ed03, type: 2}
+  - translate: 0
+    isFolded: 1
+    translateTo: {fileID: 0}
+    action: {fileID: 11400000, guid: 4ab6da0e78a14c54dbe6107cac2062dd, type: 2}
   stateTransitions:
   - action: {fileID: 11400000, guid: c304fcd1cc5628b4989f9916a7c78043, type: 2}
+    stateObject: {fileID: 11400000, guid: 886ea87108b0f534ab92fe0852633af4, type: 2}
+  - action: {fileID: 11400000, guid: 846f3d66d42bc8d4588e9e2b462ad53e, type: 2}
     stateObject: {fileID: 11400000, guid: 886ea87108b0f534ab92fe0852633af4, type: 2}
   stateChild: {fileID: 0}
