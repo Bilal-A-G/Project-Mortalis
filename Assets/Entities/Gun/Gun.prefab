@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60662582315559739}
   - component: {fileID: 60662582315559738}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FiniteStateMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60662582429470050}
   - component: {fileID: 1220829593287241507}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60662582540348275}
   - component: {fileID: 1220829593087226116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Reloading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60662582929951386}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Inputs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60662583036564278}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60662583058131323}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Actions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60662583902319114}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8802467319537839138}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Magazine_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220829591667709825}
   - component: {fileID: 1220829591667709830}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220829591707840912}
   - component: {fileID: 1220829591707840913}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Reloading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 1220829592893789038}
   - component: {fileID: 1220829592893789036}
   - component: {fileID: 1220829592893789039}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Reflection Probe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,15 +511,15 @@ MonoBehaviour:
       fadeDistance: 10000
       rangeCompressionFactor: 1
     influence:
-      m_Shape: 0
-      m_BoxSize: {x: 5, y: 5, z: 5}
+      m_Shape: 1
+      m_BoxSize: {x: 5, y: 10, z: 5}
       m_BoxBlendDistancePositive: {x: 0.5, y: 0.5, z: 0.5}
       m_BoxBlendDistanceNegative: {x: 0.5, y: 0.5, z: 0.5}
       m_BoxBlendNormalDistancePositive: {x: 0, y: 0, z: 0}
       m_BoxBlendNormalDistanceNegative: {x: 0, y: 0, z: 0}
       m_BoxSideFadePositive: {x: 1, y: 1, z: 1}
       m_BoxSideFadeNegative: {x: 1, y: 1, z: 1}
-      m_SphereRadius: 3
+      m_SphereRadius: 2
       m_SphereBlendDistance: 0
       m_SphereBlendNormalDistance: 0
       m_EditorAdvancedModeBlendDistancePositive: {x: 1, y: 1, z: 1}
@@ -579,12 +579,12 @@ MonoBehaviour:
       volumes:
         layerMask:
           serializedVersion: 2
-          m_Bits: 2147483647
+          m_Bits: 447
         anchorOverride: {fileID: 0}
       frustum:
         mode: 0
         aspect: 1
-        farClipPlaneRaw: 1000
+        farClipPlaneRaw: 10000
         nearClipPlaneRaw: 0.1
         fieldOfView: 90
         projectionMatrix:
@@ -614,7 +614,7 @@ MonoBehaviour:
       flipYMode: 0
       probeLayerMask:
         serializedVersion: 2
-        m_Bits: 2147483647
+        m_Bits: 447
       defaultFrameSettings: 0
       m_ObsoleteRenderingPath: 0
       m_ObsoleteFrameSettings:
@@ -863,7 +863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9014065295927113829}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4351875442210891124}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +927,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5014503933432980563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160179921998183048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slide_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -990,7 +990,7 @@ GameObject:
   - component: {fileID: 4671397173732193770}
   - component: {fileID: 9120308031823797981}
   - component: {fileID: 5856504167442065981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1054,7 +1054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5229597267802827191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1086,7 +1086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5933967539820569918}
   - component: {fileID: 4051929272531751597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: M1911 Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1178,7 +1178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8029525041508595450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trigger_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1208,7 +1208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2816620216809064003}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,6 +1312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: M1911SpareBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2085845596613bd49a3ec851c70c82a9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2085845596613bd49a3ec851c70c82a9, type: 3}

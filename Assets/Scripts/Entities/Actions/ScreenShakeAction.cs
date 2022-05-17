@@ -12,9 +12,9 @@ public class ScreenShakeAction : ActionBase
     public GenericReference<Path> pathToStableCamera;
 
     [System.NonSerialized]
-    Camera camera;
+    GameObject camera;
     [System.NonSerialized]
-    Camera mainCamera;
+    GameObject mainCamera;
 
     public override void Execute(GameObject callingObject)
     {
@@ -27,8 +27,8 @@ public class ScreenShakeAction : ActionBase
 
         if(camera == null)
         {
-            camera = pathToStableCamera.GetValue().GetObjectAtPath(callingObject).GetComponent<Camera>();
-            mainCamera = pathToMainCamera.GetValue().GetObjectAtPath(callingObject).GetComponent<Camera>();
+            camera = pathToStableCamera.GetValue().GetObjectAtPath(callingObject);
+            mainCamera = pathToMainCamera.GetValue().GetObjectAtPath(callingObject);
         }
 
         trauma.SetValue(trauma.GetValue() - traumaDecreaseRate.GetValue() * Time.deltaTime);

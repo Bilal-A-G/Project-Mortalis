@@ -21,7 +21,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 2
+    overrideValue: 1
   screenShakeYawPitchRoll:
     useOverride: 1
     isFolded: 1
