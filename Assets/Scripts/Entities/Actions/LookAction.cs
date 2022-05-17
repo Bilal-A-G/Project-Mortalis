@@ -7,13 +7,14 @@ public class LookAction : ActionBase
 {
     public GenericReference<Vector2> currentMouseDelta;
     public GenericReference<float> mouseSensitivity;
-    public GenericReference<string> cameraName;
+    public GenericReference<Path> pathToCamera;
 
+    [System.NonSerialized]
     GameObject agentCamera;
 
     public override void Execute(GameObject callingObject)
     {
-        if (agentCamera == null) agentCamera = callingObject.transform.Find(cameraName.GetValue()).gameObject;
+        if (agentCamera == null) agentCamera = pathToCamera.GetValue().GetObjectAtPath(callingObject);
         
         Cursor.lockState = CursorLockMode.Locked;
 

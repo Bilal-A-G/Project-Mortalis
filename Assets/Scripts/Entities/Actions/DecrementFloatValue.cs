@@ -11,9 +11,12 @@ public class DecrementFloatValue : ActionBase
     public GenericReference<float> min;
     public GenericReference<float> max;
 
+    public GenericReference<bool> resetValue;
+
     public EventObject onReachMin;
     public EventObject onReachMax;
 
+    [System.NonSerialized]
     FiniteStateMachine stateMachine;
 
     public override void Execute(GameObject callingObject)
@@ -39,5 +42,10 @@ public class DecrementFloatValue : ActionBase
 
             stateMachine.UpdateState(onReachMin, callingObject);
         }
+    }
+
+    private void OnDisable()
+    {
+        if(resetValue.GetValue()) floatToDecrement.SetValue(min.GetValue());
     }
 }

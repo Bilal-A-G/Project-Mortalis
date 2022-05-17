@@ -6,10 +6,12 @@ public class SetAnimatorValue<T> : ActionBase
 {
     public GenericReference<Path> pathToAnimator;
     public GenericReference<T> value;
+
+    [System.NonSerialized]
     protected Animator animator;
 
     public override void Execute(GameObject callingObject)
     {
-        animator = pathToAnimator.GetValue().GetObjectAtPath(callingObject).GetComponent<Animator>();
+       if(animator == null) animator = pathToAnimator.GetValue().GetObjectAtPath(callingObject).GetComponent<Animator>();
     }
 }

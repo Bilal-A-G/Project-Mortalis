@@ -19,12 +19,18 @@ public class LerpPosition : ActionBase
     public GenericReference<float> animationDuration;
     public GenericReference<AnimationCurve> easingFunction;
 
+    [System.NonSerialized]
     protected bool debounce;
+    [System.NonSerialized]
     protected GameObject lerpTarget;
+    [System.NonSerialized]
     protected GameObject callingObject;
+    [System.NonSerialized]
     protected Vector3 startVector;
+    [System.NonSerialized]
     protected float timeSinceExecuted;
 
+    [System.NonSerialized]
     protected bool didKickback;
 
     public override void Execute(GameObject callingObject)
@@ -52,7 +58,7 @@ public class LerpPosition : ActionBase
         startVector = lerpTarget.transform.localPosition;
     }
 
-    public override void FixedUpdate()
+    public override void FixedUpdateLoop(GameObject callingObject)
     {
         if (!debounce) return;
 
@@ -97,11 +103,4 @@ public class LerpPosition : ActionBase
         lerpTarget.transform.localPosition = startVector;
     }
 
-    protected virtual void OnDisable()
-    {
-        debounce = false;
-        lerpTarget = null;
-        didKickback = false;
-        timeSinceExecuted = 0;
-    }
 }

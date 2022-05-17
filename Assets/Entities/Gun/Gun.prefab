@@ -349,6 +349,7 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: ee2daaa8b828d8d42b27028bfdb6198b, type: 2}
     - {fileID: 11400000, guid: 7c73a1a465e126a4ab16d1b31854d86d, type: 2}
+    - {fileID: 11400000, guid: ed3e08db9fbb67246a47887e2ef58bfd, type: 2}
   - events:
     - {fileID: 11400000, guid: 09fe4255157f5f14b87a7f222d790944, type: 2}
     actions:
@@ -411,6 +412,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 964214138014003488f2147046411207, type: 2}
     actions:
     - {fileID: 11400000, guid: 596656b3a1c8ac644b3c96171915c9cf, type: 2}
+  - events:
+    - {fileID: 11400000, guid: e3310709cad4b3245a9892bf2acabb9d, type: 2}
+    - {fileID: 11400000, guid: f834069013a23944581b714980fbd576, type: 2}
+    actions:
+    - {fileID: 11400000, guid: 9a86bccd9827b8248bd9092f7669ca51, type: 2}
   parentObject: {fileID: 60662583036564279}
 --- !u!1 &1220829592893789033
 GameObject:

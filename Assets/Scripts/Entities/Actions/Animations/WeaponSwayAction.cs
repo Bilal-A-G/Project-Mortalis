@@ -5,7 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Weapon Sway Action", menuName = "FSM/Actions/Weapon Sway Action")]
 public class WeaponSwayAction : ActionBase
 {
+    [System.NonSerialized]
     Vector3 targetRotation;
+    [System.NonSerialized]
     Vector3 finalRotation;
 
     public GenericReference<Vector2> mouseDelta;
@@ -17,6 +19,7 @@ public class WeaponSwayAction : ActionBase
     public GenericReference<float> speed;
     public GenericReference<Path> pathToTarget;
 
+    [System.NonSerialized]
     GameObject lerpTarget;
 
     public override void Execute(GameObject callingObject)
@@ -24,7 +27,7 @@ public class WeaponSwayAction : ActionBase
         if (lerpTarget == null) lerpTarget = pathToTarget.GetValue().GetObjectAtPath(callingObject);
     }
 
-    public override void FixedUpdate()
+    public override void FixedUpdateLoop(GameObject callingObject)
     {
         if (lerpTarget == null) return;
 
@@ -52,12 +55,5 @@ public class WeaponSwayAction : ActionBase
         finalRotation = Vector3.Lerp(finalRotation, targetRotation, speed.GetValue());
 
         lerpTarget.transform.localEulerAngles = finalRotation;
-    }
-
-    void OnDisable()
-    {
-        targetRotation = Vector3.zero;
-        finalRotation = Vector3.zero;
-        lerpTarget = null;
     }
 }

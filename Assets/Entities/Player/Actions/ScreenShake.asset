@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243d437d672bb5a47b2ef3c315c17b36, type: 3}
+  m_Name: ScreenShake
+  m_EditorClassIdentifier: 
+  trauma:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 27032920206d65c4e9e7fb69143e34a2, type: 2}
+    overrideValue: 0
+  traumaDecreaseRate:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 2
+  screenShakeYawPitchRoll:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: {x: 2, y: 2, z: 2}
+  pathToMainCamera:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 7afdb37822099b74186b510dba39b687, type: 2}
+    overrideValue:
+      path: []
+  pathToStableCamera:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 4296961ddede08b49ac0ae6f93666a46, type: 2}
+    overrideValue:
+      path: []

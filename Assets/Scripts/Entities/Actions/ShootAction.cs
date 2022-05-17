@@ -10,6 +10,7 @@ public class ShootAction : ActionBase
     public GenericReference<LayerMask> layerToHit;
     public GenericReference<string> firePointName;
 
+    [System.NonSerialized]
     Transform firePoint;
 
     public override void Execute(GameObject callingObject)

@@ -22,8 +22,9 @@ MonoBehaviour:
     isFolded: 0
     variableValue: {fileID: 11400000, guid: 6e71ab9b62c429a4e883f12613225c4e, type: 2}
     overrideValue: 0
-  cameraName:
-    useOverride: 1
+  pathToCamera:
+    useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 0}
-    overrideValue: MainCamera
+    variableValue: {fileID: 11400000, guid: 4296961ddede08b49ac0ae6f93666a46, type: 2}
+    overrideValue:
+      path: []

@@ -9,6 +9,7 @@ public class MoveAction : ActionBase
     public GenericReference<float> moveSpeed;
     public GenericReference<Vector2> moveDirection;
 
+    [System.NonSerialized]
     CharacterController characterController;
 
     public override void Execute(GameObject callingObject)

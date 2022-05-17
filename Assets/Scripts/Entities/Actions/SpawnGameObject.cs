@@ -5,10 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Spawn GameObject", menuName = "FSM/Actions/Spawn GameObject")]
 public class SpawnGameObject : ActionBase
 {
+    public GameObject objectToInstantiate;
+
     public GenericReference<Vector3> instantiatePosition;
     public GenericReference<Vector3> instantiateRotation;
-    public GameObject objectToInstantiate;
     public GenericReference<float> force;
+    public GenericReference<float> destroyTime;
 
     public override void Execute(GameObject callingObject)
     {
@@ -22,5 +24,7 @@ public class SpawnGameObject : ActionBase
         {
             instantiatedObjectPhysicsBody.AddForce(instantiatedObject.transform.right * force.GetValue());
         }
+
+        Destroy(instantiatedObject, destroyTime.GetValue());
     }
 }

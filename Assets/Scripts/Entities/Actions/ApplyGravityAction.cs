@@ -9,6 +9,7 @@ public class ApplyGravityAction : ActionBase
     public GenericReference<float> gravity;
     public GenericReference<bool> applyGravity;
 
+    [System.NonSerialized]
     CharacterController controller;
 
     public override void Execute(GameObject callingObject)
