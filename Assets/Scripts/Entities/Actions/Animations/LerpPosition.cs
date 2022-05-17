@@ -14,6 +14,7 @@ public class LerpPosition : ActionBase
     public GenericReference<Path> lerpTargetPath;
 
     public GenericReference<float> currentSpeed;
+    public GenericReference<bool> resetVector;
 
     public GenericReference<float> tolorence;
     public GenericReference<float> animationDuration;
@@ -67,7 +68,8 @@ public class LerpPosition : ActionBase
         if (LerpToEnd())
         {
             if (onLerpEnd != null) onLerpEnd.Invoke(callingObject);
-            ResetLerpedProperty();
+
+            if(resetVector.GetValue()) ResetLerpedProperty();
 
             debounce = false;
         }

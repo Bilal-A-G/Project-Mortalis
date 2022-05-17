@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMoveInput : BasePlayerInput
 {
     public EventObject movingEvent;
+    public EventObject startMoveEvent;
     public EventObject stoppedMovingEvent;
 
     public GenericReference<Vector2> moveDirection;
@@ -22,6 +23,7 @@ public class PlayerMoveInput : BasePlayerInput
 
             if (ctx.ReadValue<Vector2>() != Vector2.zero)
             {
+                finiteStateMachines.UpdateState(startMoveEvent, callingObject);
                 moving = true;
             }
             else

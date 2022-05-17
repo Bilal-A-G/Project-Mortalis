@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0435ae99b690544b60480dd15cdb33, type: 3}
+  m_Name: CalculateBreathingValues
+  m_EditorClassIdentifier: 
+  lissajousValuesOutput:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: e444450abb79d7046982d3747a012feb, type: 2}
+    overrideValue: {x: 0, y: 0, z: 0}
+  curveScale:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 30
+  speed:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 5
+  offsetX:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
+  offsetY:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 2

@@ -31,6 +31,11 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: 10
+  resetVector:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
   tolorence:
     useOverride: 1
     isFolded: 1

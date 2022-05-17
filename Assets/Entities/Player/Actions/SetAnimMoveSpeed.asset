@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4911c98e585e214e89185c75dc5f75a, type: 3}
+  m_Name: SetAnimMoveSpeed
+  m_EditorClassIdentifier: 
+  pathToAnimator:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 7473f9338e78bbe48a6f247e1ccae2df, type: 2}
+    overrideValue:
+      path: []
+  value:
+  - useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
+    overrideValue: 0
+  - useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: da094bc4db1a0cf449f0fba2d91834ce, type: 2}
+    overrideValue: 0
+  valueName:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: MovementSpeed

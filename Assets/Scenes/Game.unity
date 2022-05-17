@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1863.5898, g: 1876.1943, b: 3017.3516, a: 1}
+  m_IndirectSpecularColor: {r: 1863.5918, g: 1876.1943, b: 3037.75, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -931,6 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
   movingEvent: {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
+  startMoveEvent: {fileID: 11400000, guid: 5a3b2b795dac56948a3693e4ad166734, type: 2}
   stoppedMovingEvent: {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
   moveDirection:
     useOverride: 0
@@ -968,6 +969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
   crouchingEvent: {fileID: 11400000, guid: 020856c243e34c5419dd56c888728fe7, type: 2}
+  playerStopCrouch: {fileID: 11400000, guid: 61355c7e630791a4aa23e82e5af6fe6e, type: 2}
   notCrouchingEvent: {fileID: 11400000, guid: 98c081dfa06a4184f82adaee95dc1201, type: 2}
   currentFiniteStateMachine: {fileID: 930298939}
 --- !u!114 &760473043
@@ -2223,20 +2225,33 @@ MonoBehaviour:
     - {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
     actions:
     - {fileID: 11400000, guid: f5986ebdc51e7024c8aa243dd4bdeaa2, type: 2}
+    - {fileID: 11400000, guid: 1cac3b1ed5bda37408d174f9f9c745e3, type: 2}
+    - {fileID: 11400000, guid: 10de66031d5a6f14780109aa995fbe4d, type: 2}
   - events:
     - {fileID: 11400000, guid: dbba5afb218cdfc43b4d4b57bd070748, type: 2}
     actions:
     - {fileID: 11400000, guid: 378cbbd97c7608742bf9eb2d17214671, type: 2}
+    - {fileID: 11400000, guid: 9485badd0e042dc418f4c7f945d22280, type: 2}
   - events:
     - {fileID: 11400000, guid: 020856c243e34c5419dd56c888728fe7, type: 2}
     actions:
     - {fileID: 11400000, guid: b072ed1d62f48134d845eed99f23b01f, type: 2}
   - events:
-    - {fileID: 11400000, guid: 98c081dfa06a4184f82adaee95dc1201, type: 2}
+    - {fileID: 11400000, guid: 5a3b2b795dac56948a3693e4ad166734, type: 2}
     - {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
-    - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
+    - {fileID: 11400000, guid: 61355c7e630791a4aa23e82e5af6fe6e, type: 2}
     actions:
     - {fileID: 11400000, guid: 6fb8e49f3373e62419bddc4dcc6f9a49, type: 2}
+    - {fileID: 11400000, guid: c2321d3a1a4d835408da9f94ab8c2bd6, type: 2}
+  - events:
+    - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
+    actions:
+    - {fileID: 11400000, guid: b66d8c430212e0b4ea43eaa88f3c715a, type: 2}
+  - events:
+    - {fileID: 11400000, guid: e21e30b9857420a46bf445faa7de1cff, type: 2}
+    actions:
+    - {fileID: 11400000, guid: 459363b589a6bf34ca35e4bb2bd07008, type: 2}
+    - {fileID: 11400000, guid: 10de66031d5a6f14780109aa995fbe4d, type: 2}
   parentObject: {fileID: 1231766136}
 --- !u!1 &1862298170
 GameObject:
@@ -2310,7 +2325,7 @@ GameObject:
   - component: {fileID: 1934688693}
   - component: {fileID: 1934688694}
   m_Layer: 0
-  m_Name: ScreenShake
+  m_Name: RunEveryFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2346,6 +2361,15 @@ MonoBehaviour:
   - events: []
     actions:
     - {fileID: 11400000, guid: 14666afa84fba8d45a59159c1669ee70, type: 2}
+  - events: []
+    actions:
+    - {fileID: 11400000, guid: 155a71fb763803c4fa0054927038f735, type: 2}
+    - {fileID: 11400000, guid: 8c403c76021bb28439a048c59e3b8800, type: 2}
+  - events:
+    - {fileID: 11400000, guid: dbba5afb218cdfc43b4d4b57bd070748, type: 2}
+    - {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
+    actions:
+    - {fileID: 11400000, guid: 6fd8faa49a0b708448bff5fe4215d326, type: 2}
   parentObject: {fileID: 1231766136}
 --- !u!1 &1979508451
 GameObject:
@@ -2994,17 +3018,17 @@ PrefabInstance:
     - target: {fileID: 1220829592893789036, guid: acf30fc32e6df7843805647117e1c0b0,
         type: 3}
       propertyPath: m_BoxSize.x
-      value: 4
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1220829592893789036, guid: acf30fc32e6df7843805647117e1c0b0,
         type: 3}
       propertyPath: m_BoxSize.y
-      value: 4
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1220829592893789036, guid: acf30fc32e6df7843805647117e1c0b0,
         type: 3}
       propertyPath: m_BoxSize.z
-      value: 4
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1220829592893789038, guid: acf30fc32e6df7843805647117e1c0b0,
         type: 3}
