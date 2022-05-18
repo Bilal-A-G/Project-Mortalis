@@ -29,7 +29,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 10
+    overrideValue: 30
   tolorence:
     useOverride: 1
     isFolded: 1
