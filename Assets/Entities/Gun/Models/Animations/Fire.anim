@@ -758,32 +758,35 @@ AnimationClip:
   - time: 0
     functionName: InvokeEvent
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 553743a6a42f5164f83e09f9a4c81bd3,
-      type: 2}
+    objectReferenceParameter: {fileID: 11400000, guid: 553743a6a42f5164f83e09f9a4c81bd3, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: InvokeEvent
+    data: 
+    objectReferenceParameter: {fileID: 11400000, guid: c8e85a751e9704c43b40dbd541fb0f9c, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.16666667
     functionName: InvokeEvent
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 09fe4255157f5f14b87a7f222d790944,
-      type: 2}
+    objectReferenceParameter: {fileID: 11400000, guid: 09fe4255157f5f14b87a7f222d790944, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.38333333
     functionName: InvokeEvent
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 6ff1cc874b88dfe4bb9da35921cd8969,
-      type: 2}
+    objectReferenceParameter: {fileID: 11400000, guid: 6ff1cc874b88dfe4bb9da35921cd8969, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
     functionName: InvokeEvent
     data: 
-    objectReferenceParameter: {fileID: 11400000, guid: 7cf3512fed9ed1d46a606be07fcd52ff,
-      type: 2}
+    objectReferenceParameter: {fileID: 11400000, guid: 7cf3512fed9ed1d46a606be07fcd52ff, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

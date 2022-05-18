@@ -16,6 +16,12 @@ public class ScreenShakeAction : ActionBase
     [System.NonSerialized]
     GameObject mainCamera;
 
+    [System.NonSerialized]
+    float seed;
+
+    [System.NonSerialized]
+    float time;
+
     public override void Execute(GameObject callingObject)
     {
         return; 
@@ -31,14 +37,16 @@ public class ScreenShakeAction : ActionBase
             mainCamera = pathToMainCamera.GetValue().GetObjectAtPath(callingObject);
         }
 
+        if (seed == 0) seed = Random.Range(1, 1000);
+
         trauma.SetValue(trauma.GetValue() - traumaDecreaseRate.GetValue() * Time.deltaTime);
         trauma.SetValue(Mathf.Clamp01(trauma.GetValue()));
 
         Vector3 screenShake;
 
-        float randomYawModifier = Random.Range(0.1f, 1f);
-        float randomPitchModifier = Random.Range(0.1f, 1f);
-        float randomRollModifier = Random.Range(0.1f, 1f);
+        float randomYawModifier = Mathf.PerlinNoise(seed + time, seed + time + 1);
+        float randomPitchModifier = Mathf.PerlinNoise(seed + time + 2, seed + time + 3);
+        float randomRollModifier = Mathf.PerlinNoise(seed + time + 4, seed + time + 5);
 
         float yaw = screenShakeYawPitchRoll.GetValue().x * Mathf.Pow(trauma.GetValue(), 2) * (Random.value < 0.5 ? -1 : 1) * randomYawModifier;
         float pitch = screenShakeYawPitchRoll.GetValue().y * Mathf.Pow(trauma.GetValue(), 2) * (Random.value < 0.5 ? -1 : 1) * randomPitchModifier;
@@ -49,5 +57,6 @@ public class ScreenShakeAction : ActionBase
         screenShake.z = roll;
 
         mainCamera.transform.eulerAngles = camera.transform.eulerAngles + screenShake;
+        time += Time.deltaTime;
     }
 }
