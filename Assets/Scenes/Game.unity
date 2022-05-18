@@ -213,7 +213,7 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: ee2daaa8b828d8d42b27028bfdb6198b, type: 2}
     - {fileID: 11400000, guid: 7c73a1a465e126a4ab16d1b31854d86d, type: 2}
-    - {fileID: 11400000, guid: ed3e08db9fbb67246a47887e2ef58bfd, type: 2}
+    - {fileID: 11400000, guid: c54845c309c9ba5448e27756cad008dc, type: 2}
     - {fileID: 11400000, guid: bee261bd86ab7bc4b9349daee4d72f10, type: 2}
     - {fileID: 11400000, guid: 1b2843e560a74db4685428dee912ecd0, type: 2}
   - events:
@@ -234,6 +234,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c8e85a751e9704c43b40dbd541fb0f9c, type: 2}
     actions:
     - {fileID: 11400000, guid: 0f3277fd8881bfd46b54b78d5df7e087, type: 2}
+  - events:
+    - {fileID: 11400000, guid: e7bd07208488d904a9f5c140b096b7dc, type: 2}
+    actions:
+    - {fileID: 11400000, guid: ef5f6ac49b8ca1448a0f321515beaa14, type: 2}
   parentObject: {fileID: 1163835565577848877}
 --- !u!1 &281807360
 GameObject:

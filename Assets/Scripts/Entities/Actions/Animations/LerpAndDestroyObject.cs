@@ -55,7 +55,7 @@ public class LerpAndDestroyObject : ActionBase
         if (LerpToEnd())
         {
             if (onLerpEnd != null) onLerpEnd.Invoke(callingObject);
-
+ 
             Destroy(lerpTarget);
 
             debounce = false;

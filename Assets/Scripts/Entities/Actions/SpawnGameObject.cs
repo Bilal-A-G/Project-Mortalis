@@ -15,6 +15,7 @@ public class SpawnGameObject : ActionBase
     public override void Execute(GameObject callingObject)
     {
         GameObject instantiatedObject = Instantiate(objectToInstantiate);
+
         Rigidbody instantiatedObjectPhysicsBody = instantiatedObject.GetComponent<Rigidbody>();
 
         instantiatedObject.transform.position = instantiatePosition.GetValue();
@@ -25,6 +26,7 @@ public class SpawnGameObject : ActionBase
             instantiatedObjectPhysicsBody.AddForce(instantiatedObject.transform.right * force.GetValue());
         }
 
+        instantiatedObject.SetActive(true);
         Destroy(instantiatedObject, destroyTime.GetValue());
     }
 }

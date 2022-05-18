@@ -21,7 +21,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.5
+    overrideValue: 0.35
   min:
     useOverride: 1
     isFolded: 1

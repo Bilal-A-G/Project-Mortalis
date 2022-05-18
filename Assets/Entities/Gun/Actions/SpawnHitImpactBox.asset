@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3202bd882d81fa4e85dc0c412d65368, type: 3}
+  m_Name: SpawnHitImpactBox
+  m_EditorClassIdentifier: 
+  objectToInstantiate: {fileID: 6522327156861153440, guid: 676621d3e9f1afd4cb0966d4412b4003, type: 3}
+  instantiatePosition:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 7fb9315e603236847ad7f0a8dce6cf66, type: 2}
+    overrideValue: {x: 0, y: 0, z: 0}
+  instantiateRotation:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 93d335652d41d014899f523976328307, type: 2}
+    overrideValue: {x: 0, y: 0, z: 0}
+  force:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0
+  destroyTime:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 5

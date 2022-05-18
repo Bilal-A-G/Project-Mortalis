@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e82213d9946b784bbc1c9d7a6b26d0a, type: 3}
   m_Name: LerpBulletTracer
   m_EditorClassIdentifier: 
-  onLerpEnd: {fileID: 0}
+  onLerpEnd: {fileID: 11400000, guid: e7bd07208488d904a9f5c140b096b7dc, type: 2}
   endVector:
     useOverride: 0
     isFolded: 1

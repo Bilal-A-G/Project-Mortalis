@@ -11,7 +11,10 @@ public class ShootAction : ActionBase
     public GenericReference<string> firePointName;
 
     public GenericReference<Vector3> outputPosition;
+    public GenericReference<Vector3> outputRotation;
     public GenericReference<float> bulletSpread;
+
+    public GenericReference<bool> tracerHitSomething;
 
     [System.NonSerialized]
     Transform firePoint;
@@ -50,9 +53,15 @@ public class ShootAction : ActionBase
             }
 
             outputPosition.SetValue(hit.point);
+            outputRotation.SetValue(Quaternion.LookRotation(hit.normal).eulerAngles);
+            tracerHitSomething.SetValue(true);
             didTracer = true;
         }
 
-        if (!didTracer) outputPosition.SetValue(endPoint * 1000);
+        if (!didTracer) 
+        {
+            outputPosition.SetValue(endPoint * 1000);
+            tracerHitSomething.SetValue(false);
+        } 
     }
 }
