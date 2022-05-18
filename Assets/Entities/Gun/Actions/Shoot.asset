@@ -34,3 +34,13 @@ MonoBehaviour:
     isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: FirePoint
+  outputPosition:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 7fb9315e603236847ad7f0a8dce6cf66, type: 2}
+    overrideValue: {x: 0, y: 0, z: 0}
+  bulletSpread:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0
