@@ -35,7 +35,7 @@ MonoBehaviour:
   - useOverride: 1
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
-    overrideValue: 0.3
+    overrideValue: 0.2
   speed:
     useOverride: 1
     isFolded: 1

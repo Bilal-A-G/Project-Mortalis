@@ -21,12 +21,12 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 30
+    overrideValue: 80
   speed:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 5
+    overrideValue: 1
   offsetX:
     useOverride: 1
     isFolded: 1

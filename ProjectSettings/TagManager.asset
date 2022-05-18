@@ -3,19 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Map
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Player
-  - Weapon
-  - Sun
-  - WeaponRendererMap
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
