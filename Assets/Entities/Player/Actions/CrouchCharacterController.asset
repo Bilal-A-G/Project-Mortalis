@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8491a74f110e12742b27cdce18b3f79d, type: 3}
+  m_Name: CrouchCharacterController
+  m_EditorClassIdentifier: 
+  pathToController:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: c8526d1ec16dbde42b32d8f30a5a1275, type: 2}
+    overrideValue:
+      path: []
+  desiredCenter:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: {x: 0, y: -0.5, z: 0}
+  desiredHeight:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0.7

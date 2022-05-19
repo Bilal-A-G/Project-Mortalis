@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a077babc801cc4ab8b7bfb0dd7c73f, type: 3}
+  m_Name: CheckUncrouched
+  m_EditorClassIdentifier: 
+  onFloatChanged: {fileID: 11400000, guid: 61355c7e630791a4aa23e82e5af6fe6e, type: 2}
+  floatToMonitor:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
+    overrideValue: 0
+  valueChangeTo:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 67f94494497eb164e9f16376a98f4b91, type: 2}
+    overrideValue: 0
+  valueChangeFrom:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 1921b3979a678b64ca9a538ebb781666, type: 2}
+    overrideValue: 0
