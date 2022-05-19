@@ -18,4 +18,4 @@ MonoBehaviour:
     translateTo: {fileID: 0}
     action: {fileID: 11400000, guid: 6c09005feb89735498df962ba8d75011, type: 2}
   stateTransitions: []
-  stateChild: {fileID: 11400000, guid: 64ed19ea306d7114e8a8a4de3bb2fdeb, type: 2}
+  stateChild: {fileID: 11400000, guid: 7ebd6995ee8ac814c9e9262af2a10177, type: 2}
