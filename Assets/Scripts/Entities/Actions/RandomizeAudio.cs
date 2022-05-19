@@ -10,6 +10,6 @@ public class RandomizeAudio : ActionBase
 
     public override void Execute(GameObject callingObject)
     {
-        output.SetValue(possibleClips.GetValue()[Random.Range(0, possibleClips.GetValue().Count)]);
+        output.SetValue(possibleClips.GetValue()[Random.Range(0, possibleClips.GetValue().Count - 1)]);
     }
 }
