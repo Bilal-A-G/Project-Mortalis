@@ -458,6 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 514476223}
   - component: {fileID: 514476224}
+  - component: {fileID: 514476225}
   m_Layer: 0
   m_Name: Looking
   m_TagString: Untagged
@@ -499,6 +500,22 @@ MonoBehaviour:
     variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
     overrideValue: {x: 0, y: 0}
   finiteStateMachine: {fileID: 930298939}
+--- !u!114 &514476225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514476222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a6cb8937ec6cf49a905e3304d6db44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callingObject: {fileID: 1231766136}
+  aimEvent: {fileID: 11400000, guid: 302f92962139f564ab5b943efb22499d, type: 2}
+  stopAimEvent: {fileID: 11400000, guid: 6a9cbd396966e764c9abe41b747cfc70, type: 2}
+  fsm: {fileID: 930298939}
 --- !u!1 &673576240
 GameObject:
   m_ObjectHideFlags: 1
@@ -694,6 +711,22 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
     actions:
     - {fileID: 11400000, guid: deb68db29eb9fe84d870d681bead559f, type: 2}
+  - events:
+    - {fileID: 11400000, guid: 302f92962139f564ab5b943efb22499d, type: 2}
+    actions:
+    - {fileID: 11400000, guid: 8dc58b93c6254024da19e8de634f20e4, type: 2}
+    - {fileID: 11400000, guid: b4665bc0bbf327841bbb91fbfe9e7ea5, type: 2}
+    - {fileID: 11400000, guid: 396ddaa762ae9484a83fc320e183c645, type: 2}
+    - {fileID: 11400000, guid: 0385503d38e5f604cb06349c04e1dbf8, type: 2}
+    - {fileID: 11400000, guid: ea923d7503feda64a9507d5bff946571, type: 2}
+  - events:
+    - {fileID: 11400000, guid: 6a9cbd396966e764c9abe41b747cfc70, type: 2}
+    actions:
+    - {fileID: 11400000, guid: 64f291d036df988469441df0db7febc8, type: 2}
+    - {fileID: 11400000, guid: b4665bc0bbf327841bbb91fbfe9e7ea5, type: 2}
+    - {fileID: 11400000, guid: c2321d3a1a4d835408da9f94ab8c2bd6, type: 2}
+    - {fileID: 11400000, guid: 0385503d38e5f604cb06349c04e1dbf8, type: 2}
+    - {fileID: 11400000, guid: ea923d7503feda64a9507d5bff946571, type: 2}
   parentObject: {fileID: 1231766136}
 --- !u!1 &925985417
 GameObject:
@@ -811,7 +844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c7937124d94be4db5e5f3ee0c03cbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 11400000, guid: 7ebd6995ee8ac814c9e9262af2a10177, type: 2}
+  initialState: {fileID: 11400000, guid: 644a653eb1fc3c944a2f62f7c77c2d16, type: 2}
 --- !u!1 &974898945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,7 +2226,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 98c081dfa06a4184f82adaee95dc1201, type: 2}
     actions:
     - {fileID: 11400000, guid: 6fb8e49f3373e62419bddc4dcc6f9a49, type: 2}
-    - {fileID: 11400000, guid: c2321d3a1a4d835408da9f94ab8c2bd6, type: 2}
     - {fileID: 11400000, guid: 0db5ec20a1d99e74a9ec3981bca5ad4b, type: 2}
   - events:
     - {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
@@ -2221,6 +2253,10 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: f4d0c9bbdb9f5ff478e762209230fd05, type: 2}
     - {fileID: 11400000, guid: a644a41b989c22148890dac4a1f92199, type: 2}
+  - events:
+    - {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
+    actions:
+    - {fileID: 11400000, guid: c2321d3a1a4d835408da9f94ab8c2bd6, type: 2}
   parentObject: {fileID: 1231766136}
 --- !u!1 &1862298170
 GameObject:

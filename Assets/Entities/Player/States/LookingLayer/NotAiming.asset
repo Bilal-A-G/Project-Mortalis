@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
-  m_Name: Looking
+  m_Name: NotAiming
   m_EditorClassIdentifier: 
   stateActions:
+  - translate: 0
+    isFolded: 1
+    translateTo: {fileID: 0}
+    action: {fileID: 11400000, guid: 6a9cbd396966e764c9abe41b747cfc70, type: 2}
   - translate: 0
     isFolded: 1
     translateTo: {fileID: 0}
@@ -21,5 +25,7 @@ MonoBehaviour:
     isFolded: 1
     translateTo: {fileID: 0}
     action: {fileID: 11400000, guid: 6c71d60765468e54896c731501799f1e, type: 2}
-  stateTransitions: []
-  stateChild: {fileID: 11400000, guid: 644a653eb1fc3c944a2f62f7c77c2d16, type: 2}
+  stateTransitions:
+  - action: {fileID: 11400000, guid: 302f92962139f564ab5b943efb22499d, type: 2}
+    stateObject: {fileID: 11400000, guid: d5512c68868772f48afeb8b66acd6ee3, type: 2}
+  stateChild: {fileID: 11400000, guid: bcaef98ffd936e44980011b4add5e636, type: 2}
