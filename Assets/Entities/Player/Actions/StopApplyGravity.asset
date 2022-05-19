@@ -14,13 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 653d6cd500bc7824280d86f222d00fb3, type: 2}
     overrideValue: 0
   gravity:
     useOverride: 0
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: c8f1b219d948b1649aeb51ce0c24ce78, type: 2}
     overrideValue: 0
   applyGravity:
     useOverride: 1
+    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: 0
+  stickToGroundForce:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 774d846550f2acd41af5402297425616, type: 2}
+    overrideValue: 5

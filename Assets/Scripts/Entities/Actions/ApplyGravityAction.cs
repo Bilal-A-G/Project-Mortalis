@@ -8,6 +8,7 @@ public class ApplyGravityAction : ActionBase
     public GenericReference<float> velocity;
     public GenericReference<float> gravity;
     public GenericReference<bool> applyGravity;
+    public GenericReference<float> stickToGroundForce;
 
     [System.NonSerialized]
     CharacterController controller;
@@ -22,9 +23,9 @@ public class ApplyGravityAction : ActionBase
         }
         else
         {
-            if (velocity.GetValue() > 0)
+            if ((int)velocity.GetValue() >= 0)
             {
-                velocity.SetValue(0);
+                velocity.SetValue(stickToGroundForce.GetValue());
             }
         }
 
