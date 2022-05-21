@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3385bed6e36b14eb5fbb97273b0126, type: 3}
   m_Name: PlayerStopRun
   m_EditorClassIdentifier: 
-  argumentsList: []
+  queueable: 1
+  dequeueLayer: {fileID: 11400000, guid: 7ebd6995ee8ac814c9e9262af2a10177, type: 2}

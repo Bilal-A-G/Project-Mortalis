@@ -13,6 +13,7 @@ public class GunReloadInput : BasePlayerInput
 
         inputActions.PcMap.Reload.started += ctx =>
         {
+            Debug.Log("Reloaded");
             stateMachine.UpdateState(gunReloadEvent, callingObject);
         };
     }

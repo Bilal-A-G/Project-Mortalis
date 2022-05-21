@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3385bed6e36b14eb5fbb97273b0126, type: 3}
   m_Name: PlayerLanded
   m_EditorClassIdentifier: 
+  queueable: 1
+  dequeueLayer: {fileID: 11400000, guid: 644a653eb1fc3c944a2f62f7c77c2d16, type: 2}

@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class PlayerCrouchInput : BasePlayerInput
 {
-    public EventObject crouchingEvent;
-    public EventObject notCrouchingEvent;
+    public EventObject startedCrouchingEvent;
+    public EventObject stoppedCrouchingEvent;
 
     public FiniteStateMachine currentFiniteStateMachine;
-
-    bool crouching;
-    bool crouchLastFrame;
 
     void Awake()
     {
@@ -18,23 +15,12 @@ public class PlayerCrouchInput : BasePlayerInput
 
         inputActions.PcMap.Crouch.started += ctx => 
         {
-            crouching = true;
-            currentFiniteStateMachine.UpdateState(crouchingEvent, callingObject);
+            currentFiniteStateMachine.UpdateState(startedCrouchingEvent, callingObject);
         };
 
         inputActions.PcMap.Crouch.canceled += ctx =>
         {
-            crouching = false;
+            currentFiniteStateMachine.UpdateState(stoppedCrouchingEvent, callingObject);
         };
-    }
-
-    private void Update()
-    {
-        if (!crouching)
-        {
-            currentFiniteStateMachine.UpdateState(notCrouchingEvent, callingObject);
-        }
-
-        crouchLastFrame = crouching;
     }
 }

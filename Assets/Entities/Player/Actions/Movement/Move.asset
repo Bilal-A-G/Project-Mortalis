@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed:
     useOverride: 0
+    isFolded: 1
     variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
     overrideValue: 0
   moveDirection:
     useOverride: 0
+    isFolded: 1
     variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
     overrideValue: {x: 0, y: 0}

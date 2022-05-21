@@ -12,15 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
   m_Name: Aiming
   m_EditorClassIdentifier: 
+  onStateEnter: []
+  onStateExit: []
   stateActions:
   - translate: 0
     isFolded: 1
     translateTo: {fileID: 0}
     action: {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
-  - translate: 0
-    isFolded: 1
-    translateTo: {fileID: 0}
-    action: {fileID: 11400000, guid: 6c71d60765468e54896c731501799f1e, type: 2}
   - translate: 0
     isFolded: 1
     translateTo: {fileID: 0}

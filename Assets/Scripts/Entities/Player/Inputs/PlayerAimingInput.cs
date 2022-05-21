@@ -12,8 +12,8 @@ public class PlayerAimingInput : BasePlayerInput
     {
         inputActions = new InputActions();
 
-        inputActions.PcMap.Aim.started += ctx => { fsm.UpdateState(aimEvent, callingObject); };
+        inputActions.PcMap.Aim.started += ctx => { fsm.UpdateState(aimEvent, callingObject);};
 
-        inputActions.PcMap.Aim.canceled += ctx => { fsm.UpdateState(stopAimEvent, callingObject); };
+        inputActions.PcMap.Aim.canceled += ctx => { fsm.UpdateState(stopAimEvent, callingObject);};
     }
 }

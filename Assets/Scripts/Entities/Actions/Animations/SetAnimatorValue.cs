@@ -5,7 +5,7 @@ using UnityEngine;
 public class SetAnimatorValue<T> : ActionBase
 {
     public GenericReference<Path> pathToAnimator;
-    public List<GenericReference<T>> value;
+    public GenericReference<T> value;
 
     [System.NonSerialized]
     protected Animator animator;

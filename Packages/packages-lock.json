@@ -1,22 +1,11 @@
 {
   "dependencies": {
-    "com.bilal.designer-variables": {
-      "version": "git@github.com:Bilal-A-G/Designer-Variables.git",
+    "com.bilal.wizrds-tools": {
+      "version": "git@github.com:Bilal-A-G/W_I_Zr_Ds-Tools.git",
       "depth": 0,
       "source": "git",
-      "dependencies": {
-        "com.unity.inputsystem": "1.2.0"
-      },
-      "hash": "08bc5dbd817ba05d4a5bb920ac98b659a1a12206"
-    },
-    "com.bilal.super-extensible-fsm-event-system": {
-      "version": "git@github.com:Bilal-A-G/Super-Extensible-FSM-Event-System.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.inputsystem": "1.2.0"
-      },
-      "hash": "d84939b7e723268b478c9087d5452a7d6d1378b3"
+      "dependencies": {},
+      "hash": "7dda7318d69392bbffdc3d9736be156fa02cf229"
     },
     "com.unity.collab-proxy": {
       "version": "1.5.7",
@@ -34,15 +23,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.ide.rider": {
-      "version": "3.0.7",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ext.nunit": "1.0.6"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.ide.visualstudio": {
       "version": "2.0.15",
       "depth": 0,
@@ -53,19 +33,17 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
-      "version": "1.2.3",
+      "version": "1.2.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.2.0",
-      "depth": 1,
+      "version": "1.0.2",
+      "depth": 0,
       "source": "registry",
-      "dependencies": {
-        "com.unity.modules.uielements": "1.0.0"
-      },
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
@@ -145,7 +123,7 @@
       }
     },
     "com.unity.test-framework": {
-      "version": "1.1.27",
+      "version": "1.1.31",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -165,7 +143,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.5.5",
+      "version": "1.5.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {

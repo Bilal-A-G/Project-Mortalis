@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93491874fdd46d04bb581a153511b6a2, type: 3}
-  m_Name: SetMoveAnimationTo0
+  m_Script: {fileID: 11500000, guid: 2a9ff2cf0da1c564fa9fae9f0d143482, type: 3}
+  m_Name: AnimatorSpeed
   m_EditorClassIdentifier: 
-  valueToSet:
+  vectorInput:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: da094bc4db1a0cf449f0fba2d91834ce, type: 2}
-    overrideValue: 0
-  valueToSetTo:
-    useOverride: 1
+    variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
+    overrideValue: {x: 0, y: 0}
+  floatInput:
+    useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: da094bc4db1a0cf449f0fba2d91834ce, type: 2}
+    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
     overrideValue: 0

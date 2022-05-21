@@ -10,6 +10,6 @@ public class SetAnimatorBool : SetAnimatorValue<bool>
     public override void Execute(GameObject callingObject)
     {
         base.Execute(callingObject);
-        animator.SetBool(valueName.GetValue(), value[0].GetValue());
+        animator.SetBool(valueName.GetValue(), value.GetValue());
     }
 }

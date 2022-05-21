@@ -19,13 +19,9 @@ MonoBehaviour:
     overrideValue:
       path: []
   value:
-  - useOverride: 0
+    useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
-    overrideValue: 0
-  - useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: da094bc4db1a0cf449f0fba2d91834ce, type: 2}
+    variableValue: {fileID: 11400000, guid: 4e5d65789a9db194db6de5208b7f8f25, type: 2}
     overrideValue: 0
   valueName:
     useOverride: 1
