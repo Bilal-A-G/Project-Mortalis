@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3202bd882d81fa4e85dc0c412d65368, type: 3}
+  m_Name: SpawnMagazine
+  m_EditorClassIdentifier: 
+  objectToInstantiate: {fileID: 5282870511144032122, guid: bfb59d6217a6aec41ab8c032aeadbfc0, type: 3}
+  instantiatePosition:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 56afa6cb66a8f434583018c15af2107b, type: 2}
+    overrideValue: {x: 0, y: 0, z: 0}
+  instantiateRotation:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 6f3dac17c0d92834eabfd6c044ec6880, type: 2}
+    overrideValue: {x: 0, y: 0, z: 0}
+  force:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: -100
+  destroyTime:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 5

@@ -21,5 +21,5 @@ MonoBehaviour:
   clipToPlay:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: abc1f7ab9784c2345892f9aa41a37878, type: 2}
+    variableValue: {fileID: 11400000, guid: 09ccf8a00d4ed2a4d80b04f061dbbe2d, type: 2}
     overrideValue: {fileID: 8300000, guid: 01d0c490d7006184cb5740763b6a85ce, type: 3}

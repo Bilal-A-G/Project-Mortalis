@@ -8,7 +8,7 @@ public class RunEventEveryFrameInput : MonoBehaviour
     public GameObject callingObject;
     public FiniteStateMachine fsm;
 
-    void Update()
+    void FixedUpdate()
     {
         for(int i = 0; i < events.Count; i++)
         {

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98a09e09da8e0e24091c93e83a7c2be5, type: 3}
+  m_Name: StandUpBlock
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 6fb8e49f3373e62419bddc4dcc6f9a49, type: 2}
+  - {fileID: 11400000, guid: 0385503d38e5f604cb06349c04e1dbf8, type: 2}
+  - {fileID: 11400000, guid: 97acc7b3956ec894392cf036d6a92e95, type: 2}
+  - {fileID: 11400000, guid: 1cc99ab8900dff347bd4b47e240923ef, type: 2}

@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Lerp Position", menuName = "FSM/Actions/Lerp Position")]
 public class LerpPosition : ActionBase
 {
-    public EventObject onLerpStart;
-    public EventObject onKickback;
-    public EventObject onLerpEnd;
+    public ActionBase onLerpStart;
+    public ActionBase onKickback;
+    public ActionBase onLerpEnd;
 
     public GenericReference<Vector3> endVector;
 
@@ -51,7 +51,7 @@ public class LerpPosition : ActionBase
 
         SetUpStartVector();
 
-        if (onLerpStart != null) onLerpStart.Invoke(callingObject);
+        if (onLerpStart != null) onLerpStart.Execute(callingObject);
     }
 
     protected virtual void SetUpStartVector()
@@ -67,7 +67,7 @@ public class LerpPosition : ActionBase
 
         if (LerpToEnd())
         {
-            if (onLerpEnd != null) onLerpEnd.Invoke(callingObject);
+            if (onLerpEnd != null) onLerpEnd.Execute(callingObject);
 
             if(resetVector.GetValue()) ResetLerpedProperty();
 
@@ -87,7 +87,7 @@ public class LerpPosition : ActionBase
         if(!didKickback && timeSinceExecuted >= animationDuration.GetValue()/2)
         {
             didKickback = true;
-            if(onKickback != null) onKickback.Invoke(callingObject);
+            if(onKickback != null) onKickback.Execute(callingObject);
         }
 
         if (underMaximum && overMinimum || overMaximum) return true;

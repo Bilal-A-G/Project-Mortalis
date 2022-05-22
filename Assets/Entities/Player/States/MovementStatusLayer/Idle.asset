@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
   m_Name: Idle
   m_EditorClassIdentifier: 
+  onStateEnter: []
+  onStateExit: []
   stateActions:
   - translate: 0
     isFolded: 1
@@ -21,10 +23,6 @@ MonoBehaviour:
     isFolded: 1
     translateTo: {fileID: 0}
     action: {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
-  - translate: 0
-    isFolded: 1
-    translateTo: {fileID: 0}
-    action: {fileID: 11400000, guid: 98c081dfa06a4184f82adaee95dc1201, type: 2}
   - translate: 0
     isFolded: 1
     translateTo: {fileID: 0}

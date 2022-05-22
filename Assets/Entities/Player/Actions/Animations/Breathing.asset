@@ -15,7 +15,7 @@ MonoBehaviour:
   lerpAlongVector:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: e444450abb79d7046982d3747a012feb, type: 2}
+    variableValue: {fileID: 11400000, guid: 16adc8e30592da343898c67ec04460d1, type: 2}
     overrideValue: {x: 0, y: 0, z: 0}
   speed:
     useOverride: 1

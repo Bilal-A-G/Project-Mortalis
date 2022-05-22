@@ -19,12 +19,7 @@ public class LerpFromCurrentPosition : ActionBase
 
     public override void Execute(GameObject callingObject)
     {
-        return;
-    }
-
-    public override void FixedUpdateLoop(GameObject callingObject)
-    {
-        if(lerpTarget == null) lerpTarget = pathToTarget.GetValue().GetObjectAtPath(callingObject);
+        if (lerpTarget == null) lerpTarget = pathToTarget.GetValue().GetObjectAtPath(callingObject);
 
         lerpPosition = Vector3.Lerp(lerpPosition, lerpAlongVector.GetValue(), Time.smoothDeltaTime * speed.GetValue() * speedModifier.GetValue());
         lerpTarget.transform.localPosition = lerpPosition + startPosition.GetValue();

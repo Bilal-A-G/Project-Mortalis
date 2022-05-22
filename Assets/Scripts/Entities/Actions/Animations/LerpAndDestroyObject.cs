@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Lerp And Destroy", menuName = "FSM/Actions/Lerp And Destroy")]
 public class LerpAndDestroyObject : ActionBase
 {
-    public EventObject onLerpEnd;
+    public ActionBase onLerpEnd;
 
     public GenericReference<Vector3> endVector;
 
@@ -54,7 +54,7 @@ public class LerpAndDestroyObject : ActionBase
 
         if (LerpToEnd())
         {
-            if (onLerpEnd != null) onLerpEnd.Invoke(callingObject);
+            if (onLerpEnd != null) onLerpEnd.Execute(callingObject);
  
             Destroy(lerpTarget);
 

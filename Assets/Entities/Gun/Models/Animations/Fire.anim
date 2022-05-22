@@ -762,13 +762,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
-    functionName: InvokeEvent
-    data: 
-    objectReferenceParameter: {fileID: 11400000, guid: c8e85a751e9704c43b40dbd541fb0f9c, type: 2}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0.16666667
     functionName: InvokeEvent
     data: 

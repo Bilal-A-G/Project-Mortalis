@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf31fe616226bc4ab08da23111e7b3c, type: 3}
+  m_Name: EjectCasing
+  m_EditorClassIdentifier: 
+  onLerpStart: {fileID: 0}
+  onKickback: {fileID: 11400000, guid: 63087a529cac92943aa54a9de4a278d4, type: 2}
+  onLerpEnd: {fileID: 0}
+  endVector:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 416ea1d25fa9a8a46bba881a6c0de866, type: 2}
+    overrideValue: {x: 0, y: 0, z: 0}
+  lerpTargetPath:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: b3996ccafee5bca40a7adfd0e1c76c5a, type: 2}
+    overrideValue:
+      path: []
+  currentSpeed:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 10
+  resetVector:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
+  tolorence:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0
+  animationDuration:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
+  easingFunction:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 0
+      m_RotationOrder: 4

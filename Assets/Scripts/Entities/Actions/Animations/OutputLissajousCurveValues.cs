@@ -19,14 +19,9 @@ public class OutputLissajousCurveValues : ActionBase
 
     public override void Execute(GameObject callingObject)
     {
-        return;
-    }
-
-    public override void UpdateLoop(GameObject callingObject)
-    {
         lissajousCurve = new Vector3(Mathf.Sin(time), offsetX.GetValue() * Mathf.Sin(offsetY.GetValue() * time + Mathf.PI));
-        
-        lissajousValuesOutput.SetValue(lissajousCurve/curveScale.GetValue());
+
+        lissajousValuesOutput.SetValue(lissajousCurve / curveScale.GetValue());
         time += Time.deltaTime;
 
         if (time > 6) time = 0;

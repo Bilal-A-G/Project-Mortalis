@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "", menuName = "Variables/Functions/Multiply Float By Vector Magnitude")]
+[CreateAssetMenu(fileName = "", menuName = "Modded Variables/Functions/Multiply Float By Vector Magnitude")]
 public class MultiplyFloatByVectorMagnitude : GenericValue<float>
 {
     public GenericReference<Vector2> vectorInput;

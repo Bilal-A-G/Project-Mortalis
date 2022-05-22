@@ -24,14 +24,9 @@ public class ScreenShakeAction : ActionBase
 
     public override void Execute(GameObject callingObject)
     {
-        return; 
-    }
-
-    public override void UpdateLoop(GameObject callingObject)
-    {
         if (trauma.GetValue() <= 0) return;
 
-        if(camera == null)
+        if (camera == null)
         {
             camera = pathToStableCamera.GetValue().GetObjectAtPath(callingObject);
             mainCamera = pathToMainCamera.GetValue().GetObjectAtPath(callingObject);
@@ -51,7 +46,7 @@ public class ScreenShakeAction : ActionBase
         float yaw = screenShakeYawPitchRoll.GetValue().x * Mathf.Pow(trauma.GetValue(), 2) * (Random.value < 0.5 ? -1 : 1) * randomYawModifier;
         float pitch = screenShakeYawPitchRoll.GetValue().y * Mathf.Pow(trauma.GetValue(), 2) * (Random.value < 0.5 ? -1 : 1) * randomPitchModifier;
         float roll = screenShakeYawPitchRoll.GetValue().z * Mathf.Pow(trauma.GetValue(), 2) * (Random.value < 0.5 ? -1 : 1) * randomRollModifier;
-        
+
         screenShake.x = yaw;
         screenShake.y = pitch;
         screenShake.z = roll;

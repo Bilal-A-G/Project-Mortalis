@@ -18,28 +18,37 @@ public class LerpFOV : ActionBase
     [System.NonSerialized]
     float zoomTime;
 
+    [System.NonSerialized]
+    bool debounce;
+
     public override void Execute(GameObject callingObject)
     {
-        return;
+        if (camera == null)
+        {
+            camera = pathToCamera.GetValue().GetObjectAtPath(callingObject).GetComponent<Camera>();
+        }
+
+        if (debounce) return;
+
+        finalZoom = camera.fieldOfView;
+        debounce = true;
+        zoomTime = 0;
     }
 
     public override void UpdateLoop(GameObject callingObject)
     {
-        if (camera == null) 
-        {
-            camera = pathToCamera.GetValue().GetObjectAtPath(callingObject).GetComponent<Camera>();
-            finalZoom = camera.fieldOfView;
-        }
-
-        if ((int)finalZoom <= (int)desiredFOV.GetValue() + 1 && (int)finalZoom >= (int)desiredFOV.GetValue() - 1)
-        {
-            zoomTime = 0;
-            return;
-        }
+        if (!debounce) return;
 
         zoomTime += Time.deltaTime * zoomSpeed.GetValue();
 
-        finalZoom = Mathf.Lerp(finalZoom, desiredFOV.GetValue(), zoomTime);
-        camera.fieldOfView = finalZoom;
+        if ((int)finalZoom <= (int)desiredFOV.GetValue() + 1 && (int)finalZoom >= (int)desiredFOV.GetValue() - 1)
+        {
+            debounce = false;
+        }
+        else
+        {
+            finalZoom = Mathf.Lerp(finalZoom, desiredFOV.GetValue(), zoomTime);
+            camera.fieldOfView = finalZoom;
+        }
     }
 }
