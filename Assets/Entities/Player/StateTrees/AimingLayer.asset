@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c221eb87ec0a8144af4c33ad6fcee85, type: 3}
-  m_Name: HandleLookingLayer
+  m_Name: AimingLayer
   m_EditorClassIdentifier: 
-  initialState: {fileID: 11400000, guid: c3d8cf91aee7f1245831df029553472e, type: 2}
+  initialState: {fileID: 11400000, guid: d5512c68868772f48afeb8b66acd6ee3, type: 2}

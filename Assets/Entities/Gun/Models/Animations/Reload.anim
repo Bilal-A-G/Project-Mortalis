@@ -1853,7 +1853,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
+  - time: 0.016666668
     functionName: InvokeEvent
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: d9851b15dff8e994688e2e63d8fb4e7e, type: 2}
@@ -1888,7 +1888,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.1
+  - time: 2.0833333
     functionName: InvokeEvent
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 964214138014003488f2147046411207, type: 2}

@@ -601,7 +601,7 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
+  - time: 0.016666668
     functionName: InvokeEvent
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 44b3daccc033a7243939c239e1a8a0ab, type: 2}

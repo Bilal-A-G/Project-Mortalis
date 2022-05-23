@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
   m_Name: NotUnderObject
   m_EditorClassIdentifier: 
+  onStateEnter: []
+  onStateExit: []
   stateActions: []
   stateTransitions:
   - action: {fileID: 11400000, guid: f30c467888cc5a64097e789429cd8fa5, type: 2}
     stateObject: {fileID: 11400000, guid: 37cc42b1d8217824d9a6d06dc8348f2a, type: 2}
-  stateChild: {fileID: 11400000, guid: 644a653eb1fc3c944a2f62f7c77c2d16, type: 2}
+  stateChild: {fileID: 11400000, guid: bcaef98ffd936e44980011b4add5e636, type: 2}

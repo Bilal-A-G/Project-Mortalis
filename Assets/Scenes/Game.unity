@@ -442,7 +442,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26806
+  m_Name: pb_Mesh26844
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45825,15 +45825,17 @@ MonoBehaviour:
   - events:
     - {fileID: 11400000, guid: 302f92962139f564ab5b943efb22499d, type: 2}
     actions:
-    - {fileID: 11400000, guid: 8dc58b93c6254024da19e8de634f20e4, type: 2}
+    - {fileID: 11400000, guid: c75b4677000e2be4cb9381f5462937b1, type: 2}
     - {fileID: 11400000, guid: 0385503d38e5f604cb06349c04e1dbf8, type: 2}
     - {fileID: 11400000, guid: 63a45e6efb2e61a40a2aeaef987c3a6f, type: 2}
+    - {fileID: 11400000, guid: a188230025b5d8d45a8b1e07d36daed3, type: 2}
   - events:
     - {fileID: 11400000, guid: 6a9cbd396966e764c9abe41b747cfc70, type: 2}
     actions:
-    - {fileID: 11400000, guid: 64f291d036df988469441df0db7febc8, type: 2}
+    - {fileID: 11400000, guid: b4665bc0bbf327841bbb91fbfe9e7ea5, type: 2}
     - {fileID: 11400000, guid: 5d69c5c7cc7e7fb46a7519a94cdb5774, type: 2}
     - {fileID: 11400000, guid: 0385503d38e5f604cb06349c04e1dbf8, type: 2}
+    - {fileID: 11400000, guid: 0eb222f9399e77b43b8731980f17d762, type: 2}
   parentObject: {fileID: 1231766136}
 --- !u!1 &925985417
 GameObject:
@@ -47480,8 +47482,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.897562, y: 0.66828847, z: 0.8662567}
-  m_Center: {x: 0.015162468, y: 0.16585575, z: 0.0012664795}
+  m_Size: {x: 0.897562, y: 0.617132, z: 0.8662567}
+  m_Center: {x: 0.015162468, y: 0.191434, z: 0.0012664795}
 --- !u!1 &1933619204
 GameObject:
   m_ObjectHideFlags: 0
@@ -47562,7 +47564,6 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: 14666afa84fba8d45a59159c1669ee70, type: 2}
     - {fileID: 11400000, guid: 10de66031d5a6f14780109aa995fbe4d, type: 2}
-    - {fileID: 11400000, guid: b4665bc0bbf327841bbb91fbfe9e7ea5, type: 2}
     - {fileID: 11400000, guid: 8c403c76021bb28439a048c59e3b8800, type: 2}
   parentObject: {fileID: 1231766136}
 --- !u!1 &1973176606

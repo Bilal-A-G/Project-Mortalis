@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
   m_Name: Midair
   m_EditorClassIdentifier: 
+  onStateEnter: []
+  onStateExit: []
   stateActions:
   - translate: 0
     isFolded: 1
@@ -20,4 +22,4 @@ MonoBehaviour:
   stateTransitions:
   - action: {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
     stateObject: {fileID: 11400000, guid: 44133d1a36ebce54292cf32553797da8, type: 2}
-  stateChild: {fileID: 11400000, guid: 7ebd6995ee8ac814c9e9262af2a10177, type: 2}
+  stateChild: {fileID: 11400000, guid: bbb75ce20d939984d9670a2411853cdf, type: 2}

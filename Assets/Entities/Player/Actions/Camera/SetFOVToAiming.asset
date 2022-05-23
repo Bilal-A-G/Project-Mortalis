@@ -15,7 +15,7 @@ MonoBehaviour:
   desiredFOV:
     useOverride: 1
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: d22bf3e0c08f57c42a4ff5e0cca0c8f2, type: 2}
+    variableValue: {fileID: 0}
     overrideValue: 50
   pathToCamera:
     useOverride: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.5
+    overrideValue: 1

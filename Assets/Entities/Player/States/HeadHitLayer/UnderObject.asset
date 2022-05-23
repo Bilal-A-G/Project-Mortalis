@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
   m_Name: UnderObject
   m_EditorClassIdentifier: 
+  onStateEnter: []
+  onStateExit: []
   stateActions:
   - translate: 0
     isFolded: 1
@@ -20,4 +22,4 @@ MonoBehaviour:
   stateTransitions:
   - action: {fileID: 11400000, guid: b4cf6b44a9cb5fc4ea689a25183c407e, type: 2}
     stateObject: {fileID: 11400000, guid: 7aacf6f2ac785c0419809a0aa9cf8b6f, type: 2}
-  stateChild: {fileID: 11400000, guid: fbec53fc54ed6f247a692ad9a42c3ce2, type: 2}
+  stateChild: {fileID: 11400000, guid: 7ebd6995ee8ac814c9e9262af2a10177, type: 2}

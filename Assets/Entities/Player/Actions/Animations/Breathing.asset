@@ -18,14 +18,9 @@ MonoBehaviour:
     variableValue: {fileID: 11400000, guid: 16adc8e30592da343898c67ec04460d1, type: 2}
     overrideValue: {x: 0, y: 0, z: 0}
   speed:
-    useOverride: 1
+    useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
-    overrideValue: 1
-  speedModifier:
-    useOverride: 1
-    isFolded: 1
-    variableValue: {fileID: 0}
+    variableValue: {fileID: 11400000, guid: 6233481c5c6a6b0479a5d24027aa6569, type: 2}
     overrideValue: 1
   pathToTarget:
     useOverride: 0
