@@ -38,10 +38,7 @@ public class LerpPosition : ActionBase
     {
         this.callingObject = callingObject;
 
-        if(lerpTarget == null)
-        {
-            lerpTarget = lerpTargetPath.GetValue().GetObjectAtPath(callingObject);
-        }
+        lerpTarget = lerpTargetPath.GetValue().GetObjectAtPath(callingObject);
 
         if (debounce) return;
 

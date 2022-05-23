@@ -23,19 +23,15 @@ MonoBehaviour:
     variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
     overrideValue: {x: 0, y: 0}
   lookSwayAmount:
-  - useOverride: 1
+    useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.1
-  moveSwayAmount:
-  - useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
-    overrideValue: 0
-  - useOverride: 1
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
     overrideValue: 0.2
+  moveSwayAmount:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: ab6d495d3bc62374b8d62c973557c80c, type: 2}
+    overrideValue: 0
   speed:
     useOverride: 1
     isFolded: 1

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onStateEnter:
   - {fileID: 11400000, guid: 6a9cbd396966e764c9abe41b747cfc70, type: 2}
-  onStateExit: []
+  onStateExit:
+  - {fileID: 11400000, guid: 6a9cbd396966e764c9abe41b747cfc70, type: 2}
   stateActions:
   - translate: 0
     isFolded: 1

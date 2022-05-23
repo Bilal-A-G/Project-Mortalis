@@ -23,10 +23,7 @@ public class LerpFOV : ActionBase
 
     public override void Execute(GameObject callingObject)
     {
-        if (camera == null)
-        {
-            camera = pathToCamera.GetValue().GetObjectAtPath(callingObject).GetComponent<Camera>();
-        }
+        camera = pathToCamera.GetValue().GetObjectAtPath(callingObject).GetComponent<Camera>();
 
         if (debounce) return;
 

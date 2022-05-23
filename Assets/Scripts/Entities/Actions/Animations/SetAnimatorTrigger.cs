@@ -13,7 +13,8 @@ public class SetAnimatorTrigger : ActionBase
 
     public override void Execute(GameObject callingObject)
     {
-        if (animator == null) animator = pathToAnimator.GetValue().GetObjectAtPath(callingObject).GetComponent<Animator>();
+        animator = pathToAnimator.GetValue().GetObjectAtPath(callingObject).GetComponent<Animator>();
+        
         animator.SetTrigger(value.GetValue());
     }
 }

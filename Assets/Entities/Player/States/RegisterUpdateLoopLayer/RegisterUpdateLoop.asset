@@ -23,5 +23,9 @@ MonoBehaviour:
     isFolded: 1
     translateTo: {fileID: 0}
     action: {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
+  - translate: 0
+    isFolded: 1
+    translateTo: {fileID: 0}
+    action: {fileID: 11400000, guid: 2e9de5bae08c11f46b57e618b6dd4596, type: 2}
   stateTransitions: []
   stateChild: {fileID: 11400000, guid: 64ed19ea306d7114e8a8a4de3bb2fdeb, type: 2}
