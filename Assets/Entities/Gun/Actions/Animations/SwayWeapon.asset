@@ -26,12 +26,17 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.2
+    overrideValue: 0.5
   moveSwayAmount:
     useOverride: 0
     isFolded: 1
     variableValue: {fileID: 11400000, guid: ab6d495d3bc62374b8d62c973557c80c, type: 2}
     overrideValue: 0
+  swayClamp:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: c06b42cb2c4d78543b8746b9a970418d, type: 2}
+    overrideValue: 10
   speed:
     useOverride: 1
     isFolded: 1

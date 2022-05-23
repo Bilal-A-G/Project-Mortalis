@@ -16,6 +16,8 @@ public class SwayWeapon : ActionBase
     public GenericReference<float> lookSwayAmount;
     public GenericReference<float> moveSwayAmount;
 
+    public GenericReference<float> swayClamp;
+
     public GenericReference<float> speed;
     public GenericReference<Path> pathToTarget;
 
@@ -33,8 +35,12 @@ public class SwayWeapon : ActionBase
         targetRotation.y += mouseDeltaValue.x;
         targetRotation.z += mouseDeltaValue.x + moveDeltaValue.x;
 
-        targetRotation = Vector3.Lerp(targetRotation, Vector3.zero, speed.GetValue());
-        finalRotation = Vector3.Lerp(finalRotation, targetRotation, speed.GetValue());
+        targetRotation.x = Mathf.Clamp(targetRotation.x, -swayClamp, swayClamp);
+        targetRotation.y = Mathf.Clamp(targetRotation.y, -swayClamp, swayClamp);
+        targetRotation.z = Mathf.Clamp(targetRotation.z, -swayClamp, swayClamp);
+
+        targetRotation = Vector3.Lerp(targetRotation, Vector3.zero, speed);
+        finalRotation = Vector3.Lerp(finalRotation, targetRotation, speed);
 
         lerpTarget.transform.localEulerAngles = finalRotation;
     }

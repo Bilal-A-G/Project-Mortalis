@@ -22,3 +22,4 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 3e4bfa01ca838ee4d928050b9a124730, type: 2}
     overrideValue: 0
+  resetValueOnAwake: 1

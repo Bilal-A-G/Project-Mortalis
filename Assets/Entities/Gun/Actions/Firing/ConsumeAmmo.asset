@@ -19,23 +19,23 @@ MonoBehaviour:
     overrideValue: 0
   decrementer:
     useOverride: 1
-    isFolded: 0
+    isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: -1
   min:
     useOverride: 1
-    isFolded: 0
+    isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: 0
   max:
     useOverride: 0
-    isFolded: 0
+    isFolded: 1
     variableValue: {fileID: 11400000, guid: 3e4bfa01ca838ee4d928050b9a124730, type: 2}
     overrideValue: 0
   resetValue:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 1
+    overrideValue: 0
   onReachMin: {fileID: 11400000, guid: 846f3d66d42bc8d4588e9e2b462ad53e, type: 2}
   onReachMax: {fileID: 0}
