@@ -23,12 +23,12 @@ public class ApplyGravity : ActionBase
         }
         else
         {
-            if ((int)velocity.GetValue() >= 0)
+            if ((int)velocity.GetValue() > 0)
             {
                 velocity.SetValue(stickToGroundForce.GetValue());
             }
         }
 
-        controller.Move(Time.deltaTime * velocity.GetValue() * -callingObject.transform.up);
+        controller.Move(Time.deltaTime * velocity.GetValue() * -Vector3.up);
     }
 }

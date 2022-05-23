@@ -17,7 +17,7 @@ public class CheckSphereInput : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Physics.CheckSphere(checkEmpty.position, checkRadius.GetValue(), checkLayer.GetValue()))
+        if (Physics.CheckSphere(checkEmpty.position, checkRadius, checkLayer.GetValue()))
         {
             finiteStateMachine.UpdateState(contactingEvent, callingObject);
         }
@@ -25,5 +25,10 @@ public class CheckSphereInput : MonoBehaviour
         {
             finiteStateMachine.UpdateState(notContactingEvent, callingObject);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(checkEmpty.position, checkRadius);
     }
 }
