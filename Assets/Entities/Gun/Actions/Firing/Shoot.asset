@@ -12,11 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dac5e0e9dd562e4c8f3d86a8ad06c9a, type: 3}
   m_Name: Shoot
   m_EditorClassIdentifier: 
-  damage:
-    useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: 14d14f4cc54c14b4aaaca2ac8a6e8e34, type: 2}
-    overrideValue: 0
   maxRange:
     useOverride: 0
     isFolded: 1
@@ -34,6 +29,11 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 238222268ba22d14f8af558ccbcf70d4, type: 2}
     overrideValue: FirePoint
+  agentKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: 
   outputPosition:
     useOverride: 0
     isFolded: 1
