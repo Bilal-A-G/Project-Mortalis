@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4911c98e585e214e89185c75dc5f75a, type: 3}
   m_Name: SetAnimatorCurrentAmmo
   m_EditorClassIdentifier: 
-  pathToAnimator:
+  animatorKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 835e4f0fd0aaaaf46aa220c4ec3e72aa, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: 10e9020f7fa3d8d42861023ccd650e49, type: 2}
+    overrideValue: Container
   value:
     useOverride: 0
     isFolded: 1

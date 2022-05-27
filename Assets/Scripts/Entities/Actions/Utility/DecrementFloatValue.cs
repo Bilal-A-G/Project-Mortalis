@@ -16,13 +16,19 @@ public class DecrementFloatValue : ActionBase
     public EventObject onReachMin;
     public EventObject onReachMax;
 
+    public GenericReference<string> agentKey;
+
     [System.NonSerialized]
     FiniteStateMachine stateMachine;
 
-    public override void Execute(GameObject callingObject)
+    [System.NonSerialized]
+    GameObject callingObject;
+
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
         floatToDecrement.SetValue(floatToDecrement.GetValue() + decrementer.GetValue());
 
+        callingObject = callingObjects.GetGameObjectFromCache(agentKey); 
         stateMachine = callingObject.GetComponentInChildren<FiniteStateMachine>();
 
         if (max == null && min == null) return;

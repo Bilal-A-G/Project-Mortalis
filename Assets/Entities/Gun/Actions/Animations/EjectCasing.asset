@@ -20,12 +20,11 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 416ea1d25fa9a8a46bba881a6c0de866, type: 2}
     overrideValue: {x: 0, y: 0, z: 0}
-  lerpTargetPath:
+  targetKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: b3996ccafee5bca40a7adfd0e1c76c5a, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: ed469d2d354c2304e8374435783e9952, type: 2}
+    overrideValue: Casing
   currentSpeed:
     useOverride: 1
     isFolded: 1

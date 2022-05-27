@@ -19,14 +19,14 @@ public class SwayWeapon : ActionBase
     public GenericReference<float> swayClamp;
 
     public GenericReference<float> speed;
-    public GenericReference<Path> pathToTarget;
+    public GenericReference<string> targetKey;
 
     [System.NonSerialized]
     GameObject lerpTarget;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        lerpTarget = pathToTarget.GetValue().GetObjectAtPath(callingObject);
+        lerpTarget = callingObjects.GetGameObjectFromCache(targetKey);
 
         Vector2 mouseDeltaValue = mouseDelta.GetValue() * lookSwayAmount;
         Vector2 moveDeltaValue = moveDelta.GetValue() * moveSwayAmount;

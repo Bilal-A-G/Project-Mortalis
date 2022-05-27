@@ -6,11 +6,12 @@ using UnityEngine;
 public class LerpAndDestroyObject : ActionBase
 {
     public ActionBase onLerpEnd;
+    public GenericReference<string> callingObjectKey;
+    public GenericReference<string> instantiatePositionKey;
 
     public GenericReference<Vector3> endVector;
 
     public GameObject lerpObject;
-    public GenericReference<Path> pathToInstantiatePosition;
 
     public GenericReference<float> currentSpeed;
 
@@ -23,30 +24,29 @@ public class LerpAndDestroyObject : ActionBase
     [System.NonSerialized]
     protected GameObject lerpTarget;
     [System.NonSerialized]
-    protected Vector3 startVector;
-    [System.NonSerialized]
     protected float timeSinceExecuted;
 
-    public override void Execute(GameObject callingObject)
+    [System.NonSerialized]
+    Vector3 startVector;
+
+    [System.NonSerialized]
+    GameObject callingObject;
+
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
         if (debounce) return;
 
         debounce = true;
         timeSinceExecuted = 0;
 
+        callingObject = callingObjects.GetGameObjectFromCache(callingObjectKey);
+        startVector = callingObjects.GetGameObjectFromCache(instantiatePositionKey).transform.position;
+
         lerpTarget = Instantiate(lerpObject, callingObject.transform);
-        lerpTarget.transform.position = pathToInstantiatePosition.GetValue().GetObjectAtPath(callingObject).transform.position;
-
-
-        SetUpStartVector();
+        lerpTarget.transform.position = startVector;
     }
 
-    protected virtual void SetUpStartVector()
-    {
-        startVector = lerpTarget.transform.position;
-    }
-
-    public override void FixedUpdateLoop(GameObject callingObject)
+    public override void FixedUpdateLoop(CachedObjectWrapper callingObject)
     {
         if (!debounce) return;
 

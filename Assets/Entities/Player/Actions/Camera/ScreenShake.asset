@@ -27,15 +27,13 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: {x: 2, y: 2, z: 2}
-  pathToMainCamera:
+  mainCameraKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 7afdb37822099b74186b510dba39b687, type: 2}
-    overrideValue:
-      path: []
-  pathToStableCamera:
+    variableValue: {fileID: 11400000, guid: f8a8c156f52eea6459979d72d18cc1e2, type: 2}
+    overrideValue: MainCamera
+  stableCameraKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 4296961ddede08b49ac0ae6f93666a46, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: ebc09e50c01827d4794310ff4b5be6c1, type: 2}
+    overrideValue: StableCamera

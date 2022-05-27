@@ -17,12 +17,11 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: 70
-  pathToCamera:
+  cameraKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 7afdb37822099b74186b510dba39b687, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: f8a8c156f52eea6459979d72d18cc1e2, type: 2}
+    overrideValue: MainCamera
   zoomSpeed:
     useOverride: 1
     isFolded: 1

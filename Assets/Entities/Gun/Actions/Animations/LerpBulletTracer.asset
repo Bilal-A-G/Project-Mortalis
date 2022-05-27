@@ -13,18 +13,22 @@ MonoBehaviour:
   m_Name: LerpBulletTracer
   m_EditorClassIdentifier: 
   onLerpEnd: {fileID: 11400000, guid: ef5f6ac49b8ca1448a0f321515beaa14, type: 2}
+  callingObjectKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: Parent
+  instantiatePositionKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 238222268ba22d14f8af558ccbcf70d4, type: 2}
+    overrideValue: FirePoint
   endVector:
     useOverride: 0
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 7fb9315e603236847ad7f0a8dce6cf66, type: 2}
     overrideValue: {x: 0, y: 0, z: 0}
   lerpObject: {fileID: 5988369132751798373, guid: f9b1aba5261b0ff49be6082e775edaf0, type: 3}
-  pathToInstantiatePosition:
-    useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: 14ed751571a70364a8d9b8c213ccbbb7, type: 2}
-    overrideValue:
-      path: []
   currentSpeed:
     useOverride: 1
     isFolded: 1

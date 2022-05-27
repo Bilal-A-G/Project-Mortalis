@@ -8,14 +8,19 @@ public class Move : ActionBase
 {
     public GenericReference<float> moveSpeed;
     public GenericReference<Vector2> moveDirection;
+    public GenericReference<string> agentKey;
 
     [System.NonSerialized]
     CharacterController characterController;
 
-    public override void Execute(GameObject callingObject)
-    {
-        characterController = callingObject.GetComponent<CharacterController>();
+    [System.NonSerialized]
+    GameObject agent;
 
-        characterController.Move(moveSpeed.GetValue() * Time.deltaTime * ((callingObject.gameObject.transform.forward * moveDirection.GetValue().y) + callingObject.gameObject.transform.right * moveDirection.GetValue().x));
+    public override void Execute(CachedObjectWrapper callingObjects)
+    {
+        agent = callingObjects.GetGameObjectFromCache(agentKey);
+        characterController = agent.GetComponent<CharacterController>();
+
+        characterController.Move(moveSpeed.GetValue() * Time.deltaTime * ((agent.transform.forward * moveDirection.GetValue().y) + agent.transform.right * moveDirection.GetValue().x));
     }
 }

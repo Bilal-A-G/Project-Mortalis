@@ -17,7 +17,7 @@ public class OutputLissajousCurveValues : ActionBase
     [System.NonSerialized]
     Vector3 lissajousCurve;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
         lissajousCurve = new Vector3(Mathf.Sin(time), offsetX.GetValue() * Mathf.Sin(offsetY.GetValue() * time + Mathf.PI));
 

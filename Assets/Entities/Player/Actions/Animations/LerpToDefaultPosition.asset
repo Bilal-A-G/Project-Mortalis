@@ -20,12 +20,11 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 11400000, guid: b05b762d50915a7459a76e87e6bb2b42, type: 2}
     overrideValue: {x: 0, y: 0, z: 0}
-  lerpTargetPath:
+  targetKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 4296961ddede08b49ac0ae6f93666a46, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: ebc09e50c01827d4794310ff4b5be6c1, type: 2}
+    overrideValue: StableCamera
   currentSpeed:
     useOverride: 1
     isFolded: 1

@@ -6,13 +6,13 @@ using UnityEngine;
 public class SetStepOffset : ActionBase
 {
     public GenericReference<float> desiredStepOffset;
-    public GenericReference<Path> pathToCharacterController;
+    public GenericReference<string> agentKey;
 
     CharacterController characterController;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        characterController = pathToCharacterController.GetValue().GetObjectAtPath(callingObject).GetComponent<CharacterController>();
+        characterController = callingObjects.GetGameObjectFromCache(agentKey).GetComponent<CharacterController>();
         
         characterController.stepOffset = desiredStepOffset;
     }

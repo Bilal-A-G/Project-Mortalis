@@ -11,7 +11,7 @@ public class LerpPosition : ActionBase
 
     public GenericReference<Vector3> endVector;
 
-    public GenericReference<Path> lerpTargetPath;
+    public GenericReference<string> targetKey;
 
     public GenericReference<float> currentSpeed;
     public GenericReference<bool> resetVector;
@@ -25,7 +25,7 @@ public class LerpPosition : ActionBase
     [System.NonSerialized]
     protected GameObject lerpTarget;
     [System.NonSerialized]
-    protected GameObject callingObject;
+    protected CachedObjectWrapper callingObject;
     [System.NonSerialized]
     protected Vector3 startVector;
     [System.NonSerialized]
@@ -34,11 +34,11 @@ public class LerpPosition : ActionBase
     [System.NonSerialized]
     protected bool didKickback;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        this.callingObject = callingObject;
+        this.callingObject = callingObjects;
 
-        lerpTarget = lerpTargetPath.GetValue().GetObjectAtPath(callingObject);
+        lerpTarget = callingObjects.GetGameObjectFromCache(targetKey);
 
         if (debounce) return;
 
@@ -48,7 +48,7 @@ public class LerpPosition : ActionBase
 
         SetUpStartVector();
 
-        if (onLerpStart != null) onLerpStart.Execute(callingObject);
+        if (onLerpStart != null) onLerpStart.Execute(callingObjects);
     }
 
     protected virtual void SetUpStartVector()
@@ -56,7 +56,7 @@ public class LerpPosition : ActionBase
         startVector = lerpTarget.transform.localPosition;
     }
 
-    public override void FixedUpdateLoop(GameObject callingObject)
+    public override void FixedUpdateLoop(CachedObjectWrapper callingObjects)
     {
         if (!debounce) return;
 
@@ -64,7 +64,7 @@ public class LerpPosition : ActionBase
 
         if (LerpToEnd())
         {
-            if (onLerpEnd != null) onLerpEnd.Execute(callingObject);
+            if (onLerpEnd != null) onLerpEnd.Execute(callingObjects);
 
             if(resetVector.GetValue()) ResetLerpedProperty();
 

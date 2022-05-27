@@ -22,9 +22,13 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 6e71ab9b62c429a4e883f12613225c4e, type: 2}
     overrideValue: 0
-  pathToCamera:
+  cameraKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 4296961ddede08b49ac0ae6f93666a46, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: ebc09e50c01827d4794310ff4b5be6c1, type: 2}
+    overrideValue: StableCamera
+  agentKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: Parent

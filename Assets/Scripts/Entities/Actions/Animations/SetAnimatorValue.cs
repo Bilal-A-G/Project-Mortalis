@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class SetAnimatorValue<T> : ActionBase
 {
-    public GenericReference<Path> pathToAnimator;
+    public GenericReference<string> animatorKey;
     public GenericReference<T> value;
 
     [System.NonSerialized]
     protected Animator animator;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObject)
     {
-       animator = pathToAnimator.GetValue().GetObjectAtPath(callingObject).GetComponent<Animator>();
+       animator = callingObject.GetGameObjectFromCache(animatorKey).GetComponent<Animator>();
     }
 }

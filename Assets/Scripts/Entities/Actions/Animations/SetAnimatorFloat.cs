@@ -7,7 +7,7 @@ public class SetAnimatorFloat : SetAnimatorValue<float>
 {
     public GenericReference<string> valueName;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObject)
     {
         base.Execute(callingObject);
 

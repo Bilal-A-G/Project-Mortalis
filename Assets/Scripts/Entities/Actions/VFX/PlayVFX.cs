@@ -6,15 +6,15 @@ using UnityEngine.VFX;
 [CreateAssetMenu(fileName = "New Play VFX", menuName = "FSM/Actions/Play VFX")]
 public class PlayVFX : ActionBase
 {
-    public GenericReference<Path> pathToVFXPlayer;
+    public GenericReference<string> VFXPlayerKey;
     public GenericReference<VisualEffectAsset> VFX;
 
     [System.NonSerialized]
     VisualEffect effectPlayer;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        effectPlayer = pathToVFXPlayer.GetValue().GetObjectAtPath(callingObject).GetComponent<VisualEffect>();
+        effectPlayer = callingObjects.GetGameObjectFromCache(VFXPlayerKey).GetComponent<VisualEffect>();
         effectPlayer.visualEffectAsset = VFX.GetValue();
         effectPlayer.Play();
     }

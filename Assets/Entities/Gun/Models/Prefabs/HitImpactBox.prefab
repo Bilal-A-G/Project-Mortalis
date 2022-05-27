@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6522327156861153438}
   - component: {fileID: 6522327156861153439}
   - component: {fileID: 6522327156861153437}
-  - component: {fileID: 2611956944034441774}
   m_Layer: 0
   m_Name: HitImpactBox
   m_TagString: Untagged
@@ -253,21 +252,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2611956944034441774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6522327156861153440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855fec39b78b67a40a3a5a5400114178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventActions:
-  - events:
-    - {fileID: 11400000, guid: 2c8e8feddd97685418e53b598fdadec7, type: 2}
-    actions:
-    - {fileID: 11400000, guid: ed3e08db9fbb67246a47887e2ef58bfd, type: 2}
-  parentObject: {fileID: 6522327156861153440}

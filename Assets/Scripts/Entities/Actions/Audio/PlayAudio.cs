@@ -5,15 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "", menuName = "FSM/Actions/Play Audio")]
 public class PlayAudio : ActionBase
 {
-    public GenericReference<Path> pathToAudioSource;
+    public GenericReference<string> audioSourceKey;
     public GenericReference<AudioClip> clipToPlay;
 
     [System.NonSerialized]
     AudioSource source;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        source = pathToAudioSource.GetValue().GetObjectAtPath(callingObject).GetComponent<AudioSource>();
+        source = callingObjects.GetGameObjectFromCache(audioSourceKey).GetComponent<AudioSource>();
 
         source.PlayOneShot(clipToPlay.GetValue());
     }

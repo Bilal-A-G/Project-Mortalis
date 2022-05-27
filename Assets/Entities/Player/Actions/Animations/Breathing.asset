@@ -22,12 +22,11 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 6233481c5c6a6b0479a5d24027aa6569, type: 2}
     overrideValue: 1
-  pathToTarget:
+  targetKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 27e3126bf34576949a98432ba0309cd8, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: f8a8c156f52eea6459979d72d18cc1e2, type: 2}
+    overrideValue: MainCamera
   startPosition:
     useOverride: 1
     isFolded: 1

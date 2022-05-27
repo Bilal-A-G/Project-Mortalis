@@ -9,7 +9,7 @@ public class SetValue<T> : ActionBase
 
     public bool resetValueOnAwake;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObject)
     {
         valueToSet.SetValue(valueToSetTo.GetValue());
     }

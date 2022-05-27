@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Set Controller Values", menuName = "FSM/Actions/Set Character Controller Values")]
 public class SetColliderValues : ActionBase
 {
-    public GenericReference<Path> pathToController;
+    public GenericReference<string> agentKey;
 
     public GenericReference<Vector3> desiredCenter;
     public GenericReference<float> desiredHeight;
@@ -13,9 +13,9 @@ public class SetColliderValues : ActionBase
     [System.NonSerialized]
     CharacterController controller;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        controller = pathToController.GetValue().GetObjectAtPath(callingObject).GetComponent<CharacterController>();
+        controller = callingObjects.GetGameObjectFromCache(agentKey).GetComponent<CharacterController>();
         
         controller.height = desiredHeight.GetValue();
         controller.center = desiredCenter.GetValue();

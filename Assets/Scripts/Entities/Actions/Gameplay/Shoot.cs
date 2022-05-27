@@ -8,7 +8,7 @@ public class Shoot : ActionBase
     public GenericReference<float> damage;
     public GenericReference<float> maxRange;
     public GenericReference<LayerMask> layerToHit;
-    public GenericReference<string> firePointName;
+    public GenericReference<string> firePointKey;
 
     public GenericReference<Vector3> outputPosition;
     public GenericReference<Vector3> outputRotation;
@@ -27,11 +27,11 @@ public class Shoot : ActionBase
     Vector3 endPoint;
 
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
         didTracer = false;
 
-        firePoint = callingObject.transform.Find(firePointName.GetValue());
+        firePoint = callingObjects.GetGameObjectFromCache(firePointKey).transform;
         
 
         bulletDeviation.x = Random.Range(-bulletSpread.GetValue(), bulletSpread.GetValue());

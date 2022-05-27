@@ -10,12 +10,14 @@ public class ApplyGravity : ActionBase
     public GenericReference<bool> applyGravity;
     public GenericReference<float> stickToGroundForce;
 
+    public GenericReference<string> agentKey;
+
     [System.NonSerialized]
     CharacterController controller;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        controller = callingObject.GetComponent<CharacterController>();
+        controller = callingObjects.GetGameObjectFromCache(agentKey).GetComponent<CharacterController>();
 
         if (applyGravity.GetValue())
         {

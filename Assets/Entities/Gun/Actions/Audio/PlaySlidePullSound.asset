@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fba4c0005368d54c937756d33e91368, type: 3}
   m_Name: PlaySlidePullSound
   m_EditorClassIdentifier: 
-  pathToAudioSource:
+  audioSourceKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 14ed751571a70364a8d9b8c213ccbbb7, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: 238222268ba22d14f8af558ccbcf70d4, type: 2}
+    overrideValue: FirePoint
   clipToPlay:
     useOverride: 1
     isFolded: 1

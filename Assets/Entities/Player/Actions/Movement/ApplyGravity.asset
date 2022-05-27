@@ -32,3 +32,8 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 774d846550f2acd41af5402297425616, type: 2}
     overrideValue: 1
+  agentKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: Parent

@@ -7,7 +7,7 @@ public class LerpFromCurrentPosition : ActionBase
 {
     public GenericReference<Vector3> lerpAlongVector;
     public GenericReference<float> speed;
-    public GenericReference<Path> pathToTarget;
+    public GenericReference<string> targetKey;
 
     public GenericReference<Vector3> startPosition;
 
@@ -16,9 +16,9 @@ public class LerpFromCurrentPosition : ActionBase
     [System.NonSerialized]
     GameObject lerpTarget;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObject)
     {
-        lerpTarget = pathToTarget.GetValue().GetObjectAtPath(callingObject);
+        lerpTarget = callingObject.GetGameObjectFromCache(targetKey);
 
         lerpPosition = Vector3.Lerp(lerpPosition, lerpAlongVector.GetValue(), Time.smoothDeltaTime * speed.GetValue());
         lerpTarget.transform.localPosition = lerpPosition + startPosition.GetValue();

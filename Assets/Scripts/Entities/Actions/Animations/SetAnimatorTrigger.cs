@@ -6,14 +6,14 @@ using UnityEngine;
 public class SetAnimatorTrigger : ActionBase
 {
     public GenericReference<string> value;
-    public GenericReference<Path> pathToAnimator;
+    public GenericReference<string> animatorKey;
 
     [System.NonSerialized]
     Animator animator;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        animator = pathToAnimator.GetValue().GetObjectAtPath(callingObject).GetComponent<Animator>();
+        animator = callingObjects.GetGameObjectFromCache(animatorKey).GetComponent<Animator>();
         
         animator.SetTrigger(value.GetValue());
     }

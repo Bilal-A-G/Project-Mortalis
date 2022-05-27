@@ -6,7 +6,7 @@ using UnityEngine;
 public class LerpFOV : ActionBase
 {
     public GenericReference<float> desiredFOV;
-    public GenericReference<Path> pathToCamera;
+    public GenericReference<string> cameraKey;
     public GenericReference<float> zoomSpeed;
 
     [System.NonSerialized]
@@ -21,9 +21,9 @@ public class LerpFOV : ActionBase
     [System.NonSerialized]
     bool debounce;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
-        camera = pathToCamera.GetValue().GetObjectAtPath(callingObject).GetComponent<Camera>();
+        camera = callingObjects.GetGameObjectFromCache(cameraKey).GetComponent<Camera>();
 
         if (debounce) return;
 
@@ -32,7 +32,7 @@ public class LerpFOV : ActionBase
         zoomTime = 0;
     }
 
-    public override void UpdateLoop(GameObject callingObject)
+    public override void UpdateLoop(CachedObjectWrapper callingObject)
     {
         if (!debounce) return;
 

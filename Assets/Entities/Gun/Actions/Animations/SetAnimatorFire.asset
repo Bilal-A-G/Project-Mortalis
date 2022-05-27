@@ -12,14 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f298aeafb99e924ba7bd275d1445696, type: 3}
   m_Name: SetAnimatorFire
   m_EditorClassIdentifier: 
-  pathToAnimator:
-    useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: 835e4f0fd0aaaaf46aa220c4ec3e72aa, type: 2}
-    overrideValue:
-      path: []
   value:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: Shoot
+  animatorKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 10e9020f7fa3d8d42861023ccd650e49, type: 2}
+    overrideValue: Container

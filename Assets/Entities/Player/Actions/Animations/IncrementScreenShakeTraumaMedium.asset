@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379a0630890eedd4691b502840c4bc05, type: 3}
-  m_Name: IncrementScreenShakeTraumaLow
+  m_Name: IncrementScreenShakeTraumaMedium
   m_EditorClassIdentifier: 
   floatToDecrement:
     useOverride: 0
@@ -21,7 +21,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.25
+    overrideValue: 0.35
   min:
     useOverride: 1
     isFolded: 1
@@ -39,3 +39,8 @@ MonoBehaviour:
     overrideValue: 1
   onReachMin: {fileID: 0}
   onReachMax: {fileID: 0}
+  agentKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: Player

@@ -8,8 +8,9 @@ public class ShakeScreen : ActionBase
     public GenericReference<float> trauma;
     public GenericReference<float> traumaDecreaseRate;
     public GenericReference<Vector3> screenShakeYawPitchRoll;
-    public GenericReference<Path> pathToMainCamera;
-    public GenericReference<Path> pathToStableCamera;
+
+    public GenericReference<string> mainCameraKey;
+    public GenericReference<string> stableCameraKey;
 
     [System.NonSerialized]
     GameObject camera;
@@ -22,12 +23,12 @@ public class ShakeScreen : ActionBase
     [System.NonSerialized]
     float time;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
         if (trauma.GetValue() <= 0) return;
 
-        camera = pathToStableCamera.GetValue().GetObjectAtPath(callingObject);
-        mainCamera = pathToMainCamera.GetValue().GetObjectAtPath(callingObject);
+        camera = callingObjects.GetGameObjectFromCache(stableCameraKey);
+        mainCamera = callingObjects.GetGameObjectFromCache(mainCameraKey);
 
         if (seed == 0) seed = Random.Range(1, 1000);
 

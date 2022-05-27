@@ -17,9 +17,8 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: Landed
-  pathToAnimator:
+  animatorKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 7473f9338e78bbe48a6f247e1ccae2df, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: ea815def98a1ff5499257dd3a52b69cd, type: 2}
+    overrideValue: GunPivot

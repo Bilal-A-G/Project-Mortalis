@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8491a74f110e12742b27cdce18b3f79d, type: 3}
   m_Name: CrouchCharacterController
   m_EditorClassIdentifier: 
-  pathToController:
+  agentKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: c8526d1ec16dbde42b32d8f30a5a1275, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: Parent
   desiredCenter:
     useOverride: 1
     isFolded: 1

@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae729a82db6bb5449ba980ffa5386cf1, type: 3}
   m_Name: SetEmptyIsAimingTrue
   m_EditorClassIdentifier: 
-  pathToAnimator:
+  animatorKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 7473f9338e78bbe48a6f247e1ccae2df, type: 2}
-    overrideValue:
-      path: []
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: Gun
   value:
     useOverride: 1
     isFolded: 1

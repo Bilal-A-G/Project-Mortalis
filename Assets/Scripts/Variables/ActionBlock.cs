@@ -7,27 +7,27 @@ public class ActionBlock : ActionBase
 {
     public List<ActionBase> actions;
 
-    public override void Execute(GameObject callingObject)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
         for(int i = 0; i < actions.Count; i++)
         {
-            actions[i].Execute(callingObject);
+            actions[i].Execute(callingObjects);
         }
     }
 
-    public override void FixedUpdateLoop(GameObject callingObject)
+    public override void FixedUpdateLoop(CachedObjectWrapper callingObjects)
     {
         for (int i = 0; i < actions.Count; i++)
         {
-            actions[i].FixedUpdateLoop(callingObject);
+            actions[i].FixedUpdateLoop(callingObjects);
         }
     }
 
-    public override void UpdateLoop(GameObject callingObject)
+    public override void UpdateLoop(CachedObjectWrapper callingObjects)
     {
         for (int i = 0; i < actions.Count; i++)
         {
-            actions[i].UpdateLoop(callingObject);
+            actions[i].UpdateLoop(callingObjects);
         }
     }
 }

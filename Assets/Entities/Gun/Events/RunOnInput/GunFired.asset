@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3385bed6e36b14eb5fbb97273b0126, type: 3}
   m_Name: GunFired
   m_EditorClassIdentifier: 
+  global: 0
+  queueable: 0
+  dequeueLayer: []

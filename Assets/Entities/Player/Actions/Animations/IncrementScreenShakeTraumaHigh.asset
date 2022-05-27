@@ -10,37 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379a0630890eedd4691b502840c4bc05, type: 3}
-  m_Name: ConsumeAmmo
+  m_Name: IncrementScreenShakeTraumaHigh
   m_EditorClassIdentifier: 
   floatToDecrement:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 18ad2964ede2f1242a8a32741eeabb5c, type: 2}
+    variableValue: {fileID: 11400000, guid: 27032920206d65c4e9e7fb69143e34a2, type: 2}
     overrideValue: 0
   decrementer:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: -1
+    overrideValue: 0.5
   min:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: 0
   max:
-    useOverride: 0
+    useOverride: 1
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 3e4bfa01ca838ee4d928050b9a124730, type: 2}
-    overrideValue: 0
+    variableValue: {fileID: 0}
+    overrideValue: 1
   resetValue:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0
-  onReachMin: {fileID: 11400000, guid: 846f3d66d42bc8d4588e9e2b462ad53e, type: 2}
+    overrideValue: 1
+  onReachMin: {fileID: 0}
   onReachMax: {fileID: 0}
   agentKey:
     useOverride: 0
     isFolded: 1
     variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
-    overrideValue: Parent
+    overrideValue: Player

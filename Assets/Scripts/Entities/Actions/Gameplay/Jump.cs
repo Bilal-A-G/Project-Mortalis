@@ -9,7 +9,7 @@ public class Jump : ActionBase
     public GenericReference<float> jumpHeight;
     public GenericReference<float> gravity;
 
-    public override void Execute(GameObject _)
+    public override void Execute(CachedObjectWrapper callingObjects)
     {
         velocity.SetValue(jumpHeight.GetValue() * -gravity.GetValue());
     }

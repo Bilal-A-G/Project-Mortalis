@@ -7,18 +7,23 @@ public class Look : ActionBase
 {
     public GenericReference<Vector2> currentMouseDelta;
     public GenericReference<float> mouseSensitivity;
-    public GenericReference<Path> pathToCamera;
+    public GenericReference<string> cameraKey;
+    public GenericReference<string> agentKey;
 
     [System.NonSerialized]
     GameObject agentCamera;
 
-    public override void Execute(GameObject callingObject)
+    [System.NonSerialized]
+    GameObject agent;
+
+    public override void Execute(CachedObjectWrapper callingObject)
     {
-        agentCamera = pathToCamera.GetValue().GetObjectAtPath(callingObject);
+        agentCamera = callingObject.GetGameObjectFromCache(cameraKey);
+        agent = callingObject.GetGameObjectFromCache(agentKey);
 
         Cursor.lockState = CursorLockMode.Locked;
 
-        callingObject.transform.localEulerAngles = new Vector3(0, callingObject.transform.localEulerAngles.y + currentMouseDelta.GetValue().x * mouseSensitivity.GetValue(), 0);
+        agent.transform.localEulerAngles = new Vector3(0, agent.transform.localEulerAngles.y + currentMouseDelta.GetValue().x * mouseSensitivity.GetValue(), 0);
         agentCamera.transform.localEulerAngles = new Vector3(agentCamera.transform.localEulerAngles.x - currentMouseDelta.GetValue().y * mouseSensitivity.GetValue(), 0, 0);
     }
 }

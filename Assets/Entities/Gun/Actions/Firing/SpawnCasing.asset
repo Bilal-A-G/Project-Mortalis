@@ -13,16 +13,6 @@ MonoBehaviour:
   m_Name: SpawnCasing
   m_EditorClassIdentifier: 
   objectToInstantiate: {fileID: 4776044203036453453, guid: 76c83a2b94a44114ab377ec9729078ea, type: 3}
-  instantiatePosition:
-    useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: bb2668d8c660ee247bba4fcb1016833b, type: 2}
-    overrideValue: {x: 0, y: 0, z: 0}
-  instantiateRotation:
-    useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: f57c8042bab626741832186a3022d2bc, type: 2}
-    overrideValue: {x: 0, y: 0, z: 0}
   force:
     useOverride: 1
     isFolded: 1
@@ -33,3 +23,23 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: 5
+  useInstantiateKey:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
+  instantiateKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: ed469d2d354c2304e8374435783e9952, type: 2}
+    overrideValue: Casing
+  spawnPosition:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: {x: 0, y: 0, z: 0}
+  spawnRotation:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: {x: 0, y: 0, z: 0}
