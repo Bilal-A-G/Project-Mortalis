@@ -9,21 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4911c98e585e214e89185c75dc5f75a, type: 3}
-  m_Name: SetAnimatorCurrentAmmo
+  m_Script: {fileID: 11500000, guid: f2944c080898c4b4dbf7619ef070cd28, type: 3}
+  m_Name: SetAnimatorAmmo
   m_EditorClassIdentifier: 
   animatorKey:
     useOverride: 0
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 10e9020f7fa3d8d42861023ccd650e49, type: 2}
-    overrideValue: Container
-  value:
+    overrideValue: 
+  agentKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 18ad2964ede2f1242a8a32741eeabb5c, type: 2}
-    overrideValue: 0
-  valueName:
-    useOverride: 1
-    isFolded: 1
-    variableValue: {fileID: 0}
-    overrideValue: Ammo
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: 

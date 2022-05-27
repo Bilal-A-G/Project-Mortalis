@@ -5,10 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "", menuName = "FSM/Actions/Shoot")]
 public class Shoot : ActionBase
 {
-    public GenericReference<float> damage;
     public GenericReference<float> maxRange;
     public GenericReference<LayerMask> layerToHit;
+
     public GenericReference<string> firePointKey;
+    public GenericReference<string> agentKey;
 
     public GenericReference<Vector3> outputPosition;
     public GenericReference<Vector3> outputRotation;
@@ -32,6 +33,7 @@ public class Shoot : ActionBase
         didTracer = false;
 
         firePoint = callingObjects.GetGameObjectFromCache(firePointKey).transform;
+        GunRuntimeVariables variables = callingObjects.GetGameObjectFromCache(agentKey).GetComponent<GunRuntimeVariables>();
         
 
         bulletDeviation.x = Random.Range(-bulletSpread.GetValue(), bulletSpread.GetValue());
@@ -46,7 +48,7 @@ public class Shoot : ActionBase
         {
             if ((hit.collider.gameObject.transform.position - firePoint.transform.position).magnitude <= maxRange.GetValue())
             {
-                Debug.Log("Dealt " + damage.GetValue() + " damage to " + hit.transform.gameObject.name);
+                Debug.Log("Dealt " + variables.damage + " damage to " + hit.transform.gameObject.name);
             }
 
             outputPosition.SetValue(hit.point);

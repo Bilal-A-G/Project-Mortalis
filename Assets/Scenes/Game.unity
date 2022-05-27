@@ -2993,7 +2993,7 @@ MonoBehaviour:
   - events:
     - {fileID: 11400000, guid: 964214138014003488f2147046411207, type: 2}
     actions:
-    - {fileID: 11400000, guid: 596656b3a1c8ac644b3c96171915c9cf, type: 2}
+    - {fileID: 11400000, guid: db306329120c42d4887d9704c13883dc, type: 2}
     - {fileID: 11400000, guid: 6a8890be0c1a9ee4c93837f77fe1230c, type: 2}
   - events:
     - {fileID: 11400000, guid: e3310709cad4b3245a9892bf2acabb9d, type: 2}
@@ -4420,7 +4420,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482990688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.584, z: 0}
+  m_LocalPosition: {x: 0, y: 0.538, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1231766140}
@@ -6522,6 +6522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163835565577848876}
   - component: {fileID: 1163835565577848878}
+  - component: {fileID: 1163835565577848879}
   m_Layer: 7
   m_Name: Gun
   m_TagString: Untagged
@@ -6548,6 +6549,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1163835565577848879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163835565577848877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d0c9c5854a56b409fe83a3c9a5a156, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAmmo: 1
+  minAmmo: 0
+  maxAmmo: 10
+  ammoPerShot: 1
+  damage: 5
 --- !u!4 &1163835565767993616
 Transform:
   m_ObjectHideFlags: 0
@@ -6597,7 +6615,7 @@ MonoBehaviour:
   - events:
     - {fileID: 11400000, guid: 4245baf1c026cd54b82d2e013b622a6c, type: 2}
     actions:
-    - {fileID: 11400000, guid: 6e50823b491a13c4aab115a3ad7e3636, type: 2}
+    - {fileID: 11400000, guid: 5f5287dd56b829a43b144d29ba5391af, type: 2}
   cachedObjects:
     cache:
     - cachedObject: {fileID: 6588397221414499402}
