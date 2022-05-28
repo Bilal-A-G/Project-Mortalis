@@ -6,6 +6,7 @@ public abstract class BasePlayerInput : MonoBehaviour
 {
     protected InputActions inputActions;
     public GameObject callingObject;
+    public CachedObjectWrapper cachedObjects;
 
     private void OnEnable()
     {

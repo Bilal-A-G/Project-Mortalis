@@ -1513,6 +1513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
+  cachedObjects:
+    cache: []
   playerLookEvent: {fileID: 11400000, guid: 05e38eeaace504240b143d562336f6ae, type: 2}
   mouseDelta:
     useOverride: 0
@@ -1533,6 +1535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
+  cachedObjects:
+    cache: []
   aimEvent: {fileID: 11400000, guid: 302f92962139f564ab5b943efb22499d, type: 2}
   stopAimEvent: {fileID: 11400000, guid: 6a9cbd396966e764c9abe41b747cfc70, type: 2}
   fsm: {fileID: 930298939}
@@ -2144,6 +2148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
+  cachedObjects:
+    cache: []
   movingEvent: {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
   startMoveEvent: {fileID: 11400000, guid: 5a3b2b795dac56948a3693e4ad166734, type: 2}
   stoppedMovingEvent: {fileID: 11400000, guid: 0632ec439a1cc68419eca487b8909c08, type: 2}
@@ -2166,6 +2172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
+  cachedObjects:
+    cache: []
   runStartEvent: {fileID: 11400000, guid: dbba5afb218cdfc43b4d4b57bd070748, type: 2}
   runStoppedEvent: {fileID: 11400000, guid: b47484afda8c17a41b95ae5cc006bfbd, type: 2}
   finiteStateMachines: {fileID: 930298939}
@@ -2182,6 +2190,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
+  cachedObjects:
+    cache: []
   startedCrouchingEvent: {fileID: 11400000, guid: 020856c243e34c5419dd56c888728fe7, type: 2}
   stoppedCrouchingEvent: {fileID: 11400000, guid: 61355c7e630791a4aa23e82e5af6fe6e, type: 2}
   currentFiniteStateMachine: {fileID: 930298939}
@@ -2199,6 +2209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notContactingEvent: {fileID: 11400000, guid: b4cf6b44a9cb5fc4ea689a25183c407e, type: 2}
   contactingEvent: {fileID: 11400000, guid: f30c467888cc5a64097e789429cd8fa5, type: 2}
+  cachedObjects:
+    cache: []
   checkRadius:
     useOverride: 1
     isFolded: 1
@@ -5513,6 +5525,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   callingObject: {fileID: 1231766136}
+  cachedObjects:
+    cache: []
   jumpedEvent: {fileID: 11400000, guid: 465479c7865ae964590073550dcb3bdf, type: 2}
   finiteStateMachines: {fileID: 930298939}
 --- !u!1 &2044969967
@@ -5809,6 +5823,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notContactingEvent: {fileID: 11400000, guid: 258e8c8088bbefe46ad8ac4ca407813a, type: 2}
   contactingEvent: {fileID: 11400000, guid: 43f0e87cc4608a541953d6abea51baef, type: 2}
+  cachedObjects:
+    cache: []
   checkRadius:
     useOverride: 1
     isFolded: 1

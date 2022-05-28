@@ -7,12 +7,12 @@ public class RandomizeSoundClipFromList : GenericValue<AudioClip>
 {
     public List<GenericReference<AudioClip>> list;
 
-    public override AudioClip GetValue()
+    public override AudioClip GetValue(CachedObjectWrapper cachedObjects)
     {
-        return list[Random.Range(0, list.Count)];
+        return list[Random.Range(0, list.Count)].GetValue(cachedObjects);
     }
 
-    public override void SetValue(AudioClip value)
+    public override void SetValue(AudioClip value, CachedObjectWrapper cachedObjects)
     {
         return;
     }

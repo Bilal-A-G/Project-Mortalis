@@ -10,10 +10,10 @@ public class SetStepOffset : ActionBase
 
     CharacterController characterController;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        characterController = callingObjects.GetGameObjectFromCache(agentKey).GetComponent<CharacterController>();
+        characterController = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects)).GetComponent<CharacterController>();
         
-        characterController.stepOffset = desiredStepOffset;
+        characterController.stepOffset = desiredStepOffset.GetValue(cachedObjects);
     }
 }

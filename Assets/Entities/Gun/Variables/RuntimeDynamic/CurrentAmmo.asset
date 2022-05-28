@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93491874fdd46d04bb581a153511b6a2, type: 3}
-  m_Name: Reload
+  m_Script: {fileID: 11500000, guid: 7831fb403ea2b7d408e20da17b0d7338, type: 3}
+  m_Name: CurrentAmmo
   m_EditorClassIdentifier: 
-  valueToSet:
+  valueKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 2b3dba834c57ab34b92b1438fc9dc472, type: 2}
-    overrideValue: 0
-  valueToSetTo:
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: 
+  valueName:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 10
+    overrideValue: currentAmmo

@@ -15,22 +15,22 @@ public class ApplyGravity : ActionBase
     [System.NonSerialized]
     CharacterController controller;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        controller = callingObjects.GetGameObjectFromCache(agentKey).GetComponent<CharacterController>();
+        controller = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects)).GetComponent<CharacterController>();
 
-        if (applyGravity.GetValue())
+        if (applyGravity.GetValue(cachedObjects))
         {
-            velocity.SetValue(velocity.GetValue() + gravity.GetValue() * 2 * Time.deltaTime);
+            velocity.SetValue(velocity.GetValue(cachedObjects) + gravity.GetValue(cachedObjects) * 2 * Time.deltaTime, cachedObjects);
         }
         else
         {
-            if ((int)velocity.GetValue() > 0)
+            if ((int)velocity.GetValue(cachedObjects) > 0)
             {
-                velocity.SetValue(stickToGroundForce.GetValue());
+                velocity.SetValue(stickToGroundForce.GetValue(cachedObjects), cachedObjects);
             }
         }
 
-        controller.Move(Time.deltaTime * velocity.GetValue() * -Vector3.up);
+        controller.Move(Time.deltaTime * velocity.GetValue(cachedObjects) * -Vector3.up);
     }
 }

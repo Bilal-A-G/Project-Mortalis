@@ -11,10 +11,10 @@ public class SetAnimatorAmmo : ActionBase
     [System.NonSerialized]
     protected Animator animator;
 
-    public override void Execute(CachedObjectWrapper callingObject)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        animator = callingObject.GetGameObjectFromCache(animatorKey).GetComponent<Animator>();
-        GunRuntimeVariables variables = callingObject.GetGameObjectFromCache(agentKey).GetComponent<GunRuntimeVariables>();
+        animator = cachedObjects.GetGameObjectFromCache(animatorKey.GetValue(cachedObjects)).GetComponent<Animator>();
+        GunRuntimeVariables variables = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects)).GetComponent<GunRuntimeVariables>();
 
         animator.SetFloat("Ammo", variables.currentAmmo);
     }

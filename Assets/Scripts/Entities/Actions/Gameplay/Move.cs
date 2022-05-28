@@ -16,11 +16,11 @@ public class Move : ActionBase
     [System.NonSerialized]
     GameObject agent;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        agent = callingObjects.GetGameObjectFromCache(agentKey);
+        agent = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects));
         characterController = agent.GetComponent<CharacterController>();
 
-        characterController.Move(moveSpeed.GetValue() * Time.deltaTime * ((agent.transform.forward * moveDirection.GetValue().y) + agent.transform.right * moveDirection.GetValue().x));
+        characterController.Move(moveSpeed.GetValue(cachedObjects) * Time.deltaTime * ((agent.transform.forward * moveDirection.GetValue(cachedObjects).y) + agent.transform.right * moveDirection.GetValue(cachedObjects).x));
     }
 }

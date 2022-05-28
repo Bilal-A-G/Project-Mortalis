@@ -12,10 +12,10 @@ public class PlayVFX : ActionBase
     [System.NonSerialized]
     VisualEffect effectPlayer;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        effectPlayer = callingObjects.GetGameObjectFromCache(VFXPlayerKey).GetComponent<VisualEffect>();
-        effectPlayer.visualEffectAsset = VFX.GetValue();
+        effectPlayer = cachedObjects.GetGameObjectFromCache(VFXPlayerKey.GetValue(cachedObjects)).GetComponent<VisualEffect>();
+        effectPlayer.visualEffectAsset = VFX.GetValue(cachedObjects);
         effectPlayer.Play();
     }
 }

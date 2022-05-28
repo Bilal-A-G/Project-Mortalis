@@ -6,6 +6,7 @@ public class CheckSphereInput : MonoBehaviour
 {
     public EventObject notContactingEvent;
     public EventObject contactingEvent;
+    public CachedObjectWrapper cachedObjects;
 
     public GenericReference<float> checkRadius;
     public GenericReference<LayerMask> checkLayer;
@@ -17,7 +18,7 @@ public class CheckSphereInput : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Physics.CheckSphere(checkEmpty.position, checkRadius, checkLayer.GetValue()))
+        if (Physics.CheckSphere(checkEmpty.position, checkRadius.GetValue(cachedObjects), checkLayer.GetValue(cachedObjects)))
         {
             finiteStateMachine.UpdateState(contactingEvent, callingObject);
         }
@@ -29,6 +30,6 @@ public class CheckSphereInput : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(checkEmpty.position, checkRadius);
+        Gizmos.DrawSphere(checkEmpty.position, checkRadius.GetValue(cachedObjects));
     }
 }

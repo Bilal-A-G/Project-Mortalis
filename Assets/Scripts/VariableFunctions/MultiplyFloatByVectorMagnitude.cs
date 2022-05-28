@@ -8,12 +8,12 @@ public class MultiplyFloatByVectorMagnitude : GenericValue<float>
     public GenericReference<Vector2> vectorInput;
     public GenericReference<float> floatInput;
 
-    public override float GetValue()
+    public override float GetValue(CachedObjectWrapper cachedObjects)
     {
-        return vectorInput.GetValue().magnitude * floatInput;
+        return vectorInput.GetValue(cachedObjects).magnitude * floatInput.GetValue(cachedObjects);
     }
 
-    public override void SetValue(float value)
+    public override void SetValue(float value, CachedObjectWrapper cachedObjects)
     {
         return;
     }

@@ -10,8 +10,8 @@ public class SetAnimatorValue<T> : ActionBase
     [System.NonSerialized]
     protected Animator animator;
 
-    public override void Execute(CachedObjectWrapper callingObject)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-       animator = callingObject.GetGameObjectFromCache(animatorKey).GetComponent<Animator>();
+       animator = cachedObjects.GetGameObjectFromCache(animatorKey.GetValue(cachedObjects)).GetComponent<Animator>();
     }
 }

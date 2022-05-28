@@ -9,9 +9,9 @@ public class UpdateFSM : ActionBase
     public GenericReference<string> callingObjectKey;
     public EventObject eventToInvoke;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        FiniteStateMachine fsm = callingObjects.GetGameObjectFromCache(FSMKey).GetComponent<FiniteStateMachine>();
-        fsm.UpdateState(eventToInvoke, callingObjects.GetGameObjectFromCache(callingObjectKey));
+        FiniteStateMachine fsm = cachedObjects.GetGameObjectFromCache(FSMKey.GetValue(cachedObjects)).GetComponent<FiniteStateMachine>();
+        fsm.UpdateState(eventToInvoke, cachedObjects.GetGameObjectFromCache(callingObjectKey.GetValue(cachedObjects)));
     }
 }

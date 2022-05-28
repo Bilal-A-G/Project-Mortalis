@@ -13,11 +13,11 @@ public class SetColliderValues : ActionBase
     [System.NonSerialized]
     CharacterController controller;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        controller = callingObjects.GetGameObjectFromCache(agentKey).GetComponent<CharacterController>();
+        controller = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects)).GetComponent<CharacterController>();
         
-        controller.height = desiredHeight.GetValue();
-        controller.center = desiredCenter.GetValue();
+        controller.height = desiredHeight.GetValue(cachedObjects);
+        controller.center = desiredCenter.GetValue(cachedObjects);
     }
 }

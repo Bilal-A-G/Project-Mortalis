@@ -19,29 +19,29 @@ public class SpawnGameObject : ActionBase
     public GenericReference<Vector3> spawnPosition;
     public GenericReference<Vector3> spawnRotation;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
         GameObject instantiatedObject = Instantiate(objectToInstantiate);
 
         Rigidbody instantiatedObjectPhysicsBody = instantiatedObject.GetComponent<Rigidbody>();
 
-        if(useInstantiateKey)
+        if(useInstantiateKey.GetValue(cachedObjects))
         {
-            instantiatedObject.transform.position = callingObjects.GetGameObjectFromCache(instantiateKey).transform.position;
-            instantiatedObject.transform.eulerAngles = callingObjects.GetGameObjectFromCache(instantiateKey).transform.eulerAngles;
+            instantiatedObject.transform.position = cachedObjects.GetGameObjectFromCache(instantiateKey.GetValue(cachedObjects)).transform.position;
+            instantiatedObject.transform.eulerAngles = cachedObjects.GetGameObjectFromCache(instantiateKey.GetValue(cachedObjects)).transform.eulerAngles;
         }
         else
         {
-            instantiatedObject.transform.position = spawnPosition;
-            instantiatedObject.transform.eulerAngles = spawnRotation;
+            instantiatedObject.transform.position = spawnPosition.GetValue(cachedObjects);
+            instantiatedObject.transform.eulerAngles = spawnRotation.GetValue(cachedObjects);
         }
 
         if (instantiatedObjectPhysicsBody)
         {
-            instantiatedObjectPhysicsBody.AddForce(instantiatedObject.transform.right * force.GetValue());
+            instantiatedObjectPhysicsBody.AddForce(instantiatedObject.transform.right * force.GetValue(cachedObjects));
         }
 
         instantiatedObject.SetActive(true);
-        Destroy(instantiatedObject, destroyTime.GetValue());
+        Destroy(instantiatedObject, destroyTime.GetValue(cachedObjects));
     }
 }

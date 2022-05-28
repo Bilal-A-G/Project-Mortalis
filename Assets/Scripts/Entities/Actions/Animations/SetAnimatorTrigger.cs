@@ -11,10 +11,10 @@ public class SetAnimatorTrigger : ActionBase
     [System.NonSerialized]
     Animator animator;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        animator = callingObjects.GetGameObjectFromCache(animatorKey).GetComponent<Animator>();
+        animator = cachedObjects.GetGameObjectFromCache(animatorKey.GetValue(cachedObjects)).GetComponent<Animator>();
         
-        animator.SetTrigger(value.GetValue());
+        animator.SetTrigger(value.GetValue(cachedObjects));
     }
 }

@@ -7,14 +7,15 @@ public class PlayVFXOnAwake : MonoBehaviour
 {
     public VisualEffect vfxSource;
     public VisualEffectAsset vfx;
-    public GenericReference<bool> condition;
     public GameObject callingObject;
 
     public EventObject onAwakeEvent;
+    public GenericReference<bool> playVFX;
+    public CachedObjectWrapper cachedObjects;
 
     void Awake()
     {
-        if (condition.GetValue())
+        if (playVFX.GetValue(cachedObjects))
         {
             vfxSource.Stop();
             vfxSource.visualEffectAsset = vfx;

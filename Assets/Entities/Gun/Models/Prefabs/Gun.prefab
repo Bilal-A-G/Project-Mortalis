@@ -834,6 +834,10 @@ PrefabInstance:
       propertyPath: cachedObjects.cache.Array.data[3].cachedObject
       value: 
       objectReference: {fileID: 60662583036564279}
+    - target: {fileID: 2172571221534936063, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
+      propertyPath: eventActions.Array.data[1].actions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d1110f6f4d255846a294b138ad6d138, type: 2}
     - target: {fileID: 2172571221922005812, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
       propertyPath: m_RootOrder
       value: 1

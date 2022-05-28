@@ -11,8 +11,6 @@ public class DecrementFloatValue : ActionBase
     public GenericReference<float> min;
     public GenericReference<float> max;
 
-    public GenericReference<bool> resetValue;
-
     public EventObject onReachMin;
     public EventObject onReachMax;
 
@@ -24,35 +22,30 @@ public class DecrementFloatValue : ActionBase
     [System.NonSerialized]
     GameObject callingObject;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        floatToDecrement.SetValue(floatToDecrement.GetValue() + decrementer.GetValue());
+        floatToDecrement.SetValue(floatToDecrement.GetValue(cachedObjects) + decrementer.GetValue(cachedObjects), cachedObjects);
 
-        callingObject = callingObjects.GetGameObjectFromCache(agentKey); 
+        callingObject = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects)); 
         stateMachine = callingObject.GetComponentInChildren<FiniteStateMachine>();
 
         if (max == null && min == null) return;
 
-        if (max != null && floatToDecrement.GetValue() >= max.GetValue())
+        if (max != null && floatToDecrement.GetValue(cachedObjects) >= max.GetValue(cachedObjects))
         {
-            floatToDecrement.SetValue(max.GetValue());
+            floatToDecrement.SetValue(max.GetValue(cachedObjects), cachedObjects);
 
             if (onReachMax == null) return;
 
             stateMachine.UpdateState(onReachMax, callingObject);
         }
-        else if (min != null && floatToDecrement.GetValue() <= min.GetValue())
+        else if (min != null && floatToDecrement.GetValue(cachedObjects) <= min.GetValue(cachedObjects))
         {
-            floatToDecrement.SetValue(min.GetValue());
+            floatToDecrement.SetValue(min.GetValue(cachedObjects), cachedObjects);
 
             if (onReachMin == null) return;
 
             stateMachine.UpdateState(onReachMin, callingObject);
         }
-    }
-
-    private void OnDisable()
-    {
-        if(resetValue.GetValue()) floatToDecrement.SetValue(min.GetValue());
     }
 }

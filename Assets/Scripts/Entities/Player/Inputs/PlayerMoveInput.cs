@@ -19,7 +19,7 @@ public class PlayerMoveInput : BasePlayerInput
 
         inputActions.PcMap.Movement.performed += ctx =>
         {
-            moveDirection.SetValue(ctx.ReadValue<Vector2>());
+            moveDirection.SetValue(ctx.ReadValue<Vector2>(), cachedObjects);
 
             if (ctx.ReadValue<Vector2>() != Vector2.zero)
             {

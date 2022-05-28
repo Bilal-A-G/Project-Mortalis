@@ -16,14 +16,14 @@ public class Look : ActionBase
     [System.NonSerialized]
     GameObject agent;
 
-    public override void Execute(CachedObjectWrapper callingObject)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        agentCamera = callingObject.GetGameObjectFromCache(cameraKey);
-        agent = callingObject.GetGameObjectFromCache(agentKey);
+        agentCamera = cachedObjects.GetGameObjectFromCache(cameraKey.GetValue(cachedObjects));
+        agent = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects));
 
         Cursor.lockState = CursorLockMode.Locked;
 
-        agent.transform.localEulerAngles = new Vector3(0, agent.transform.localEulerAngles.y + currentMouseDelta.GetValue().x * mouseSensitivity.GetValue(), 0);
-        agentCamera.transform.localEulerAngles = new Vector3(agentCamera.transform.localEulerAngles.x - currentMouseDelta.GetValue().y * mouseSensitivity.GetValue(), 0, 0);
+        agent.transform.localEulerAngles = new Vector3(0, agent.transform.localEulerAngles.y + currentMouseDelta.GetValue(cachedObjects).x * mouseSensitivity.GetValue(cachedObjects), 0);
+        agentCamera.transform.localEulerAngles = new Vector3(agentCamera.transform.localEulerAngles.x - currentMouseDelta.GetValue(cachedObjects).y * mouseSensitivity.GetValue(cachedObjects), 0, 0);
     }
 }

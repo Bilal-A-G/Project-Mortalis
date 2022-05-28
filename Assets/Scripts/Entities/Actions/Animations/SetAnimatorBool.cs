@@ -7,9 +7,9 @@ public class SetAnimatorBool : SetAnimatorValue<bool>
 {
     public GenericReference<string> valueName;
 
-    public override void Execute(CachedObjectWrapper callingObject)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        base.Execute(callingObject);
-        animator.SetBool(valueName.GetValue(), value.GetValue());
+        base.Execute(cachedObjects);
+        animator.SetBool(valueName.GetValue(cachedObjects), value.GetValue(cachedObjects));
     }
 }

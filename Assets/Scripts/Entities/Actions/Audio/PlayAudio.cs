@@ -11,10 +11,10 @@ public class PlayAudio : ActionBase
     [System.NonSerialized]
     AudioSource source;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        source = callingObjects.GetGameObjectFromCache(audioSourceKey).GetComponent<AudioSource>();
+        source = cachedObjects.GetGameObjectFromCache(audioSourceKey.GetValue(cachedObjects)).GetComponent<AudioSource>();
 
-        source.PlayOneShot(clipToPlay.GetValue());
+        source.PlayOneShot(clipToPlay.GetValue(cachedObjects));
     }
 }

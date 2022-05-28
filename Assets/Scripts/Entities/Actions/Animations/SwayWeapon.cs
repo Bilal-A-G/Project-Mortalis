@@ -24,23 +24,25 @@ public class SwayWeapon : ActionBase
     [System.NonSerialized]
     GameObject lerpTarget;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        lerpTarget = callingObjects.GetGameObjectFromCache(targetKey);
+        lerpTarget = cachedObjects.GetGameObjectFromCache(targetKey.GetValue(cachedObjects));
 
-        Vector2 mouseDeltaValue = mouseDelta.GetValue() * lookSwayAmount;
-        Vector2 moveDeltaValue = moveDelta.GetValue() * moveSwayAmount;
+        Vector2 mouseDeltaValue = mouseDelta.GetValue(cachedObjects) * lookSwayAmount.GetValue(cachedObjects);
+        Vector2 moveDeltaValue = moveDelta.GetValue(cachedObjects) * moveSwayAmount.GetValue(cachedObjects);
 
         targetRotation.x -= mouseDeltaValue.y - moveDeltaValue.y;
         targetRotation.y += mouseDeltaValue.x;
         targetRotation.z += mouseDeltaValue.x + moveDeltaValue.x;
 
-        targetRotation.x = Mathf.Clamp(targetRotation.x, -swayClamp, swayClamp);
-        targetRotation.y = Mathf.Clamp(targetRotation.y, -swayClamp, swayClamp);
-        targetRotation.z = Mathf.Clamp(targetRotation.z, -swayClamp, swayClamp);
+        float swayClampValue = swayClamp.GetValue(cachedObjects);
 
-        targetRotation = Vector3.Lerp(targetRotation, Vector3.zero, speed);
-        finalRotation = Vector3.Lerp(finalRotation, targetRotation, speed);
+        targetRotation.x = Mathf.Clamp(targetRotation.x, -swayClampValue, swayClampValue);
+        targetRotation.y = Mathf.Clamp(targetRotation.y, -swayClampValue, swayClampValue);
+        targetRotation.z = Mathf.Clamp(targetRotation.z, -swayClampValue, swayClampValue);
+
+        targetRotation = Vector3.Lerp(targetRotation, Vector3.zero, speed.GetValue(cachedObjects));
+        finalRotation = Vector3.Lerp(finalRotation, targetRotation, speed.GetValue(cachedObjects));
 
         lerpTarget.transform.localEulerAngles = finalRotation;
     }

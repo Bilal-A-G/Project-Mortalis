@@ -49,13 +49,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vfxSource: {fileID: 6522327156861153438}
   vfx: {fileID: 8926484042661614526, guid: 539476d2b319cfa4b95c1e85c5ccbb40, type: 3}
-  condition:
-    useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: 2b60bacda50ac8244aeb26acd02ed083, type: 2}
-    overrideValue: 0
   callingObject: {fileID: 6522327156861153440}
   onAwakeEvent: {fileID: 11400000, guid: 2c8e8feddd97685418e53b598fdadec7, type: 2}
+  playVFX:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 11400000, guid: 2b60bacda50ac8244aeb26acd02ed083, type: 2}
+    overrideValue: 0
+  cachedObjects:
+    cache: []
 --- !u!114 &6522327156861153434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,16 +71,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioOptions:
+  - {fileID: 8300000, guid: d05621b1efc19084281942ce83fbbfb0, type: 3}
+  - {fileID: 8300000, guid: 62d66ed153387bd458bd1a939c455810, type: 3}
+  - {fileID: 8300000, guid: 526952f26435c594497df6459f3d98df, type: 3}
+  - {fileID: 8300000, guid: 8e5735997c51cde478ec902f0c51a12a, type: 3}
+  source: {fileID: 6522327156861153437}
+  playAudio:
     useOverride: 0
-    isFolded: 1
-    variableValue: {fileID: 11400000, guid: 9ae165df8a28f09468f5df242952fc8a, type: 2}
-    overrideValue: []
-  condition:
-    useOverride: 0
-    isFolded: 1
+    isFolded: 0
     variableValue: {fileID: 11400000, guid: 2b60bacda50ac8244aeb26acd02ed083, type: 2}
     overrideValue: 0
-  source: {fileID: 6522327156861153437}
+  cachedObjects:
+    cache: []
 --- !u!2083052967 &6522327156861153438
 VisualEffect:
   m_ObjectHideFlags: 0

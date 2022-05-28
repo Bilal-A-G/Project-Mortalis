@@ -7,11 +7,11 @@ public class SetAnimatorFloat : SetAnimatorValue<float>
 {
     public GenericReference<string> valueName;
 
-    public override void Execute(CachedObjectWrapper callingObject)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        base.Execute(callingObject);
+        base.Execute(cachedObjects);
 
-        animator.SetFloat(valueName.GetValue(), value.GetValue());
+        animator.SetFloat(valueName.GetValue(cachedObjects), value.GetValue(cachedObjects));
 
     }
 }

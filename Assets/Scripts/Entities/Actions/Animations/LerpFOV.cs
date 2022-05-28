@@ -21,9 +21,9 @@ public class LerpFOV : ActionBase
     [System.NonSerialized]
     bool debounce;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        camera = callingObjects.GetGameObjectFromCache(cameraKey).GetComponent<Camera>();
+        camera = cachedObjects.GetGameObjectFromCache(cameraKey.GetValue(cachedObjects)).GetComponent<Camera>();
 
         if (debounce) return;
 
@@ -32,19 +32,19 @@ public class LerpFOV : ActionBase
         zoomTime = 0;
     }
 
-    public override void UpdateLoop(CachedObjectWrapper callingObject)
+    public override void UpdateLoop(CachedObjectWrapper cachedObjects)
     {
         if (!debounce) return;
 
-        zoomTime += Time.deltaTime * zoomSpeed.GetValue();
+        zoomTime += Time.deltaTime * zoomSpeed.GetValue(cachedObjects);
 
-        if ((int)finalZoom <= (int)desiredFOV.GetValue() + 1 && (int)finalZoom >= (int)desiredFOV.GetValue() - 1)
+        if ((int)finalZoom <= (int)desiredFOV.GetValue(cachedObjects) + 1 && (int)finalZoom >= (int)desiredFOV.GetValue(cachedObjects) - 1)
         {
             debounce = false;
         }
         else
         {
-            finalZoom = Mathf.Lerp(finalZoom, desiredFOV.GetValue(), zoomTime);
+            finalZoom = Mathf.Lerp(finalZoom, desiredFOV.GetValue(cachedObjects), zoomTime);
             camera.fieldOfView = finalZoom;
         }
     }

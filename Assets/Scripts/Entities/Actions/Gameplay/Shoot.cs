@@ -28,39 +28,40 @@ public class Shoot : ActionBase
     Vector3 endPoint;
 
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
         didTracer = false;
 
-        firePoint = callingObjects.GetGameObjectFromCache(firePointKey).transform;
-        GunRuntimeVariables variables = callingObjects.GetGameObjectFromCache(agentKey).GetComponent<GunRuntimeVariables>();
-        
+        firePoint = cachedObjects.GetGameObjectFromCache(firePointKey.GetValue(cachedObjects)).transform;
+        GunRuntimeVariables variables = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects)).GetComponent<GunRuntimeVariables>();
 
-        bulletDeviation.x = Random.Range(-bulletSpread.GetValue(), bulletSpread.GetValue());
-        bulletDeviation.y = Random.Range(-bulletSpread.GetValue(), bulletSpread.GetValue());
-        bulletDeviation.z = Random.Range(-bulletSpread.GetValue(), bulletSpread.GetValue());
+        float bulletSpreadValue = bulletSpread.GetValue(cachedObjects);
+
+        bulletDeviation.x = Random.Range(-bulletSpreadValue, bulletSpreadValue);
+        bulletDeviation.y = Random.Range(-bulletSpreadValue, bulletSpreadValue);
+        bulletDeviation.z = Random.Range(-bulletSpreadValue, bulletSpreadValue);
 
         endPoint = (bulletDeviation + firePoint.forward).normalized;
 
         RaycastHit hit;
 
-        if (Physics.Raycast(firePoint.position, endPoint, out hit, maxRange.GetValue(), layerToHit.GetValue()))
+        if (Physics.Raycast(firePoint.position, endPoint, out hit, maxRange.GetValue(cachedObjects), layerToHit.GetValue(cachedObjects)))
         {
-            if ((hit.collider.gameObject.transform.position - firePoint.transform.position).magnitude <= maxRange.GetValue())
+            if ((hit.collider.gameObject.transform.position - firePoint.transform.position).magnitude <= maxRange.GetValue(cachedObjects))
             {
                 Debug.Log("Dealt " + variables.damage + " damage to " + hit.transform.gameObject.name);
             }
 
-            outputPosition.SetValue(hit.point);
-            outputRotation.SetValue(Quaternion.LookRotation(hit.normal).eulerAngles);
-            tracerHitSomething.SetValue(true);
+            outputPosition.SetValue(hit.point, cachedObjects);
+            outputRotation.SetValue(Quaternion.LookRotation(hit.normal).eulerAngles, cachedObjects);
+            tracerHitSomething.SetValue(true, cachedObjects);
             didTracer = true;
         }
 
         if (!didTracer) 
         {
-            outputPosition.SetValue(endPoint * 1000);
-            tracerHitSomething.SetValue(false);
+            outputPosition.SetValue(endPoint * 1000, cachedObjects);
+            tracerHitSomething.SetValue(false, cachedObjects);
         } 
     }
 }

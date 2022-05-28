@@ -15,7 +15,7 @@ public class PlayerLookInput : BasePlayerInput
 
         inputActions.PcMap.Look.performed += ctx =>
         {
-            mouseDelta.SetValue(ctx.ReadValue<Vector2>());
+            mouseDelta.SetValue(ctx.ReadValue<Vector2>(), cachedObjects);
             finiteStateMachine.UpdateState(playerLookEvent, callingObject);
         };
     }

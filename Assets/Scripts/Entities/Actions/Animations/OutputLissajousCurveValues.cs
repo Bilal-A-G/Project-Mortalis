@@ -17,11 +17,11 @@ public class OutputLissajousCurveValues : ActionBase
     [System.NonSerialized]
     Vector3 lissajousCurve;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        lissajousCurve = new Vector3(Mathf.Sin(time), offsetX.GetValue() * Mathf.Sin(offsetY.GetValue() * time + Mathf.PI));
+        lissajousCurve = new Vector3(Mathf.Sin(time), offsetX.GetValue(cachedObjects) * Mathf.Sin(offsetY.GetValue(cachedObjects) * time + Mathf.PI));
 
-        lissajousValuesOutput.SetValue(lissajousCurve / curveScale.GetValue());
+        lissajousValuesOutput.SetValue(lissajousCurve / curveScale.GetValue(cachedObjects), cachedObjects);
         time += Time.deltaTime;
 
         if (time > 6) time = 0;

@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class PlayRandomAudioOnAwake : MonoBehaviour
 {
-    public GenericReference<List<AudioClip>> audioOptions;
-    public GenericReference<bool> condition;
+    public List<AudioClip> audioOptions;
     public AudioSource source;
+    public GenericReference<bool> playAudio;
+
+    public CachedObjectWrapper cachedObjects;
 
     AudioClip currentAudioClip;
 
     void Awake()
     {
-        if (condition.GetValue())
+        if (playAudio.GetValue(cachedObjects))
         {
-            currentAudioClip = audioOptions.GetValue()[Random.Range(0, audioOptions.GetValue().Count)];
+            currentAudioClip = audioOptions[Random.Range(0, audioOptions.Count)];
             source.PlayOneShot(currentAudioClip);
         }
     }

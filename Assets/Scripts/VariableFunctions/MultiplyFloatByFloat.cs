@@ -8,14 +8,13 @@ public class MultiplyFloatByFloat : GenericValue<float>
     public GenericReference<float> baseValue;
     public GenericReference<float> modifier;
 
-    public override float GetValue()
+    public override float GetValue(CachedObjectWrapper cachedObjects)
     {
-        return baseValue * modifier;
+        return baseValue.GetValue(cachedObjects) * modifier.GetValue(cachedObjects);
     }
 
-    public override void SetValue(float value)
+    public override void SetValue(float value, CachedObjectWrapper cachedObjects)
     {
         return;
     }
-
 }

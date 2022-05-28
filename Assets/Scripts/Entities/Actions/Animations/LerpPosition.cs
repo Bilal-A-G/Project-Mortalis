@@ -34,11 +34,11 @@ public class LerpPosition : ActionBase
     [System.NonSerialized]
     protected bool didKickback;
 
-    public override void Execute(CachedObjectWrapper callingObjects)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        this.callingObject = callingObjects;
+        this.callingObject = cachedObjects;
 
-        lerpTarget = callingObjects.GetGameObjectFromCache(targetKey);
+        lerpTarget = cachedObjects.GetGameObjectFromCache(targetKey.GetValue(cachedObjects));
 
         if (debounce) return;
 
@@ -48,7 +48,7 @@ public class LerpPosition : ActionBase
 
         SetUpStartVector();
 
-        if (onLerpStart != null) onLerpStart.Execute(callingObjects);
+        if (onLerpStart != null) onLerpStart.Execute(cachedObjects);
     }
 
     protected virtual void SetUpStartVector()
@@ -56,32 +56,35 @@ public class LerpPosition : ActionBase
         startVector = lerpTarget.transform.localPosition;
     }
 
-    public override void FixedUpdateLoop(CachedObjectWrapper callingObjects)
+    public override void FixedUpdateLoop(CachedObjectWrapper cachedObjects)
     {
         if (!debounce) return;
 
-        timeSinceExecuted += Time.deltaTime * currentSpeed.GetValue();
+        timeSinceExecuted += Time.deltaTime * currentSpeed.GetValue(cachedObjects);
 
-        if (LerpToEnd())
+        if (LerpToEnd(cachedObjects))
         {
-            if (onLerpEnd != null) onLerpEnd.Execute(callingObjects);
+            if (onLerpEnd != null) onLerpEnd.Execute(cachedObjects);
 
-            if(resetVector.GetValue()) ResetLerpedProperty();
+            if(resetVector.GetValue(cachedObjects)) ResetLerpedProperty();
 
             debounce = false;
         }
     }
 
-    protected bool LerpToEnd()
+    protected bool LerpToEnd(CachedObjectWrapper cachedObjects)
     {
-        LerpProperty(startVector, endVector.GetValue());
+        LerpProperty(startVector, endVector.GetValue(cachedObjects), cachedObjects);
 
-        bool underMaximum = timeSinceExecuted < animationDuration.GetValue() + tolorence.GetValue();
-        bool overMinimum = timeSinceExecuted > animationDuration.GetValue() - tolorence.GetValue();
+        float animationDurationValue = animationDuration.GetValue(cachedObjects);
+        float tolorenceValue = tolorence.GetValue(cachedObjects);
 
-        bool overMaximum = timeSinceExecuted > animationDuration.GetValue() + tolorence.GetValue();
+        bool underMaximum = timeSinceExecuted < animationDurationValue + tolorenceValue;
+        bool overMinimum = timeSinceExecuted > animationDurationValue - tolorenceValue;
 
-        if(!didKickback && timeSinceExecuted >= animationDuration.GetValue()/2)
+        bool overMaximum = timeSinceExecuted > animationDurationValue + tolorenceValue;
+
+        if(!didKickback && timeSinceExecuted >= animationDurationValue / 2)
         {
             didKickback = true;
             if(onKickback != null) onKickback.Execute(callingObject);
@@ -92,9 +95,9 @@ public class LerpPosition : ActionBase
         return false;
     }
 
-    protected virtual void LerpProperty(Vector3 startPosition, Vector3 endPosition)
+    protected virtual void LerpProperty(Vector3 startPosition, Vector3 endPosition, CachedObjectWrapper cachedObjects)
     {
-        lerpTarget.transform.localPosition = Vector3.LerpUnclamped(startPosition, endPosition, easingFunction.GetValue().Evaluate(timeSinceExecuted));
+        lerpTarget.transform.localPosition = Vector3.LerpUnclamped(startPosition, endPosition, easingFunction.GetValue(cachedObjects).Evaluate(timeSinceExecuted));
     }
 
     protected virtual void ResetLerpedProperty()

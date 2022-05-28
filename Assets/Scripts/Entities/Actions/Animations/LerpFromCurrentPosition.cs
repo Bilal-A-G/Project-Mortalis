@@ -16,11 +16,11 @@ public class LerpFromCurrentPosition : ActionBase
     [System.NonSerialized]
     GameObject lerpTarget;
 
-    public override void Execute(CachedObjectWrapper callingObject)
+    public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        lerpTarget = callingObject.GetGameObjectFromCache(targetKey);
+        lerpTarget = cachedObjects.GetGameObjectFromCache(targetKey.GetValue(cachedObjects));
 
-        lerpPosition = Vector3.Lerp(lerpPosition, lerpAlongVector.GetValue(), Time.smoothDeltaTime * speed.GetValue());
-        lerpTarget.transform.localPosition = lerpPosition + startPosition.GetValue();
+        lerpPosition = Vector3.Lerp(lerpPosition, lerpAlongVector.GetValue(cachedObjects), Time.smoothDeltaTime * speed.GetValue(cachedObjects));
+        lerpTarget.transform.localPosition = lerpPosition + startPosition.GetValue(cachedObjects);
     }
 }
