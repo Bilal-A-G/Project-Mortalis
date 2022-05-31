@@ -31,4 +31,4 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: {x: 0.578, y: -0.22300005, z: 0.541}
+    overrideValue: {x: 0, y: 0, z: 0}
