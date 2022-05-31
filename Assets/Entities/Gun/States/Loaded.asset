@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
   m_Name: Loaded
   m_EditorClassIdentifier: 
+  onStateEnter: []
+  onStateExit: []
   stateActions:
   - translate: 0
     isFolded: 1

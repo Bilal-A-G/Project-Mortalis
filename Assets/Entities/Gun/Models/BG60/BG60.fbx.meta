@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: 2e35b4586aa2a1d47b88524420ec11ee
+guid: df68a7246d808f84187cdcd7152d4922
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BulletCasing
+    second: {fileID: 2100000, guid: 9f620c876f51680439caec5f3fc3e0ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: ea59bcff901ea1a49aee165b8f42239e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoughPlastic
+    second: {fileID: 2100000, guid: 05ba8c65a04a4ad468b880db85790508, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Secondary
+    second: {fileID: 2100000, guid: 3e9051f906ffca1459d34bcdbe3ba561, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -41,8 +61,8 @@ ModelImporter:
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -73,7 +93,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []

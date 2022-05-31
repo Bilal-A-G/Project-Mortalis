@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3202bd882d81fa4e85dc0c412d65368, type: 3}
+  m_Name: SpawnRifleCasing
+  m_EditorClassIdentifier: 
+  objectToInstantiate: {fileID: 6274200902924967159, guid: 0fbb9434dad8f244584ff533652cbeb2, type: 3}
+  force:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: -300
+  destroyTime:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 5
+  useInstantiateKey:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
+  instantiateKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: ed469d2d354c2304e8374435783e9952, type: 2}
+    overrideValue: Casing
+  spawnPosition:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: {x: 0, y: 0, z: 0}
+  spawnRotation:
+    useOverride: 0
+    isFolded: 0
+    variableValue: {fileID: 0}
+    overrideValue: {x: 0, y: 0, z: 0}
