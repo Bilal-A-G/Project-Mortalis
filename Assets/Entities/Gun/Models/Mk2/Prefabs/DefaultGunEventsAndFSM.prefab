@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   callingObject: {fileID: 0}
+  cachedObjects:
+    cache: []
   gunFireEvent: {fileID: 11400000, guid: 770f7b3367a194844810abd09a14ed03, type: 2}
   stateMachine: {fileID: 1008876978738549076}
 --- !u!1 &1008876979055612190
@@ -168,6 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   callingObject: {fileID: 0}
+  cachedObjects:
+    cache: []
   gunReloadEvent: {fileID: 11400000, guid: 3f8142514ef233041bec5f8343f0cf5e, type: 2}
   stateMachine: {fileID: 1008876978738549076}
 --- !u!1 &1008876979470397685
@@ -428,7 +432,7 @@ MonoBehaviour:
   - events:
     - {fileID: 11400000, guid: 964214138014003488f2147046411207, type: 2}
     actions:
-    - {fileID: 11400000, guid: db306329120c42d4887d9704c13883dc, type: 2}
+    - {fileID: 11400000, guid: 6d1110f6f4d255846a294b138ad6d138, type: 2}
     - {fileID: 11400000, guid: 6a8890be0c1a9ee4c93837f77fe1230c, type: 2}
   - events:
     - {fileID: 11400000, guid: e3310709cad4b3245a9892bf2acabb9d, type: 2}

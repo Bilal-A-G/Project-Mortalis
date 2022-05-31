@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4763495665807396288}
   m_Layer: 8
-  m_Name: M1911PhysicsMagazine
+  m_Name: PhysicsMagazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

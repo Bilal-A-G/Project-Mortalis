@@ -28,9 +28,9 @@ MonoBehaviour:
     variableValue: {fileID: 0}
     overrideValue: 0
   max:
-    useOverride: 1
+    useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 0}
+    variableValue: {fileID: 11400000, guid: f536414a2206e304f95a7f1e50f74430, type: 2}
     overrideValue: 10
   onReachMin: {fileID: 11400000, guid: 846f3d66d42bc8d4588e9e2b462ad53e, type: 2}
   onReachMax: {fileID: 0}
