@@ -13,7 +13,7 @@ public class PlayerJumpInput : BasePlayerInput
 
         inputActions.PcMap.Jump.performed += ctx =>
         {
-            finiteStateMachines.UpdateState(jumpedEvent, callingObject);
+            finiteStateMachines.UpdateState(jumpedEvent, callingObject, cachedObjects);
         };
     }
 }

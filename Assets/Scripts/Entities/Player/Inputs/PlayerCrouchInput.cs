@@ -15,12 +15,12 @@ public class PlayerCrouchInput : BasePlayerInput
 
         inputActions.PcMap.Crouch.started += ctx => 
         {
-            currentFiniteStateMachine.UpdateState(startedCrouchingEvent, callingObject);
+            currentFiniteStateMachine.UpdateState(startedCrouchingEvent, callingObject, cachedObjects);
         };
 
         inputActions.PcMap.Crouch.canceled += ctx =>
         {
-            currentFiniteStateMachine.UpdateState(stoppedCrouchingEvent, callingObject);
+            currentFiniteStateMachine.UpdateState(stoppedCrouchingEvent, callingObject, cachedObjects);
         };
     }
 }

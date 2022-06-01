@@ -13,6 +13,9 @@ public class GunRuntimeVariables : MonoBehaviour, IRuntimeVariable
     [Header("Damage")]
     public float damage;
 
+    [Header("States")]
+    public StateObject currentLoadedState;
+
     public object GetValueFromName(string name)
     {
         return typeof(GunRuntimeVariables).GetField(name).GetValue(this);

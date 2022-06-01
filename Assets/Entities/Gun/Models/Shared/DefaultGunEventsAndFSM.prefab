@@ -310,6 +310,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4245baf1c026cd54b82d2e013b622a6c, type: 2}
   callingObject: {fileID: 0}
   fsm: {fileID: 1008876978738549076}
+  cachedObjects:
+    cache:
+    - cachedObject: {fileID: 0}
+      key: Parent
 --- !u!1 &2172571221377936878
 GameObject:
   m_ObjectHideFlags: 0

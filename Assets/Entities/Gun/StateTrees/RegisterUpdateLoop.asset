@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c221eb87ec0a8144af4c33ad6fcee85, type: 3}
   m_Name: RegisterUpdateLoop
   m_EditorClassIdentifier: 
-  initialState: {fileID: 11400000, guid: 47a3881357936aa42aa7829bf967eeb4, type: 2}
+  currentState:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: {fileID: 11400000, guid: 47a3881357936aa42aa7829bf967eeb4, type: 2}

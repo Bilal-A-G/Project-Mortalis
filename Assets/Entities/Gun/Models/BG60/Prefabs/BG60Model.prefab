@@ -802,7 +802,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   callingObject: {fileID: 0}
   cachedObjects:
-    cache: []
+    cache:
+    - cachedObject: {fileID: 9022089612867024182}
+      key: Parent
   gunFireEvent: {fileID: 11400000, guid: 770f7b3367a194844810abd09a14ed03, type: 2}
   stateMachine: {fileID: 6050794319635707453}
 --- !u!1 &4890481655104256582
@@ -908,6 +910,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4245baf1c026cd54b82d2e013b622a6c, type: 2}
   callingObject: {fileID: 0}
   fsm: {fileID: 6050794319635707453}
+  cachedObjects:
+    cache:
+    - cachedObject: {fileID: 9022089612867024182}
+      key: Parent
 --- !u!1 &4890481655605912610
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +992,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   callingObject: {fileID: 0}
   cachedObjects:
-    cache: []
+    cache:
+    - cachedObject: {fileID: 9022089612867024182}
+      key: Parent
   gunReloadEvent: {fileID: 11400000, guid: 3f8142514ef233041bec5f8343f0cf5e, type: 2}
   stateMachine: {fileID: 6050794319635707453}
 --- !u!1 &6050794319635707455
@@ -1261,3 +1269,4 @@ MonoBehaviour:
   maxAmmo: 20
   ammoPerShot: 1
   damage: 5
+  currentLoadedState: {fileID: 11400000, guid: ba754607975dfb74eab7822cd7a50755, type: 2}

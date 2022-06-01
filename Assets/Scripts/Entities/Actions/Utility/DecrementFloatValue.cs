@@ -37,7 +37,7 @@ public class DecrementFloatValue : ActionBase
 
             if (onReachMax == null) return;
 
-            stateMachine.UpdateState(onReachMax, callingObject);
+            stateMachine.UpdateState(onReachMax, callingObject, cachedObjects);
         }
         else if (min != null && floatToDecrement.GetValue(cachedObjects) <= min.GetValue(cachedObjects))
         {
@@ -45,7 +45,7 @@ public class DecrementFloatValue : ActionBase
 
             if (onReachMin == null) return;
 
-            stateMachine.UpdateState(onReachMin, callingObject);
+            stateMachine.UpdateState(onReachMin, callingObject, cachedObjects);
         }
     }
 }

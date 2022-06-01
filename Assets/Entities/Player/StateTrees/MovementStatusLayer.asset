@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c221eb87ec0a8144af4c33ad6fcee85, type: 3}
   m_Name: MovementStatusLayer
   m_EditorClassIdentifier: 
-  initialState: {fileID: 11400000, guid: 50caa76ee9d877c419af33d86435350d, type: 2}
+  currentState:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: {fileID: 11400000, guid: 50caa76ee9d877c419af33d86435350d, type: 2}

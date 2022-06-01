@@ -12,6 +12,6 @@ public class UpdateFSM : ActionBase
     public override void Execute(CachedObjectWrapper cachedObjects)
     {
         FiniteStateMachine fsm = cachedObjects.GetGameObjectFromCache(FSMKey.GetValue(cachedObjects)).GetComponent<FiniteStateMachine>();
-        fsm.UpdateState(eventToInvoke, cachedObjects.GetGameObjectFromCache(callingObjectKey.GetValue(cachedObjects)));
+        fsm.UpdateState(eventToInvoke, cachedObjects.GetGameObjectFromCache(callingObjectKey.GetValue(cachedObjects)), cachedObjects);
     }
 }

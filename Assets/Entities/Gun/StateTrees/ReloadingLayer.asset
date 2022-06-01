@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c221eb87ec0a8144af4c33ad6fcee85, type: 3}
   m_Name: ReloadingLayer
   m_EditorClassIdentifier: 
-  initialState: {fileID: 11400000, guid: ba754607975dfb74eab7822cd7a50755, type: 2}
+  currentState:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: 4a91a11f90011b940b3209dd3d0c476e, type: 2}
+    overrideValue: {fileID: 11400000, guid: ba754607975dfb74eab7822cd7a50755, type: 2}

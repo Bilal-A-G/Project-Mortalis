@@ -13,7 +13,7 @@ public class GunFireInput : BasePlayerInput
 
         inputActions.PcMap.FireGun.performed += ctx =>
         {
-            stateMachine.UpdateState(gunFireEvent, callingObject);
+            stateMachine.UpdateState(gunFireEvent, callingObject, cachedObjects);
         };
     }
 

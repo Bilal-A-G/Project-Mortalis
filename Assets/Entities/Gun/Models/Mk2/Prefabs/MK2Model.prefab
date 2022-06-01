@@ -71,6 +71,7 @@ MonoBehaviour:
   maxAmmo: 10
   ammoPerShot: 1
   damage: 5
+  currentLoadedState: {fileID: 11400000, guid: ba754607975dfb74eab7822cd7a50755, type: 2}
 --- !u!1 &711753837574446041
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,8 +652,32 @@ PrefabInstance:
       propertyPath: callingObject
       value: 
       objectReference: {fileID: 60662583036564279}
+    - target: {fileID: 2172571220764773226, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
+      propertyPath: cachedObjects.cache.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172571220764773226, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
+      propertyPath: cachedObjects.cache.Array.data[0].key
+      value: Parent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172571220764773226, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
+      propertyPath: cachedObjects.cache.Array.data[0].cachedObject
+      value: 
+      objectReference: {fileID: 60662583036564279}
     - target: {fileID: 2172571220833195341, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
       propertyPath: callingObject
+      value: 
+      objectReference: {fileID: 60662583036564279}
+    - target: {fileID: 2172571220833195341, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
+      propertyPath: cachedObjects.cache.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172571220833195341, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
+      propertyPath: cachedObjects.cache.Array.data[0].key
+      value: Parent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2172571220833195341, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
+      propertyPath: cachedObjects.cache.Array.data[0].cachedObject
       value: 
       objectReference: {fileID: 60662583036564279}
     - target: {fileID: 2172571221254479145, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
@@ -661,6 +686,10 @@ PrefabInstance:
       objectReference: {fileID: 60662583036564279}
     - target: {fileID: 2172571221255588980, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
       propertyPath: callingObject
+      value: 
+      objectReference: {fileID: 60662583036564279}
+    - target: {fileID: 2172571221255588980, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}
+      propertyPath: cachedObjects.cache.Array.data[0].cachedObject
       value: 
       objectReference: {fileID: 60662583036564279}
     - target: {fileID: 2172571221377936872, guid: 0bfce2828e2f434488eb754423c5916c, type: 3}

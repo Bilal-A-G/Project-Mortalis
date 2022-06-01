@@ -9,11 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c221eb87ec0a8144af4c33ad6fcee85, type: 3}
-  m_Name: MovingLayer
+  m_Script: {fileID: 11500000, guid: d9e6662201c059845a48a5a5eb15d8f9, type: 3}
+  m_Name: CurrentReloadingState
   m_EditorClassIdentifier: 
-  currentState:
+  valueKey:
+    useOverride: 0
+    isFolded: 1
+    variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
+    overrideValue: 
+  valueName:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: {fileID: 11400000, guid: ff369ad6594dc8b41a47dfbbf4e47fb6, type: 2}
+    overrideValue: currentLoadedState

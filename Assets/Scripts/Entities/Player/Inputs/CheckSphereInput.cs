@@ -20,11 +20,11 @@ public class CheckSphereInput : MonoBehaviour
     {
         if (Physics.CheckSphere(checkEmpty.position, checkRadius.GetValue(cachedObjects), checkLayer.GetValue(cachedObjects)))
         {
-            finiteStateMachine.UpdateState(contactingEvent, callingObject);
+            finiteStateMachine.UpdateState(contactingEvent, callingObject, cachedObjects);
         }
         else
         {
-            finiteStateMachine.UpdateState(notContactingEvent, callingObject);
+            finiteStateMachine.UpdateState(notContactingEvent, callingObject, cachedObjects);
         }
     }
 

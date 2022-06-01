@@ -6,9 +6,10 @@ public class AnimationEventTranslatorFSM : MonoBehaviour
 {
     public GameObject parentObject;
     public FiniteStateMachine fsm;
+    public CachedObjectWrapper cachedObjects;
 
     public void InvokeEventOnFSM(EventObject eventToInvoke)
     {
-        fsm.UpdateState(eventToInvoke, parentObject);
+        fsm.UpdateState(eventToInvoke, parentObject, cachedObjects);
     }
 }

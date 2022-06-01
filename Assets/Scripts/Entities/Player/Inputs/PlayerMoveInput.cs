@@ -23,12 +23,12 @@ public class PlayerMoveInput : BasePlayerInput
 
             if (ctx.ReadValue<Vector2>() != Vector2.zero)
             {
-                finiteStateMachines.UpdateState(startMoveEvent, callingObject);
+                finiteStateMachines.UpdateState(startMoveEvent, callingObject, cachedObjects);
                 moving = true;
             }
             else
             {
-                finiteStateMachines.UpdateState(stoppedMovingEvent, callingObject);
+                finiteStateMachines.UpdateState(stoppedMovingEvent, callingObject, cachedObjects);
                 moving = false;
             }
         };
@@ -38,6 +38,6 @@ public class PlayerMoveInput : BasePlayerInput
     {
         if (!moving) return;
 
-        finiteStateMachines.UpdateState(movingEvent, callingObject);
+        finiteStateMachines.UpdateState(movingEvent, callingObject, cachedObjects);
     }
 }
