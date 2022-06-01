@@ -9,31 +9,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3eab830d7e53f745b7da563e94ec33e, type: 3}
-  m_Name: Move
+  m_Script: {fileID: 11500000, guid: 379a0630890eedd4691b502840c4bc05, type: 3}
+  m_Name: IncrementRecoilPistol
   m_EditorClassIdentifier: 
-  moveSpeed:
+  floatToDecrement:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 0bd08d37e720a33419dd67a72fc5d086, type: 2}
+    variableValue: {fileID: 11400000, guid: 9f2be44fc2196a343b35739f43ab5193, type: 2}
     overrideValue: 0
-  minMoveSpeed:
+  decrementer:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.4
-  smoothing:
+    overrideValue: 8
+  min:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.2
-  moveDirection:
-    useOverride: 0
+    overrideValue: 0
+  max:
+    useOverride: 1
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: 0c34ab498f6c5db46813ccaa0ed8c1b1, type: 2}
-    overrideValue: {x: 0, y: 0}
+    variableValue: {fileID: 0}
+    overrideValue: 100
+  onReachMin: {fileID: 0}
+  onReachMax: {fileID: 0}
   agentKey:
     useOverride: 0
     isFolded: 1
     variableValue: {fileID: 11400000, guid: db306344195432c4e8b9546b9acc9078, type: 2}
-    overrideValue: Parent
+    overrideValue: 

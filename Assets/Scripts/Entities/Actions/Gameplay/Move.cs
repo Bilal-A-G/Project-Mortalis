@@ -29,16 +29,15 @@ public class Move : ActionBase
         agent = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects));
         characterController = agent.GetComponent<CharacterController>();
 
+        currentMovement = Vector2.SmoothDamp(currentMovement, moveDirection.GetValue(cachedObjects) * moveSpeed.GetValue(cachedObjects), ref refrenceVelocity, smoothing.GetValue(cachedObjects));
+
+
         if (moveSpeed.GetValue(cachedObjects) <= 0)
         {
-            currentMovement = Vector2.SmoothDamp(currentMovement, moveDirection.GetValue(cachedObjects) * minMoveSpeed.GetValue(cachedObjects), ref refrenceVelocity, smoothing.GetValue(cachedObjects));
-
-            characterController.Move(Time.deltaTime * ((agent.transform.forward * currentMovement.y) + (agent.transform.right * currentMovement.x)));
+            characterController.Move(minMoveSpeed.GetValue(cachedObjects) * Time.deltaTime * ((agent.transform.forward * currentMovement.y) + (agent.transform.right * currentMovement.x)));
         }
         else
         {
-            currentMovement = Vector2.SmoothDamp(currentMovement, moveDirection.GetValue(cachedObjects) * moveSpeed.GetValue(cachedObjects), ref refrenceVelocity, smoothing.GetValue(cachedObjects));
-
             characterController.Move(Time.deltaTime * ((agent.transform.forward * currentMovement.y) + (agent.transform.right * currentMovement.x)));
         }
     }
