@@ -7,6 +7,8 @@ using UnityEngine;
 public class Move : ActionBase
 {
     public GenericReference<float> moveSpeed;
+    public GenericReference<float> minMoveSpeed;
+    public GenericReference<float> smoothing;
     public GenericReference<Vector2> moveDirection;
     public GenericReference<string> agentKey;
 
@@ -16,11 +18,28 @@ public class Move : ActionBase
     [System.NonSerialized]
     GameObject agent;
 
+    [System.NonSerialized]
+    Vector2 refrenceVelocity;
+
+    [System.NonSerialized]
+    Vector2 currentMovement;
+
     public override void Execute(CachedObjectWrapper cachedObjects)
     {
         agent = cachedObjects.GetGameObjectFromCache(agentKey.GetValue(cachedObjects));
         characterController = agent.GetComponent<CharacterController>();
 
-        characterController.Move(moveSpeed.GetValue(cachedObjects) * Time.deltaTime * ((agent.transform.forward * moveDirection.GetValue(cachedObjects).y) + agent.transform.right * moveDirection.GetValue(cachedObjects).x));
+        if (moveSpeed.GetValue(cachedObjects) <= 0)
+        {
+            currentMovement = Vector2.SmoothDamp(currentMovement, moveDirection.GetValue(cachedObjects) * minMoveSpeed.GetValue(cachedObjects), ref refrenceVelocity, smoothing.GetValue(cachedObjects));
+
+            characterController.Move(Time.deltaTime * ((agent.transform.forward * currentMovement.y) + (agent.transform.right * currentMovement.x)));
+        }
+        else
+        {
+            currentMovement = Vector2.SmoothDamp(currentMovement, moveDirection.GetValue(cachedObjects) * moveSpeed.GetValue(cachedObjects), ref refrenceVelocity, smoothing.GetValue(cachedObjects));
+
+            characterController.Move(Time.deltaTime * ((agent.transform.forward * currentMovement.y) + (agent.transform.right * currentMovement.x)));
+        }
     }
 }

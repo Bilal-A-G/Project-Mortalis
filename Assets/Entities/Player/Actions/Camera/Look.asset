@@ -17,6 +17,11 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 11400000, guid: 513a45e0cf5a2164dae900b705ef35e8, type: 2}
     overrideValue: {x: 0, y: 0}
+  smoothing:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 0.03
   mouseSensitivity:
     useOverride: 0
     isFolded: 1

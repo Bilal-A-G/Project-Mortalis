@@ -6,6 +6,7 @@ using UnityEngine;
 public class Look : ActionBase
 {
     public GenericReference<Vector2> currentMouseDelta;
+    public GenericReference<float> smoothing;
     public GenericReference<float> mouseSensitivity;
     public GenericReference<string> cameraKey;
     public GenericReference<string> agentKey;
@@ -16,6 +17,12 @@ public class Look : ActionBase
     [System.NonSerialized]
     GameObject agent;
 
+    [System.NonSerialized]
+    Vector2 refrenceVelocity;
+
+    [System.NonSerialized]
+    Vector2 currentLook;
+
     public override void Execute(CachedObjectWrapper cachedObjects)
     {
         agentCamera = cachedObjects.GetGameObjectFromCache(cameraKey.GetValue(cachedObjects));
@@ -23,7 +30,9 @@ public class Look : ActionBase
 
         Cursor.lockState = CursorLockMode.Locked;
 
-        agent.transform.localEulerAngles = new Vector3(0, agent.transform.localEulerAngles.y + currentMouseDelta.GetValue(cachedObjects).x * mouseSensitivity.GetValue(cachedObjects), 0);
-        agentCamera.transform.localEulerAngles = new Vector3(agentCamera.transform.localEulerAngles.x - currentMouseDelta.GetValue(cachedObjects).y * mouseSensitivity.GetValue(cachedObjects), 0, 0);
+        currentLook = Vector2.SmoothDamp(currentLook, currentMouseDelta.GetValue(cachedObjects), ref refrenceVelocity, smoothing.GetValue(cachedObjects));
+
+        agent.transform.localEulerAngles = new Vector3(0, agent.transform.localEulerAngles.y + currentLook.x * mouseSensitivity.GetValue(cachedObjects), 0);
+        agentCamera.transform.localEulerAngles = new Vector3(agentCamera.transform.localEulerAngles.x - currentLook.y * mouseSensitivity.GetValue(cachedObjects), 0, 0);
     }
 }

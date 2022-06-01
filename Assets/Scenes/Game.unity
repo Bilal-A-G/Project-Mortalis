@@ -168,10 +168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventActions:
   - events:
-    - {fileID: 11400000, guid: e1c0805c63a1cb640bb68fdd3c8a5a6e, type: 2}
-    actions:
-    - {fileID: 11400000, guid: f5986ebdc51e7024c8aa243dd4bdeaa2, type: 2}
-  - events:
     - {fileID: 11400000, guid: 6c09005feb89735498df962ba8d75011, type: 2}
     actions:
     - {fileID: 11400000, guid: cf6a5be6ad8d42b46820fe15928e2dc8, type: 2}
@@ -5589,6 +5585,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2e9de5bae08c11f46b57e618b6dd4596, type: 2}
     actions:
     - {fileID: 11400000, guid: deb68db29eb9fe84d870d681bead559f, type: 2}
+    - {fileID: 11400000, guid: f5986ebdc51e7024c8aa243dd4bdeaa2, type: 2}
   cachedObjects:
     cache:
     - cachedObject: {fileID: 2044969967}
