@@ -9,26 +9,26 @@ public class GunFullAutoFireInput : BasePlayerInput
     public GenericReference<float> fireRate;
 
     bool isFiring;
+    float previousShotTime;
 
     private void Awake()
     {
         inputActions = new InputActions();
 
-        inputActions.PcMap.FireGun.started += ctx => { isFiring = true; fsm.UpdateState(gunFireEvent, callingObject, cachedObjects); };
+        inputActions.PcMap.FireGun.started += ctx => { isFiring = true; fsm.UpdateState(gunFireEvent, callingObject, cachedObjects); Debug.Log("Hi"); };
         inputActions.PcMap.FireGun.canceled += ctx => isFiring = false;
-
-        StartCoroutine("FireLoop");
+        previousShotTime = Time.time;
     }
 
-    IEnumerator FireLoop()
+    private void FixedUpdate()
     {
-        if (isFiring)
+        if (!isFiring) return;
+
+        if(Time.time - previousShotTime >= 1 / fireRate.GetValue(cachedObjects))
         {
             fsm.UpdateState(gunFireEvent, callingObject, cachedObjects);
+            previousShotTime = Time.time;
         }
-
-        yield return new WaitForSeconds(1/fireRate.GetValue(cachedObjects));
-
-        StartCoroutine("FireLoop");
     }
+
 }
