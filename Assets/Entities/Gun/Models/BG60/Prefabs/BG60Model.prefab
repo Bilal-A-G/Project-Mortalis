@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 8020430866572885770}
   - component: {fileID: 820437213186802131}
   m_Layer: 7
-  m_Name: Gun
+  m_Name: BG60Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -81,6 +81,22 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""PrimaryWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""ca6d2d34-f23c-4c31-8442-ff651d5009b0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""SecondaryWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""3013c609-d47d-4f5c-af63-849820270d9e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -215,6 +231,28 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""action"": ""Aim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6878caa8-adfb-46f0-bce0-de438afd11e3"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""PrimaryWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0379a503-4829-4912-9bc3-d63c2cd09c8d"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""SecondaryWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -248,6 +286,8 @@ public class @InputActions : IInputActionCollection, IDisposable
         m_PcMap_FireGun = m_PcMap.FindAction("FireGun", throwIfNotFound: true);
         m_PcMap_Reload = m_PcMap.FindAction("Reload", throwIfNotFound: true);
         m_PcMap_Aim = m_PcMap.FindAction("Aim", throwIfNotFound: true);
+        m_PcMap_PrimaryWeapon = m_PcMap.FindAction("PrimaryWeapon", throwIfNotFound: true);
+        m_PcMap_SecondaryWeapon = m_PcMap.FindAction("SecondaryWeapon", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -305,6 +345,8 @@ public class @InputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_PcMap_FireGun;
     private readonly InputAction m_PcMap_Reload;
     private readonly InputAction m_PcMap_Aim;
+    private readonly InputAction m_PcMap_PrimaryWeapon;
+    private readonly InputAction m_PcMap_SecondaryWeapon;
     public struct PcMapActions
     {
         private @InputActions m_Wrapper;
@@ -317,6 +359,8 @@ public class @InputActions : IInputActionCollection, IDisposable
         public InputAction @FireGun => m_Wrapper.m_PcMap_FireGun;
         public InputAction @Reload => m_Wrapper.m_PcMap_Reload;
         public InputAction @Aim => m_Wrapper.m_PcMap_Aim;
+        public InputAction @PrimaryWeapon => m_Wrapper.m_PcMap_PrimaryWeapon;
+        public InputAction @SecondaryWeapon => m_Wrapper.m_PcMap_SecondaryWeapon;
         public InputActionMap Get() { return m_Wrapper.m_PcMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -350,6 +394,12 @@ public class @InputActions : IInputActionCollection, IDisposable
                 @Aim.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnAim;
                 @Aim.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnAim;
                 @Aim.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnAim;
+                @PrimaryWeapon.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnPrimaryWeapon;
+                @PrimaryWeapon.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnPrimaryWeapon;
+                @PrimaryWeapon.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnPrimaryWeapon;
+                @SecondaryWeapon.started -= m_Wrapper.m_PcMapActionsCallbackInterface.OnSecondaryWeapon;
+                @SecondaryWeapon.performed -= m_Wrapper.m_PcMapActionsCallbackInterface.OnSecondaryWeapon;
+                @SecondaryWeapon.canceled -= m_Wrapper.m_PcMapActionsCallbackInterface.OnSecondaryWeapon;
             }
             m_Wrapper.m_PcMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -378,6 +428,12 @@ public class @InputActions : IInputActionCollection, IDisposable
                 @Aim.started += instance.OnAim;
                 @Aim.performed += instance.OnAim;
                 @Aim.canceled += instance.OnAim;
+                @PrimaryWeapon.started += instance.OnPrimaryWeapon;
+                @PrimaryWeapon.performed += instance.OnPrimaryWeapon;
+                @PrimaryWeapon.canceled += instance.OnPrimaryWeapon;
+                @SecondaryWeapon.started += instance.OnSecondaryWeapon;
+                @SecondaryWeapon.performed += instance.OnSecondaryWeapon;
+                @SecondaryWeapon.canceled += instance.OnSecondaryWeapon;
             }
         }
     }
@@ -401,5 +457,7 @@ public class @InputActions : IInputActionCollection, IDisposable
         void OnFireGun(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
+        void OnPrimaryWeapon(InputAction.CallbackContext context);
+        void OnSecondaryWeapon(InputAction.CallbackContext context);
     }
 }
