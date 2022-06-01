@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4aba365707e5f64baf7d3a15cb49dc0, type: 3}
   m_Name: Reloading
   m_EditorClassIdentifier: 
+  onStateEnter: []
+  onStateExit:
+  - {fileID: 11400000, guid: 6ff1cc874b88dfe4bb9da35921cd8969, type: 2}
   stateActions:
   - translate: 1
     isFolded: 1
     translateTo: {fileID: 11400000, guid: de83630d0afdc794bbbdc4b879290c68, type: 2}
     action: {fileID: 11400000, guid: 770f7b3367a194844810abd09a14ed03, type: 2}
+  - translate: 0
+    isFolded: 1
+    translateTo: {fileID: 11400000, guid: de83630d0afdc794bbbdc4b879290c68, type: 2}
+    action: {fileID: 11400000, guid: 3f8142514ef233041bec5f8343f0cf5e, type: 2}
   stateTransitions:
-  - action: {fileID: 11400000, guid: 3f8142514ef233041bec5f8343f0cf5e, type: 2}
+  - action: {fileID: 11400000, guid: 964214138014003488f2147046411207, type: 2}
     stateObject: {fileID: 11400000, guid: ba754607975dfb74eab7822cd7a50755, type: 2}
   stateChild: {fileID: 0}

@@ -1889,7 +1889,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 2.0833333
-    functionName: InvokeEvent
+    functionName: InvokeEventOnFSM
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 964214138014003488f2147046411207, type: 2}
     floatParameter: 0

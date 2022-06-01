@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Loaded
   m_EditorClassIdentifier: 
   onStateEnter: []
-  onStateExit: []
+  onStateExit:
+  - {fileID: 11400000, guid: 6ff1cc874b88dfe4bb9da35921cd8969, type: 2}
   stateActions:
   - translate: 0
     isFolded: 1
@@ -23,6 +24,10 @@ MonoBehaviour:
     isFolded: 1
     translateTo: {fileID: 0}
     action: {fileID: 11400000, guid: 3f8142514ef233041bec5f8343f0cf5e, type: 2}
+  - translate: 0
+    isFolded: 1
+    translateTo: {fileID: 0}
+    action: {fileID: 11400000, guid: 964214138014003488f2147046411207, type: 2}
   stateTransitions:
   - action: {fileID: 11400000, guid: 846f3d66d42bc8d4588e9e2b462ad53e, type: 2}
     stateObject: {fileID: 11400000, guid: 886ea87108b0f534ab92fe0852633af4, type: 2}

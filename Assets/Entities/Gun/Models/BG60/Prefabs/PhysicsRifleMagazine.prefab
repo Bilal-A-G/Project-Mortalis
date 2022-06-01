@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 158958525846125007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PhysicsRifleMagazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 9022952649469840239}
   - component: {fileID: 9135241341811508748}
   - component: {fileID: 6997426414243236387}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RifleMagazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

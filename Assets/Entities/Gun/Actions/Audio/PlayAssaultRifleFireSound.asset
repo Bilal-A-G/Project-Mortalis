@@ -18,7 +18,7 @@ MonoBehaviour:
     variableValue: {fileID: 11400000, guid: 238222268ba22d14f8af558ccbcf70d4, type: 2}
     overrideValue: 
   clipToPlay:
-    useOverride: 1
+    useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 0}
-    overrideValue: {fileID: 8300000, guid: fb19e591e755d5445acbe14abee25e94, type: 3}
+    variableValue: {fileID: 11400000, guid: f52185317d7b9ba489ee79e3ebe4512e, type: 2}
+    overrideValue: {fileID: 8300000, guid: 7fb6d39b48236c04782892ac121324fc, type: 3}
