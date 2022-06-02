@@ -1802,7 +1802,7 @@ MonoBehaviour:
     cache: []
   checkRadius:
     useOverride: 1
-    isFolded: 1
+    isFolded: 0
     variableValue: {fileID: 0}
     overrideValue: 0.5
   checkLayer:

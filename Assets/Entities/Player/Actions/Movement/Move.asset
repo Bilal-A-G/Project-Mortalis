@@ -21,12 +21,12 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.4
+    overrideValue: 0.2
   smoothing:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.2
+    overrideValue: 0.1
   moveDirection:
     useOverride: 0
     isFolded: 1
