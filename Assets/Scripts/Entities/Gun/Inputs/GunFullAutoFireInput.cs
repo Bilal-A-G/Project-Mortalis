@@ -15,7 +15,7 @@ public class GunFullAutoFireInput : BasePlayerInput
     {
         inputActions = new InputActions();
 
-        inputActions.PcMap.FireGun.started += ctx => { isFiring = true; fsm.UpdateState(gunFireEvent, callingObject, cachedObjects); Debug.Log("Hi"); };
+        inputActions.PcMap.FireGun.started += ctx => { isFiring = true; fsm.UpdateState(gunFireEvent, callingObject, cachedObjects); };
         inputActions.PcMap.FireGun.canceled += ctx => isFiring = false;
         previousShotTime = Time.time;
     }

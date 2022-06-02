@@ -939,7 +939,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 6
+    overrideValue: 5.2
 --- !u!1 &4890481655104256582
 GameObject:
   m_ObjectHideFlags: 0

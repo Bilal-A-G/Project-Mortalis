@@ -49,7 +49,7 @@ public class Shoot : ActionBase
         {
             if ((hit.collider.gameObject.transform.position - firePoint.transform.position).magnitude <= maxRange.GetValue(cachedObjects))
             {
-                Debug.Log("Dealt " + variables.damage + " damage to " + hit.transform.gameObject.name);
+                //Debug.Log("Dealt " + variables.damage + " damage to " + hit.transform.gameObject.name);
             }
 
             outputPosition.SetValue(hit.point, cachedObjects);
