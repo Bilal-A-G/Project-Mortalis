@@ -21,7 +21,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.03
+    overrideValue: 0.05
   mouseSensitivity:
     useOverride: 0
     isFolded: 1

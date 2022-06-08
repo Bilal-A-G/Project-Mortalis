@@ -7,6 +7,16 @@
       "dependencies": {},
       "hash": "935e2fbaae6b253436baaa3760181cd16eea7414"
     },
+    "com.unity.animation.rigging": {
+      "version": "1.1.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.4.1",
+        "com.unity.test-framework": "1.1.24"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.burst": {
       "version": "1.6.0",
       "depth": 1,
