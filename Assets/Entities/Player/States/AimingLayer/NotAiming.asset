@@ -22,4 +22,4 @@ MonoBehaviour:
   stateTransitions:
   - action: {fileID: 11400000, guid: 302f92962139f564ab5b943efb22499d, type: 2}
     stateObject: {fileID: 11400000, guid: d5512c68868772f48afeb8b66acd6ee3, type: 2}
-  stateChild: {fileID: 11400000, guid: 644a653eb1fc3c944a2f62f7c77c2d16, type: 2}
+  childLayer: {fileID: 11400000, guid: 644a653eb1fc3c944a2f62f7c77c2d16, type: 2}
