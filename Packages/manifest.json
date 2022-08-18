@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.bilal.wizrds-tools": "git@github.com:Bilal-A-G/W_I_Zr_Ds-Tools.git",
+    "com.bilal.wizrds": "https://github.com/Bilal-A-G/W_I_Zr_Ds.git",
     "com.unity.animation.rigging": "1.1.1",
     "com.unity.collab-proxy": "1.15.17",
     "com.unity.ide.visualstudio": "2.0.15",

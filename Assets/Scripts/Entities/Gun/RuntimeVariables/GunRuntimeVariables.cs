@@ -25,4 +25,5 @@ public class GunRuntimeVariables : MonoBehaviour, IRuntimeVariable
     {
         typeof(GunRuntimeVariables).GetField(name).SetValue(this, value);
     }
+
 }

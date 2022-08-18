@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine.VFX;
 
 [CustomPropertyDrawer(typeof(GenericReference<VisualEffectAsset>))]
-public class VisualEffectAssetDrawer : GenericReferenceDrawerWrapper<VisualEffectAsset>
+public class VisualEffectAssetDrawer : GenericReferenceDrawer<VisualEffectAsset>
 {
 
 }

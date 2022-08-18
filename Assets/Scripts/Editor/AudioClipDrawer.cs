@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomPropertyDrawer(typeof(GenericReference<AudioClip>))]
-public class AudioClipDrawer : GenericReferenceDrawerWrapper<AudioClip>
+public class AudioClipDrawer : GenericReferenceDrawer<AudioClip>
 {
 
 }

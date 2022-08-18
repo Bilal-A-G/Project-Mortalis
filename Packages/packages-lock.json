@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "com.bilal.wizrds-tools": {
-      "version": "git@github.com:Bilal-A-G/W_I_Zr_Ds-Tools.git",
+    "com.bilal.wizrds": {
+      "version": "https://github.com/Bilal-A-G/W_I_Zr_Ds.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "935e2fbaae6b253436baaa3760181cd16eea7414"
+      "hash": "1990197eb913f07cf1bbc65c76461bb7dc2ee415"
     },
     "com.unity.animation.rigging": {
       "version": "1.1.1",
