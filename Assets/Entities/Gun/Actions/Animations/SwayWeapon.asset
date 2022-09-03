@@ -41,7 +41,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.3
+    overrideValue: 0.15
   targetKey:
     useOverride: 0
     isFolded: 1
