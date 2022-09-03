@@ -25,7 +25,7 @@ MonoBehaviour:
   targetKey:
     useOverride: 0
     isFolded: 1
-    variableValue: {fileID: 11400000, guid: f8a8c156f52eea6459979d72d18cc1e2, type: 2}
+    variableValue: {fileID: 11400000, guid: cc7f265e42251c04993953fa4209e56f, type: 2}
     overrideValue: MainCamera
   startPosition:
     useOverride: 1

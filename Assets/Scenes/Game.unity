@@ -5656,15 +5656,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126095307}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5779991, y: -0.22300005, z: 0.5409995}
+  m_LocalRotation: {x: 0.036643673, y: 0, z: 0, w: 0.99932843}
+  m_LocalPosition: {x: 0.5779979, y: -0.23885503, z: 0.609}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1477210849}
   m_Father: {fileID: 2044969970}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.2, y: 0, z: 0}
 --- !u!1001 &1144936628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11161,6 +11161,8 @@ MonoBehaviour:
       key: GunHolder
     - cachedObject: {fileID: 1231766136}
       key: Parent
+    - cachedObject: {fileID: 974898945}
+      key: WeaponRenderer
 --- !u!1001 &1940810992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12523,13 +12525,13 @@ ReflectionProbe:
   m_Mode: 1
   m_RefreshMode: 1
   m_TimeSlicingMode: 2
-  m_Resolution: 1024
+  m_Resolution: 16
   m_UpdateFrequency: 0
   m_BoxSize: {x: 1.9815407, y: 2.120638, z: 1.9373093}
   m_BoxOffset: {x: -0.018884659, y: -0.10089111, z: 0.024227142}
   m_NearClip: 0.1
-  m_FarClip: 100
-  m_ShadowDistance: 50
+  m_FarClip: 50
+  m_ShadowDistance: 20
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_CullingMask:
@@ -12541,7 +12543,7 @@ ReflectionProbe:
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
-  m_Importance: 3
+  m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
 --- !u!1 &919132149593046894
 GameObject:

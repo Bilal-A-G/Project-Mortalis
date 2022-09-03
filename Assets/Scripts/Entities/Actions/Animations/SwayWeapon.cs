@@ -22,11 +22,18 @@ public class SwayWeapon : ActionBase
     public GenericReference<string> targetKey;
 
     [System.NonSerialized]
+    Vector3 initialRotation = Vector3.zero;
+
+    [System.NonSerialized]
     GameObject lerpTarget;
 
     public override void Execute(CachedObjectWrapper cachedObjects)
     {
         lerpTarget = cachedObjects.GetGameObjectFromCache(targetKey.GetValue(cachedObjects));
+        if(initialRotation == Vector3.zero)
+        {
+            initialRotation = lerpTarget.transform.localEulerAngles;
+        }
 
         Vector2 mouseDeltaValue = mouseDelta.GetValue(cachedObjects) * lookSwayAmount.GetValue(cachedObjects);
         Vector2 moveDeltaValue = moveDelta.GetValue(cachedObjects) * moveSwayAmount.GetValue(cachedObjects);
@@ -41,7 +48,7 @@ public class SwayWeapon : ActionBase
         targetRotation.y = Mathf.Clamp(targetRotation.y, -swayClampValue, swayClampValue);
         targetRotation.z = Mathf.Clamp(targetRotation.z, -swayClampValue, swayClampValue);
 
-        targetRotation = Vector3.Lerp(targetRotation, Vector3.zero, speed.GetValue(cachedObjects));
+        targetRotation = Vector3.Lerp(targetRotation, initialRotation, speed.GetValue(cachedObjects));
         finalRotation = Vector3.Lerp(finalRotation, targetRotation, speed.GetValue(cachedObjects));
 
         lerpTarget.transform.localEulerAngles = finalRotation;
