@@ -421,14 +421,14 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.33333334
+  - time: 0.23333333
     functionName: InvokeEventOnFSM
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 6c09005feb89735498df962ba8d75011, type: 2}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.85
+  - time: 0.73333335
     functionName: InvokeEventOnFSM
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: 6c09005feb89735498df962ba8d75011, type: 2}
