@@ -4420,6 +4420,8 @@ MonoBehaviour:
       key: AudioSource
     - cachedObject: {fileID: 1477210848}
       key: GunPivot
+    - cachedObject: {fileID: 1477210848}
+      key: Aimer
 --- !u!1001 &877520265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13215,10 +13217,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855fec39b78b67a40a3a5a5400114178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventActions: []
+  eventActions:
+  - events:
+    - {fileID: 11400000, guid: 302f92962139f564ab5b943efb22499d, type: 2}
+    actions:
+    - {fileID: 11400000, guid: c75b4677000e2be4cb9381f5462937b1, type: 2}
+  - events:
+    - {fileID: 11400000, guid: 6a9cbd396966e764c9abe41b747cfc70, type: 2}
+    actions:
+    - {fileID: 11400000, guid: b4665bc0bbf327841bbb91fbfe9e7ea5, type: 2}
   cachedObjects:
     cache:
-    - cachedObject: {fileID: 1581317808}
+    - cachedObject: {fileID: 919132149593046894}
+      key: Aimer
+    - cachedObject: {fileID: 919132149593046894}
       key: Parent
 --- !u!1 &2172571220652445774
 GameObject:

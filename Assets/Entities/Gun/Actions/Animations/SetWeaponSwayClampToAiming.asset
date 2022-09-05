@@ -21,5 +21,4 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: 0.5
-  resetValueOnAwake: 0
+    overrideValue: 2
