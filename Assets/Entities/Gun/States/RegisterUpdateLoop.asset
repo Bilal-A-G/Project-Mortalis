@@ -24,4 +24,4 @@ MonoBehaviour:
     translateTo: {fileID: 0}
     action: {fileID: 11400000, guid: 525c74e708023144db8b326d3b2c49ad, type: 2}
   stateTransitions: []
-  stateChild: {fileID: 11400000, guid: c00c59b79031d0d4c8a5351a35e491d5, type: 2}
+  childLayer: {fileID: 11400000, guid: c00c59b79031d0d4c8a5351a35e491d5, type: 2}

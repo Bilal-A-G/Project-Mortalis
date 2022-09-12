@@ -17,7 +17,7 @@ MonoBehaviour:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: -400
+    overrideValue: 400
   destroyTime:
     useOverride: 1
     isFolded: 1

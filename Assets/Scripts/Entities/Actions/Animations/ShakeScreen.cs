@@ -7,6 +7,7 @@ public class ShakeScreen : ActionBase
 {
     public GenericReference<float> trauma;
     public GenericReference<float> traumaDecreaseRate;
+    public GenericReference<float> shakeSpeed;
     public GenericReference<Vector3> screenShakeYawPitchRoll;
 
     public GenericReference<string> mainCameraKey;
@@ -25,8 +26,6 @@ public class ShakeScreen : ActionBase
 
     public override void Execute(CachedObjectWrapper cachedObjects)
     {
-        if (trauma.GetValue(cachedObjects) <= 0) return;
-
         camera = cachedObjects.GetGameObjectFromCache(stableCameraKey.GetValue(cachedObjects));
         mainCamera = cachedObjects.GetGameObjectFromCache(mainCameraKey.GetValue(cachedObjects));
 
@@ -39,17 +38,16 @@ public class ShakeScreen : ActionBase
 
         float randomYawModifier = Mathf.PerlinNoise(seed + time, seed + time + 1);
         float randomPitchModifier = Mathf.PerlinNoise(seed + time + 2, seed + time + 3);
-        float randomRollModifier = Mathf.PerlinNoise(seed + time + 4, seed + time + 5);
 
         float yaw = screenShakeYawPitchRoll.GetValue(cachedObjects).x * Mathf.Pow(trauma.GetValue(cachedObjects), 2) * (Random.value < 0.5 ? -1 : 1) * randomYawModifier;
         float pitch = screenShakeYawPitchRoll.GetValue(cachedObjects).y * Mathf.Pow(trauma.GetValue(cachedObjects), 2) * (Random.value < 0.5 ? -1 : 1) * randomPitchModifier;
-        float roll = screenShakeYawPitchRoll.GetValue(cachedObjects).z * Mathf.Pow(trauma.GetValue(cachedObjects), 2) * (Random.value < 0.5 ? -1 : 1) * randomRollModifier;
 
         screenShake.x = yaw;
         screenShake.y = pitch;
-        screenShake.z = roll;
+        screenShake.z = 0;
 
-        mainCamera.transform.eulerAngles = camera.transform.eulerAngles + screenShake;
+        Vector3 lerpedShake = Vector3.Lerp(mainCamera.transform.eulerAngles, camera.transform.eulerAngles + screenShake, Time.deltaTime * shakeSpeed.GetValue(cachedObjects));
+        mainCamera.transform.eulerAngles = new Vector3(lerpedShake.x, lerpedShake.y, mainCamera.transform.eulerAngles.z);
         time += Time.deltaTime;
     }
 }

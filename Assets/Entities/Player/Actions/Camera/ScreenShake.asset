@@ -22,11 +22,16 @@ MonoBehaviour:
     isFolded: 1
     variableValue: {fileID: 0}
     overrideValue: 1
+  shakeSpeed:
+    useOverride: 1
+    isFolded: 1
+    variableValue: {fileID: 0}
+    overrideValue: 1
   screenShakeYawPitchRoll:
     useOverride: 1
     isFolded: 1
     variableValue: {fileID: 0}
-    overrideValue: {x: 2, y: 2, z: 2}
+    overrideValue: {x: 5, y: 5, z: 5}
   mainCameraKey:
     useOverride: 0
     isFolded: 1
