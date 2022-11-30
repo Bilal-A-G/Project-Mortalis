@@ -10,3 +10,5 @@ Screenshots from the latest version of the project:
 
 Itch page link:
 https://bilal-a-g.itch.io/project-mortalis
+
+All work for this project has been done by me, except for sounds.
