@@ -3,12 +3,14 @@ An FPS game that is a continuation of/successor to my previous FPS project, Unna
 
 This is a Unity project, so you can download the repo, extract it, and open with Unity Hub to load, alternatively, you can check out the itch page linked below. However, this game is currently going through a massive shift in aesthetics as I felt that the itch build version looked fairly bland.
 
-Screenshots from the latest version of the project:
+## Screenshots:
+
 ![Screenshot (187)](https://user-images.githubusercontent.com/86686062/204679063-5ed24995-f948-4037-b5d7-b4662b47b477.png)
 
 ![Screenshot (188)](https://user-images.githubusercontent.com/86686062/204679075-8ad296fd-f139-4171-8253-42fcae6454bd.png)
 
-Itch page link:
+## Links:
+
 https://bilal-a-g.itch.io/project-mortalis
 
 All work for this project has been done by me, except for sounds.
