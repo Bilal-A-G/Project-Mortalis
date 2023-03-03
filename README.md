@@ -7,7 +7,7 @@ This is a Unity project, so you can download the repo, extract it, and open with
 
 ![](https://github.com/Bilal-A-G/Project-Mortalis/blob/main/Media/Project%20Mortalis.gif)
 
-## Links:
+## Itch Link:
 
 https://bilal-a-g.itch.io/project-mortalis
 
